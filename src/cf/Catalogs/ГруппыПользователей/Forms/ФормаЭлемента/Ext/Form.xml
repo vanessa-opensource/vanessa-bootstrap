@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="117">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="118"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<Width>40</Width>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="55"/>
+					<SelectedItemsActionsPanel name="НаименованиеПанельДействийВыделенныхСтрок" id="124"/>
+				</InputField>
+				<InputField name="Родитель" id="40">
+					<DataPath>Объект.Parent</DataPath>
+					<ContextMenu name="РодительКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="72"/>
+					<SelectedItemsActionsPanel name="РодительПанельДействийВыделенныхСтрок" id="125"/>
+					<Events>
+						<Event name="StartChoice">РодительНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="СтраницыУчастникиГруппыКомментарий" id="78">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы участники группы комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыУчастникиГруппыКомментарийРасширеннаяПодсказка" id="79"/>
+			<ChildItems>
+				<Page name="УчастникиГруппы" id="80">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Участники группы</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="УчастникиГруппыРасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<Table name="Состав" id="10">
+							<Representation>List</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<Header>false</Header>
+							<HorizontalLinesBWA>false</HorizontalLinesBWA>
+							<VerticalLinesBWA>false</VerticalLinesBWA>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Состав</DataPath>
+							<BorderColor>style:BorderColor</BorderColor>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Состав</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<CurrentRowUse>SelectionPresentationAndChoice</CurrentRowUse>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СоставКонтекстноеМеню" id="11">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СоставКонтекстноеМенюПодобратьПользователей" id="42">
+										<Type>CommandBarButton</Type>
+										<SkipOnInput>false</SkipOnInput>
+										<CommandName>Form.Command.ПодобратьПользователей</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Подобрать</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СоставКонтекстноеМенюПодобратьПользователейРасширеннаяПодсказка" id="56"/>
+									</Button>
+									<Button name="СоставКонтекстноеМенюДобавить" id="45">
+										<Type>CommandBarButton</Type>
+										<SkipOnInput>false</SkipOnInput>
+										<CommandName>Form.Item.Состав.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="СоставКонтекстноеМенюДобавитьРасширеннаяПодсказка" id="57"/>
+									</Button>
+									<Button name="СоставКонтекстноеМенюИзменить" id="104">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Состав.StandardCommand.Change</CommandName>
+										<ExtendedTooltip name="СоставКонтекстноеМенюИзменитьРасширеннаяПодсказка" id="105"/>
+									</Button>
+									<Button name="СоставКонтекстноеМенюУдалить" id="46">
+										<Type>CommandBarButton</Type>
+										<SkipOnInput>false</SkipOnInput>
+										<CommandName>Form.Item.Состав.StandardCommand.Delete</CommandName>
+										<ExtendedTooltip name="СоставКонтекстноеМенюУдалитьРасширеннаяПодсказка" id="59"/>
+									</Button>
+									<Button name="СоставКонтекстноеМенюПереместитьВверх" id="100">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПереместитьВверх</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Переместить вверх</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СоставКонтекстноеМенюПереместитьВверхРасширеннаяПодсказка" id="101"/>
+									</Button>
+									<Button name="СоставКонтекстноеМенюПереместитьВниз" id="102">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПереместитьВниз</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Переместить вниз</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СоставКонтекстноеМенюПереместитьВнизРасширеннаяПодсказка" id="103"/>
+									</Button>
+									<ButtonGroup name="СоставКонтекстноеМенюСтандартныеКоманды" id="74">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Состав контекстное меню стандартные команды</v8:content>
+											</v8:item>
+										</Title>
+										<CommandSource>Item.Состав</CommandSource>
+										<ExtendedTooltip name="СоставКонтекстноеМенюСтандартныеКомандыРасширеннаяПодсказка" id="75"/>
+									</ButtonGroup>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="СоставКоманднаяПанель" id="12">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СоставПодобрать" id="31">
+										<Type>CommandBarButton</Type>
+										<SkipOnInput>false</SkipOnInput>
+										<CommandName>Form.Command.ПодобратьПользователей</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Подобрать</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СоставПодобратьРасширеннаяПодсказка" id="60"/>
+									</Button>
+									<Button name="СоставДобавить" id="32">
+										<Type>CommandBarButton</Type>
+										<SkipOnInput>false</SkipOnInput>
+										<CommandName>Form.Item.Состав.StandardCommand.Add</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СоставДобавитьРасширеннаяПодсказка" id="61"/>
+									</Button>
+									<Button name="СоставИзменить" id="106">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Состав.StandardCommand.Change</CommandName>
+										<ExtendedTooltip name="СоставИзменитьРасширеннаяПодсказка" id="107"/>
+									</Button>
+									<Button name="СоставУдалить" id="33">
+										<Type>CommandBarButton</Type>
+										<SkipOnInput>false</SkipOnInput>
+										<CommandName>Form.Item.Состав.StandardCommand.Delete</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СоставУдалитьРасширеннаяПодсказка" id="63"/>
+									</Button>
+									<Button name="СоставПереместитьВверх" id="96">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПереместитьВверх</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Переместить вверх</v8:content>
+											</v8:item>
+										</Title>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СоставПереместитьВверхРасширеннаяПодсказка" id="97"/>
+									</Button>
+									<Button name="СоставПереместитьВниз" id="98">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПереместитьВниз</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Переместить вниз</v8:content>
+											</v8:item>
+										</Title>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СоставПереместитьВнизРасширеннаяПодсказка" id="99"/>
+									</Button>
+									<ButtonGroup name="СоставГруппаКомандСортировать" id="119">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Состав группа команд сортировать</v8:content>
+											</v8:item>
+										</Title>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="СоставГруппаКомандСортироватьРасширеннаяПодсказка" id="120"/>
+										<ChildItems>
+											<Button name="СоставСортироватьПоВозрастанию" id="84">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СортироватьПоВозрастанию</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сортировать по возрастанию</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="СоставСортироватьПоВозрастаниюРасширеннаяПодсказка" id="85"/>
+											</Button>
+											<Button name="СоставСортироватьПоУбыванию" id="86">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СортироватьПоУбыванию</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сортировать по убыванию</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="СоставСортироватьПоУбываниюРасширеннаяПодсказка" id="87"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ПоказыватьНедействительныхПользователей" id="51">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПоказыватьНедействительныхПользователей</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Показывать недействительных пользователей</v8:content>
+											</v8:item>
+										</Title>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ПоказыватьНедействительныхПользователейРасширеннаяПодсказка" id="54"/>
+									</Button>
+									<ButtonGroup name="СоставСтандартныеКоманды" id="76">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Состав стандартные команды</v8:content>
+											</v8:item>
+										</Title>
+										<CommandSource>Item.Состав</CommandSource>
+										<ExtendedTooltip name="СоставСтандартныеКомандыРасширеннаяПодсказка" id="77"/>
+									</ButtonGroup>
+									<SearchStringAddition name="СоставСтрокаПоиск" id="121">
+										<AdditionSource>
+											<Item>Состав</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Поиск</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="СоставСтрокаПоискКонтекстноеМеню" id="122"/>
+										<ExtendedTooltip name="СоставСтрокаПоискРасширеннаяПодсказка" id="123"/>
+									</SearchStringAddition>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СоставРасширеннаяПодсказка" id="68"/>
+							<SearchStringAddition name="СоставСтрокаПоиска" id="108">
+								<AdditionSource>
+									<Item>Состав</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставСтрокаПоискаКонтекстноеМеню" id="109"/>
+								<ExtendedTooltip name="СоставСтрокаПоискаРасширеннаяПодсказка" id="110"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СоставСостояниеПросмотра" id="111">
+								<AdditionSource>
+									<Item>Состав</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставСостояниеПросмотраКонтекстноеМеню" id="112"/>
+								<ExtendedTooltip name="СоставСостояниеПросмотраРасширеннаяПодсказка" id="113"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СоставУправлениеПоиском" id="114">
+								<AdditionSource>
+									<Item>Состав</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставУправлениеПоискомКонтекстноеМеню" id="115"/>
+								<ExtendedTooltip name="СоставУправлениеПоискомРасширеннаяПодсказка" id="116"/>
+							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="СоставПанельДействийВыделенныхСтрок" id="126"/>
+							<Events>
+								<Event name="Drag">СоставПеретаскивание</Event>
+								<Event name="ChoiceProcessing">СоставОбработкаВыбора</Event>
+								<Event name="OnChange">СоставПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="Пользователь" id="15">
+									<DataPath>Объект.Состав.Пользователь</DataPath>
+									<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+									<Wrap>false</Wrap>
+									<BorderColor>style:BorderColor</BorderColor>
+									<ContextMenu name="ПользовательКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="69"/>
+									<SelectedItemsActionsPanel name="ПользовательПанельДействийВыделенныхСтрок" id="127"/>
+								</InputField>
+								<CheckBoxField name="Недействителен" id="52">
+									<DataPath>Объект.Состав.Недействителен</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НедействителенКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="НедействителенРасширеннаяПодсказка" id="70"/>
+									<SelectedItemsActionsPanel name="НедействителенПанельДействийВыделенныхСтрок" id="128"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаКомментарий" id="82">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ГруппаКомментарийРасширеннаяПодсказка" id="83"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="38">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="73"/>
+							<SelectedItemsActionsPanel name="КомментарийПанельДействийВыделенныхСтрок" id="130"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ГруппыПользователей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.Состав">
+					<Column name="Недействителен" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Недействителен</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодобратьПользователей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодобратьПользователей</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказыватьНедействительныхПользователей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать недействительных пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать недействительных пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьНедействительныхПользователей</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СортироватьПоВозрастанию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировать по возрастанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упорядочить список по возрастанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SortListAsc</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СортироватьПоВозрастанию</Action>
+			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СортироватьПоУбыванию" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировать по убыванию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упорядочить список по убыванию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SortListDesc</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СортироватьПоУбыванию</Action>
+			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПереместитьВверх" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВверх</Action>
+			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПереместитьВниз" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВниз</Action>
+			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

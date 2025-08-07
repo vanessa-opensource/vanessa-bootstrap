@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаДополнительнаяИнформация" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительная информация</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДополнительнаяИнформацияРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<PictureDecoration name="КартинкаИнформации" id="34">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка информации</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="КартинкаИнформацииКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="КартинкаИнформацииРасширеннаяПодсказка" id="36"/>
+				</PictureDecoration>
+				<LabelDecoration name="ДополнительнаяИнформация" id="37">
+					<Width>40</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительная информация по способу авторизации</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Center</VerticalAlign>
+					<ContextMenu name="ДополнительнаяИнформацияКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ДополнительнаяИнформацияРасширеннаяПодсказка" id="39"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ПровайдерSMS" id="5">
+			<DataPath>НаборКонстант.ПровайдерSMS</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провайдер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<Width>30</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ClearButton>false</ClearButton>
+			<BackColor>style:ФонУправляющегоПоля</BackColor>
+			<ContextMenu name="ПровайдерSMSКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ПровайдерSMSРасширеннаяПодсказка" id="11"/>
+			<SelectedItemsActionsPanel name="ПровайдерSMSПанельДействийВыделенныхСтрок" id="40"/>
+			<Events>
+				<Event name="OnChange">ПровайдерSMSПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="СпособАвторизации" id="24">
+			<DataPath>СпособАвторизации</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ авторизации</v8:content>
+				</v8:item>
+			</Title>
+			<Width>30</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ListChoiceMode>true</ListChoiceMode>
+			<TextEdit>false</TextEdit>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>По ключу (рекомендуется)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ПоКлючу</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>По логину и паролю (устаревший способ)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ПоЛогинуИПаролю</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<BackColor>style:ФонУправляющегоПоля</BackColor>
+			<ContextMenu name="СпособАвторизацииКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="СпособАвторизацииРасширеннаяПодсказка" id="26"/>
+			<SelectedItemsActionsPanel name="СпособАвторизацииПанельДействийВыделенныхСтрок" id="41"/>
+			<Events>
+				<Event name="OnChange">СпособАвторизацииПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Логин" id="1">
+			<DataPath>ЛогинДляОтправкиSMS</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<Width>30</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="ЛогинКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ЛогинРасширеннаяПодсказка" id="12"/>
+			<SelectedItemsActionsPanel name="ЛогинПанельДействийВыделенныхСтрок" id="42"/>
+		</InputField>
+		<InputField name="Пароль" id="3">
+			<DataPath>ПарольДляОтправкиSMS</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<Width>30</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<PasswordMode>true</PasswordMode>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="ПарольКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="13"/>
+			<SelectedItemsActionsPanel name="ПарольПанельДействийВыделенныхСтрок" id="43"/>
+		</InputField>
+		<InputField name="ИмяОтправителя" id="16">
+			<DataPath>ИмяОтправителя</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя отправителя</v8:content>
+				</v8:item>
+			</Title>
+			<Width>30</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ИмяОтправителяКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ИмяОтправителяРасширеннаяПодсказка" id="18"/>
+			<SelectedItemsActionsPanel name="ИмяОтправителяПанельДействийВыделенныхСтрок" id="44"/>
+		</InputField>
+		<UsualGroup name="ГруппаНужнаПомощь" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нужна помощь?</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>PopUp</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаНужнаПомощьРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<LabelDecoration name="ИнструкцияПоПодключениюУслуги" id="29">
+					<Width>40</Width>
+					<ContextMenu name="ИнструкцияПоПодключениюУслугиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ИнструкцияПоПодключениюУслугиРасширеннаяПодсказка" id="31"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЛогинДляОтправкиSMS" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин для отправки SMS</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольДляОтправкиSMS" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль для отправки SMS</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяОтправителя" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя отправителя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособАвторизации" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ авторизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособыАвторизации" id="7">
+			<Type/>
+		</Attribute>
+		<Attribute name="НастройкиПровайдера" id="8">
+			<Type/>
+		</Attribute>
+		<Attribute name="ДополнительнаяИнформация" id="5">
+			<Type/>
+		</Attribute>
+	</Attributes>
+</Form>

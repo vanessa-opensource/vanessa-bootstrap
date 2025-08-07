@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandSet>
+		<ExcludedCommand>Create</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="СписокВыбрать" id="16">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Item.Список.StandardCommand.Choose</CommandName>
+				<ExtendedTooltip name="СписокВыбратьРасширеннаяПодсказка" id="21"/>
+			</Button>
+			<ButtonGroup name="Создать" id="47">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Создать</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="СоздатьРасширеннаяПодсказка" id="48"/>
+				<ChildItems>
+					<Button name="СписокСоздать" id="55">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.Create</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Добавить вручную</v8:content>
+							</v8:item>
+						</Title>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СписокСоздатьРасширеннаяПодсказка" id="56"/>
+					</Button>
+					<Button name="СписокВыбратьИзКлассификатора" id="53">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.Command.ВыбратьИзКлассификатора</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Добавить из классификатора...</v8:content>
+							</v8:item>
+						</Title>
+						<ButtonImportance>Main</ButtonImportance>
+						<ExtendedTooltip name="СписокВыбратьИзКлассификатораРасширеннаяПодсказка" id="54"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<ButtonGroup name="СписокКоманды" id="15">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды списка</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>Item.Список</CommandSource>
+				<ExtendedTooltip name="СписокКомандыРасширеннаяПодсказка" id="22"/>
+			</ButtonGroup>
+			<Button name="СписокКлассификатор" id="17">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьКлассификатор</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Классификатор стран (ОКСМ)</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="СписокКлассификаторРасширеннаяПодсказка" id="23"/>
+			</Button>
+			<Button name="СписокИзменитьФорму" id="19">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+				<ExtendedTooltip name="СписокИзменитьФормуРасширеннаяПодсказка" id="25"/>
+			</Button>
+			<Button name="СписокСправка" id="20">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="СписокСправкаРасширеннаяПодсказка" id="26"/>
+			</Button>
+			<SearchStringAddition name="СтрокаПоиска" id="62">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Поиск</v8:content>
+					</v8:item>
+				</Title>
+				<ContextMenu name="СтрокаПоискаКонтекстноеМеню" id="63"/>
+				<ExtendedTooltip name="СтрокаПоискаРасширеннаяПодсказка" id="64"/>
+			</SearchStringAddition>
+			<SearchControlAddition name="УправлениеПоиском" id="65">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дополнение1</v8:content>
+					</v8:item>
+				</Title>
+				<ContextMenu name="УправлениеПоискомКонтекстноеМеню" id="66"/>
+				<ExtendedTooltip name="УправлениеПоискомРасширеннаяПодсказка" id="67"/>
+			</SearchControlAddition>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="37"/>
+		</UsualGroup>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>Top</CommandBarLocation>
+			<ChoiceMode>true</ChoiceMode>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="27"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="38">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="40"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="41">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="42"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="44">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="СписокПанельДействийВыделенныхСтрок" id="68"/>
+			<Events>
+				<Event name="ChoiceProcessing">СписокОбработкаВыбора</Event>
+				<Event name="NewWriteProcessing">СписокОбработкаЗаписиНового</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Наименование" id="4">
+					<DataPath>Список.Description</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="28"/>
+					<SelectedItemsActionsPanel name="НаименованиеПанельДействийВыделенныхСтрок" id="69"/>
+				</LabelField>
+				<LabelField name="Код" id="6">
+					<DataPath>Список.Code</DataPath>
+					<Width>5</Width>
+					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="29"/>
+					<SelectedItemsActionsPanel name="КодПанельДействийВыделенныхСтрок" id="70"/>
+				</LabelField>
+				<LabelField name="КодАльфа2" id="8">
+					<DataPath>Список.КодАльфа2</DataPath>
+					<Width>10</Width>
+					<ContextMenu name="КодАльфа2КонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="КодАльфа2РасширеннаяПодсказка" id="30"/>
+					<SelectedItemsActionsPanel name="КодАльфа2ПанельДействийВыделенныхСтрок" id="71"/>
+				</LabelField>
+				<LabelField name="КодАльфа3" id="10">
+					<DataPath>Список.КодАльфа3</DataPath>
+					<Width>10</Width>
+					<ContextMenu name="КодАльфа3КонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="КодАльфа3РасширеннаяПодсказка" id="31"/>
+					<SelectedItemsActionsPanel name="КодАльфа3ПанельДействийВыделенныхСтрок" id="72"/>
+				</LabelField>
+				<CheckBoxField name="УчастникЕАЭС" id="57">
+					<DataPath>Список.УчастникЕАЭС</DataPath>
+					<Enabled>false</Enabled>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УчастникЕАЭСКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="УчастникЕАЭСРасширеннаяПодсказка" id="59"/>
+					<SelectedItemsActionsPanel name="УчастникЕАЭСПанельДействийВыделенныхСтрок" id="73"/>
+				</CheckBoxField>
+				<LabelField name="НаименованиеПолное" id="12">
+					<DataPath>Список.НаименованиеПолное</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полное наименование</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="32"/>
+					<SelectedItemsActionsPanel name="НаименованиеПолноеПанельДействийВыделенныхСтрок" id="74"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="33">
+					<DataPath>Список.Ref</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="35"/>
+					<SelectedItemsActionsPanel name="СсылкаПанельДействийВыделенныхСтрок" id="75"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.СтраныМира</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОткрытьФормуКлассификатора" id="2">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимВыбора" id="3">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЭлементаОтбораСсылки" id="4">
+			<Type/>
+		</Attribute>
+		<Attribute name="ДанныеКлассификатораДоступны" id="5">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьКлассификатор" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Классификатор стран (ОКСМ)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть классификатор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьКлассификатор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьИзКлассификатора" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить из классификатора...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать страну выбрав из классификатора стран</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьИзКлассификатора</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ТолькоДанныеКлассификатора">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="РазрешитьДанныеКлассификатора">
+			<Type/>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="РежимВыбора">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.21">
+	<Item id="8cbaa30d-faab-45ad-880e-84f8b421f448">
+		<Name>СправочникПользователи</Name>
+		<Code/>
+		<Description>Контактная информация справочника "Пользователи"</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="35dccbf2-dcce-4160-91a0-9697dd21aa79">
+				<Name>ТелефонПользователя</Name>
+				<Code/>
+				<Description>Телефон</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b930f2d1-4c2b-4f78-a697-4b87e83c8dd0">
+				<Name>EmailПользователя</Name>
+				<Code/>
+				<Description>Электронная почта</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>

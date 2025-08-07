@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Документ" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<InputField name="Исполнитель" id="10">
+					<DataPath>Запись.Исполнитель</DataPath>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ИсполнительКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ИсполнительРасширеннаяПодсказка" id="16"/>
+					<SelectedItemsActionsPanel name="ИсполнительПанельДействийВыделенныхСтрок" id="29"/>
+				</InputField>
+				<InputField name="РольИсполнителя" id="1">
+					<DataPath>Запись.РольИсполнителя</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполняет роль</v8:content>
+						</v8:item>
+					</Title>
+					<Wrap>false</Wrap>
+					<ContextMenu name="РольИсполнителяКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="РольИсполнителяРасширеннаяПодсказка" id="17"/>
+					<SelectedItemsActionsPanel name="РольИсполнителяПанельДействийВыделенныхСтрок" id="30"/>
+					<Events>
+						<Event name="OnChange">РольИсполнителяПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ГруппаУточнение" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уточнение роли</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУточнениеРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<LabelDecoration name="Отступ" id="24">
+							<ContextMenu name="ОтступКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ОтступРасширеннаяПодсказка" id="26"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаОбъектыАдресации" id="22">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Объекты адресации</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОбъектыАдресацииРасширеннаяПодсказка" id="23"/>
+							<ChildItems>
+								<InputField name="ОсновнойОбъектАдресации" id="12">
+									<DataPath>Запись.ОсновнойОбъектАдресации</DataPath>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ОсновнойОбъектАдресацииКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="ОсновнойОбъектАдресацииРасширеннаяПодсказка" id="18"/>
+									<SelectedItemsActionsPanel name="ОсновнойОбъектАдресацииПанельДействийВыделенныхСтрок" id="31"/>
+								</InputField>
+								<InputField name="ДополнительныйОбъектАдресации" id="14">
+									<DataPath>Запись.ДополнительныйОбъектАдресации</DataPath>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ДополнительныйОбъектАдресацииКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="ДополнительныйОбъектАдресацииРасширеннаяПодсказка" id="19"/>
+									<SelectedItemsActionsPanel name="ДополнительныйОбъектАдресацииПанельДействийВыделенныхСтрок" id="32"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ИсполнителиЗадач</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВариантНазначения" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РольДоступнаДляВнешнихПользователей" id="3">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РольДоступнаДляПользователей" id="4">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

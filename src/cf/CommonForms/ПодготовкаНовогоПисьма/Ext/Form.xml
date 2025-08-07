@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<ChildItems>
+			<Button name="КнопкаПодготовить" id="29">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.Подготовить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подготовить...</v8:content>
+					</v8:item>
+				</Title>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="КнопкаПодготовитьРасширеннаяПодсказка" id="67"/>
+			</Button>
+			<Button name="КнопкаОтмена" id="30">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="КнопкаОтменаРасширеннаяПодсказка" id="68"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeLoadDataFromSettingsAtServer">ПередЗагрузкойДанныхИзНастроекНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Получатели" id="43">
+			<Representation>List</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<Height>10</Height>
+			<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Получатели</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получатели</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>Top</SearchStringLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПолучателиКонтекстноеМеню" id="44">
+				<ChildItems>
+					<ButtonGroup name="ПолучателиКонтекстноеМенюГруппаУправлениеВыбором" id="66">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Получатели контекстное меню группа управление выбором</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ПолучателиКонтекстноеМенюГруппаУправлениеВыборомРасширеннаяПодсказка" id="69"/>
+						<ChildItems>
+							<Button name="ПолучателиКонтекстноеМенюВыбратьВсех" id="63">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВыбратьВсехПолучателей</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выбрать всех получателей</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПолучателиКонтекстноеМенюВыбратьВсехРасширеннаяПодсказка" id="70"/>
+							</Button>
+							<Button name="ПолучателиКонтекстноеМенюОтменитьВыборДляВсех" id="64">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОтменитьВыборДляВсех</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Отменить выбор для всех</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПолучателиКонтекстноеМенюОтменитьВыборДляВсехРасширеннаяПодсказка" id="71"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="ПолучателиКонтекстноеМенюВывестиСписок" id="65">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Получатели.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="ПолучателиКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="72"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ПолучателиКоманднаяПанель" id="45">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПолучателиРасширеннаяПодсказка" id="73"/>
+			<SearchStringAddition name="ПолучателиSearchString" id="88">
+				<AdditionSource>
+					<Item>Получатели</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолучателиSearchStringContextMenu" id="89"/>
+				<ExtendedTooltip name="ПолучателиSearchStringExtendedTooltip" id="90"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПолучателиViewStatus" id="91">
+				<AdditionSource>
+					<Item>Получатели</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолучателиViewStatusContextMenu" id="92"/>
+				<ExtendedTooltip name="ПолучателиViewStatusExtendedTooltip" id="93"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПолучателиSearchControl" id="94">
+				<AdditionSource>
+					<Item>Получатели</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолучателиSearchControlContextMenu" id="95"/>
+				<ExtendedTooltip name="ПолучателиSearchControlExtendedTooltip" id="96"/>
+			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="ПолучателиПанельДействийВыделенныхСтрок" id="112"/>
+			<Events>
+				<Event name="BeforeRowChange">ПолучателиПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="ПолучателиВыбран" id="52">
+					<DataPath>Получатели.Выбран</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбран</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.ОтправитьЭлектронноеПисьмо</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</HeaderPicture>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<AutoEditMode>true</AutoEditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПолучателиВыбранКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ПолучателиВыбранРасширеннаяПодсказка" id="74"/>
+					<SelectedItemsActionsPanel name="ПолучателиВыбранПанельДействийВыделенныхСтрок" id="113"/>
+				</CheckBoxField>
+				<ColumnGroup name="ПолучателиГруппа" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получатели группа</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПолучателиГруппаРасширеннаяПодсказка" id="75"/>
+					<ChildItems>
+						<ColumnGroup name="ПолучателиГруппаПредставление" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получатели группа представление</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ПолучателиГруппаПредставлениеРасширеннаяПодсказка" id="76"/>
+							<ChildItems>
+								<InputField name="ПолучателиПредставление" id="48">
+									<DataPath>Получатели.Представление</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Получатель</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="ПолучателиПредставлениеКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ПолучателиПредставлениеРасширеннаяПодсказка" id="77"/>
+									<SelectedItemsActionsPanel name="ПолучателиПредставлениеПанельДействийВыделенныхСтрок" id="114"/>
+								</InputField>
+								<InputField name="ПолучателиПредставлениеАдреса" id="56">
+									<DataPath>Получатели.ПредставлениеАдреса</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>E-mail</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="ПолучателиПредставлениеАдресаКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ПолучателиПредставлениеАдресаРасширеннаяПодсказка" id="78"/>
+									<SelectedItemsActionsPanel name="ПолучателиПредставлениеАдресаПанельДействийВыделенныхСтрок" id="115"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="ПолучателиГруппаПояснение" id="62">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получатели группа пояснение</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПолучателиГруппаПояснениеРасширеннаяПодсказка" id="79"/>
+							<ChildItems>
+								<InputField name="ПолучателиПояснение" id="58">
+									<DataPath>Получатели.Пояснение</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пояснение</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoCellHeight>true</AutoCellHeight>
+									<ShowInHeader>false</ShowInHeader>
+									<AutoEditMode>true</AutoEditMode>
+									<MultiLine>true</MultiLine>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<ContextMenu name="ПолучателиПояснениеКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ПолучателиПояснениеРасширеннаяПодсказка" id="80"/>
+									<SelectedItemsActionsPanel name="ПолучателиПояснениеПанельДействийВыделенныхСтрок" id="116"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаВыборФорматов" id="31">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить печатную форму к письму в формате</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
+			<ExtendedTooltip name="ГруппаВыборФорматовРасширеннаяПодсказка" id="81"/>
+			<ChildItems>
+				<Table name="ВыбранныеФорматыСохранения" id="32">
+					<Representation>List</Representation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Height>10</Height>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<Header>false</Header>
+					<HorizontalLinesBWA>false</HorizontalLinesBWA>
+					<VerticalLinesBWA>false</VerticalLinesBWA>
+					<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ВыбранныеФорматыСохранения</DataPath>
+					<RowPictureDataPath>ВыбранныеФорматыСохранения.Picture</RowPictureDataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбранные форматы сохранения</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>Pickup</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<ContextMenu name="ВыбранныеФорматыСохраненияКонтекстноеМеню" id="33"/>
+					<AutoCommandBar name="ВыбранныеФорматыСохраненияКоманднаяПанель" id="34">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ВыбранныеФорматыСохраненияРасширеннаяПодсказка" id="82"/>
+					<SearchStringAddition name="ВыбранныеФорматыСохраненияSearchString" id="97">
+						<AdditionSource>
+							<Item>ВыбранныеФорматыСохранения</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВыбранныеФорматыСохраненияSearchStringContextMenu" id="98"/>
+						<ExtendedTooltip name="ВыбранныеФорматыСохраненияSearchStringExtendedTooltip" id="99"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ВыбранныеФорматыСохраненияViewStatus" id="100">
+						<AdditionSource>
+							<Item>ВыбранныеФорматыСохранения</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВыбранныеФорматыСохраненияViewStatusContextMenu" id="101"/>
+						<ExtendedTooltip name="ВыбранныеФорматыСохраненияViewStatusExtendedTooltip" id="102"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ВыбранныеФорматыСохраненияSearchControl" id="103">
+						<AdditionSource>
+							<Item>ВыбранныеФорматыСохранения</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ВыбранныеФорматыСохраненияSearchControlContextMenu" id="104"/>
+						<ExtendedTooltip name="ВыбранныеФорматыСохраненияSearchControlExtendedTooltip" id="105"/>
+					</SearchControlAddition>
+					<SelectedItemsActionsPanel name="ВыбранныеФорматыСохраненияПанельДействийВыделенныхСтрок" id="118"/>
+					<ChildItems>
+						<CheckBoxField name="ВыбранныеФорматыСохраненияПометка" id="37">
+							<DataPath>ВыбранныеФорматыСохранения.Check</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пометка</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыбранныеФорматыСохраненияПометкаКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ВыбранныеФорматыСохраненияПометкаРасширеннаяПодсказка" id="83"/>
+							<SelectedItemsActionsPanel name="ВыбранныеФорматыСохраненияПометкаПанельДействийВыделенныхСтрок" id="119"/>
+						</CheckBoxField>
+						<InputField name="ВыбранныеФорматыСохраненияЗначение" id="35">
+							<DataPath>ВыбранныеФорматыСохранения.Value</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Значение</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="ВыбранныеФорматыСохраненияЗначениеКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ВыбранныеФорматыСохраненияЗначениеРасширеннаяПодсказка" id="84"/>
+							<SelectedItemsActionsPanel name="ВыбранныеФорматыСохраненияЗначениеПанельДействийВыделенныхСтрок" id="120"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДополнительныеПараметры" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительные параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДополнительныеПараметрыРасширеннаяПодсказка" id="85"/>
+			<ChildItems>
+				<LabelField name="ФорматВложений" id="54">
+					<DataPath>ФорматВложений</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формат вложений</v8:content>
+						</v8:item>
+					</Title>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="ФорматВложенийКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ФорматВложенийРасширеннаяПодсказка" id="86"/>
+					<SelectedItemsActionsPanel name="ФорматВложенийПанельДействийВыделенныхСтрок" id="122"/>
+					<Events>
+						<Event name="Click">ФорматВложенийНажатие</Event>
+					</Events>
+				</LabelField>
+				<CheckBoxField name="УпаковатьВАрхив" id="40">
+					<DataPath>УпаковатьВАрхив</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно упаковать в архив (.zip)</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УпаковатьВАрхивКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="УпаковатьВАрхивРасширеннаяПодсказка" id="87"/>
+					<SelectedItemsActionsPanel name="УпаковатьВАрхивПанельДействийВыделенныхСтрок" id="123"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПереводитьИменаФайловВТранслит" id="106">
+					<DataPath>ПереводитьИменаФайловВТранслит</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Транслитерировать имена файлов</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сохраненные файлы будут иметь имена, содержащие только латинские буквы и цифры, для возможности переноса между различными операционными системами. Например, файл "Документ.txt" будет сохранен с именем "Document.txt".</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПереводитьИменаФайловВТранслитКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="ПереводитьИменаФайловВТранслитРасширеннаяПодсказка" id="108"/>
+					<SelectedItemsActionsPanel name="ПереводитьИменаФайловВТранслитПанельДействийВыделенныхСтрок" id="124"/>
+				</CheckBoxField>
+				<CheckBoxField name="Подписать" id="109">
+					<DataPath>Подписать</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подписать</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПодписатьКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="ПодписатьРасширеннаяПодсказка" id="111"/>
+					<SelectedItemsActionsPanel name="ПодписатьПанельДействийВыделенныхСтрок" id="125"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВыбранныеФорматыСохранения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные форматы сохранения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВыбранныеФорматыСохранения</Field>
+			</Save>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="УпаковатьВАрхив" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковать в архив (.zip)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>УпаковатьВАрхив</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Получатели" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получатели</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Адрес" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получатель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИсточникКонтактнойИнформации" id="3">
+					<Type>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Выбран" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбран</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидПочтовогоАдреса" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеАдреса" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>E-mail</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пояснение" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пояснение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ФорматВложений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формат вложений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПереводитьИменаФайловВТранслит" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Транслитерировать имена файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПереводитьИменаФайловВТранслит</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Подписать" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Подписать</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьЭлектронныеПодписи</Item>
+			</FunctionalOptions>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Подготовить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подготовить...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к форме создания нового письма</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выбрать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьВсехПолучателей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать всех получателей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать всех получателей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьВсехПолучателей</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтменитьВыборДляВсех" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить выбор для всех</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить выбор для всех</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтменитьВыборДляВсех</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Получатели">
+			<Type/>
+		</Parameter>
+		<Parameter name="ОграничениеФорматовСохранения">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ПропуститьВыборФорматаВложений">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

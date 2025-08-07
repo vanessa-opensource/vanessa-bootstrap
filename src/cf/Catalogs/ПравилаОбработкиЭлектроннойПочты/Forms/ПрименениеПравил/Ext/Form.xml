@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаДляПапки" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для папки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДляПапкиРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<InputField name="ДляПисемВПапке" id="8">
+					<DataPath>ДляПисемВПапке</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для писем в папке</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">УчетнаяЗапись</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="ДляПисемВПапкеКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ДляПисемВПапкеРасширеннаяПодсказка" id="24"/>
+					<SelectedItemsActionsPanel name="ДляПисемВПапкеПанельДействийВыделенныхСтрок" id="49"/>
+				</InputField>
+				<CheckBoxField name="ВключаяПодчиненные" id="11">
+					<DataPath>ВключаяПодчиненные</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включая подчиненные</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВключаяПодчиненныеКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ВключаяПодчиненныеРасширеннаяПодсказка" id="25"/>
+					<SelectedItemsActionsPanel name="ВключаяПодчиненныеПанельДействийВыделенныхСтрок" id="50"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ПрименяемыеПравила" id="1">
+			<Representation>List</Representation>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ПрименяемыеПравила</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применяемые правила</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПрименяемыеПравилаКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ПрименяемыеПравилаКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="Применить" id="13">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.Command.Применить</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Применить</v8:content>
+							</v8:item>
+						</Title>
+						<ButtonImportance>Main</ButtonImportance>
+						<ExtendedTooltip name="ПрименитьРасширеннаяПодсказка" id="26"/>
+					</Button>
+					<ButtonGroup name="ПрименяемыеПравилаГруппа" id="45">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Применяемые правила группа</v8:content>
+							</v8:item>
+						</Title>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ПрименяемыеПравилаГруппаРасширеннаяПодсказка" id="46"/>
+						<ChildItems>
+							<Button name="ПрименяемыеПравилаУстановитьВсеПрименить" id="16">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПрименитьВсеПравила</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Применить все правила</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПрименяемыеПравилаУстановитьВсеПрименитьРасширеннаяПодсказка" id="27"/>
+							</Button>
+							<Button name="ПрименяемыеПравилаСнятьВсеПрименить" id="15">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.НеПрименятьВсеПравила</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Не применять все правила</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПрименяемыеПравилаСнятьВсеПрименитьРасширеннаяПодсказка" id="28"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="ПрименяемыеПравилаСправочникПравилаОбработкиЭлектроннойПочтыОткрытьПоЗначению1" id="22">
+						<Type>CommandBarButton</Type>
+						<CommandName>Catalog.ПравилаОбработкиЭлектроннойПочты.StandardCommand.OpenByValue</CommandName>
+						<DataPath>УчетнаяЗапись</DataPath>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Электронная почта</v8:content>
+							</v8:item>
+						</Title>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ПрименяемыеПравилаСправочникПравилаОбработкиЭлектроннойПочтыОткрытьПоЗначению1РасширеннаяПодсказка" id="29"/>
+					</Button>
+					<ButtonGroup name="ГруппаСтандартныеКоманды" id="14">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Стандартные команды</v8:content>
+							</v8:item>
+						</Title>
+						<CommandSource>Item.ПрименяемыеПравила</CommandSource>
+						<ExtendedTooltip name="ГруппаСтандартныеКомандыРасширеннаяПодсказка" id="30"/>
+					</ButtonGroup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПрименяемыеПравилаРасширеннаяПодсказка" id="31"/>
+			<SearchStringAddition name="ПрименяемыеПравилаСтрокаПоиска" id="36">
+				<AdditionSource>
+					<Item>ПрименяемыеПравила</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПрименяемыеПравилаСтрокаПоискаКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="ПрименяемыеПравилаСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПрименяемыеПравилаСостояниеПросмотра" id="39">
+				<AdditionSource>
+					<Item>ПрименяемыеПравила</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПрименяемыеПравилаСостояниеПросмотраКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="ПрименяемыеПравилаСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПрименяемыеПравилаУправлениеПоиском" id="42">
+				<AdditionSource>
+					<Item>ПрименяемыеПравила</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПрименяемыеПравилаУправлениеПоискомКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="ПрименяемыеПравилаУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="ПрименяемыеПравилаПанельДействийВыделенныхСтрок" id="51"/>
+			<ChildItems>
+				<CheckBoxField name="ПрименяемыеПравилаПрименять" id="6">
+					<DataPath>ПрименяемыеПравила.Применять</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Применять</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Признак применения правила</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderPicture>
+						<xr:Ref>StdPicture.CheckAll</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<AutoEditMode>true</AutoEditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПрименяемыеПравилаПрименятьКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ПрименяемыеПравилаПрименятьРасширеннаяПодсказка" id="32"/>
+					<SelectedItemsActionsPanel name="ПрименяемыеПравилаПрименятьПанельДействийВыделенныхСтрок" id="52"/>
+				</CheckBoxField>
+				<InputField name="ПрименяемыеПравилаПравило" id="4">
+					<DataPath>ПрименяемыеПравила.Правило</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Условие</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ChoiceButton>false</ChoiceButton>
+					<OpenButton>true</OpenButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ПрименяемыеПравилаПравилоКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ПрименяемыеПравилаПравилоРасширеннаяПодсказка" id="33"/>
+					<SelectedItemsActionsPanel name="ПрименяемыеПравилаПравилоПанельДействийВыделенныхСтрок" id="53"/>
+				</InputField>
+				<InputField name="ПрименяемыеПравилаПеремещатьВПапку" id="19">
+					<DataPath>ПрименяемыеПравила.ПомещатьВПапку</DataPath>
+					<Enabled>false</Enabled>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Помещать в папку</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ChoiceButton>false</ChoiceButton>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="ПрименяемыеПравилаПеремещатьВПапкуКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ПрименяемыеПравилаПеремещатьВПапкуРасширеннаяПодсказка" id="34"/>
+					<SelectedItemsActionsPanel name="ПрименяемыеПравилаПеремещатьВПапкуПанельДействийВыделенныхСтрок" id="54"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="ПредставлениеОтбора" id="17">
+			<DataPath>Items.ПрименяемыеПравила.CurrentData.ПредставлениеОтбора</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>2</Height>
+			<VerticalStretch>false</VerticalStretch>
+			<MultiLine>true</MultiLine>
+			<ExtendedEdit>false</ExtendedEdit>
+			<ContextMenu name="ПредставлениеОтбораКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ПредставлениеОтбораРасширеннаяПодсказка" id="35"/>
+			<SelectedItemsActionsPanel name="ПредставлениеОтбораПанельДействийВыделенныхСтрок" id="56"/>
+		</InputField>
+		<Button name="ПрименяемыеПравилаСправочникПравилаОбработкиЭлектроннойПочтыОткрытьПоЗначению2" id="47">
+			<Type>Hyperlink</Type>
+			<CommandName>Catalog.ПравилаОбработкиЭлектроннойПочты.StandardCommand.OpenByValue</CommandName>
+			<DataPath>УчетнаяЗапись</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронная почта</v8:content>
+				</v8:item>
+			</Title>
+			<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+			<ExtendedTooltip name="ПрименяемыеПравилаСправочникПравилаОбработкиЭлектроннойПочтыОткрытьПоЗначению2РасширеннаяПодсказка" id="48"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПрименяемыеПравила" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применяемые правила</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Правило" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правило</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПравилаОбработкиЭлектроннойПочты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Применять" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Применять</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеОтбора" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление отбора</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПомещатьВПапку" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Помещать в папку</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПапкиЭлектронныхПисем</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="УчетнаяЗапись" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронная почта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДляПисемВПапке" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для писем в папке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПапкиЭлектронныхПисем</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВключаяПодчиненные" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включая подчиненные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВключаяПодчиненные</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТекстСообщенияПользователю" id="5">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Применить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Применить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПрименитьВсеПравила" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить все правила</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить все правила</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПрименитьВсеПравила</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НеПрименятьВсеПравила" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не применять все правила</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не применять все правила</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НеПрименятьВсеПравила</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="УчетнаяЗапись">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ДляПисемВПапке">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПапкиЭлектронныхПисем</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

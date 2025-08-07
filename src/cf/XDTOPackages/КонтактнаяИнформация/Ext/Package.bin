@@ -1,0 +1,38 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.v8.1c.ru/ssl/contactinfo">
+	<objectType name="КонтактнаяИнформация">
+		<property name="Представление" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0" nillable="true" form="Element"/>
+		<property name="Состав"/>
+	</objectType>
+	<objectType name="Адрес">
+		<property name="Страна" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="Состав" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="НациональныйАдрес" ordered="false">
+		<property name="Адрес_по_документу" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="НомерТелефона">
+		<property name="КодСтраны" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+		<property name="КодГорода" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+		<property name="Номер" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+		<property name="Добавочный" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+	</objectType>
+	<objectType name="НомерФакса">
+		<property name="КодСтраны" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+		<property name="КодГорода" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+		<property name="Номер" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+		<property name="Добавочный" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+	</objectType>
+	<objectType name="ЭлектроннаяПочта">
+		<property name="Значение" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+	</objectType>
+	<objectType name="ВебСайт">
+		<property name="Значение" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+	</objectType>
+	<objectType name="Прочее">
+		<property name="Значение" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+	</objectType>
+	<objectType name="Skype">
+		<property name="Значение" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+	</objectType>
+</package>

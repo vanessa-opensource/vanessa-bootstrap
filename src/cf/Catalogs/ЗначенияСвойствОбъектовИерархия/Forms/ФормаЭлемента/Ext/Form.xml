@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<Wrap>false</Wrap>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="9"/>
+			<SelectedItemsActionsPanel name="НаименованиеПанельДействийВыделенныхСтрок" id="16"/>
+		</InputField>
+		<InputField name="ПолноеНаименование" id="13">
+			<DataPath>Объект.ПолноеНаименование</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<ContextMenu name="ПолноеНаименованиеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПолноеНаименованиеРасширеннаяПодсказка" id="15"/>
+			<SelectedItemsActionsPanel name="ПолноеНаименованиеПанельДействийВыделенныхСтрок" id="17"/>
+		</InputField>
+		<InputField name="Родитель" id="5">
+			<DataPath>Объект.Parent</DataPath>
+			<Wrap>false</Wrap>
+			<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="10"/>
+			<SelectedItemsActionsPanel name="РодительПанельДействийВыделенныхСтрок" id="18"/>
+		</InputField>
+		<InputField name="Вес" id="7">
+			<DataPath>Объект.Вес</DataPath>
+			<ExtendedEdit>true</ExtendedEdit>
+			<ChooseType>false</ChooseType>
+			<ContextMenu name="ВесКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВесРасширеннаяПодсказка" id="11"/>
+			<SelectedItemsActionsPanel name="ВесПанельДействийВыделенныхСтрок" id="19"/>
+		</InputField>
+		<InputField name="Владелец" id="3">
+			<DataPath>Объект.Owner</DataPath>
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<Wrap>false</Wrap>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="12"/>
+			<SelectedItemsActionsPanel name="ВладелецПанельДействийВыделенныхСтрок" id="20"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЗначенияСвойствОбъектовИерархия</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="ПоказатьВес">
+			<Type/>
+		</Parameter>
+		<Parameter name="СкрытьВладельца">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

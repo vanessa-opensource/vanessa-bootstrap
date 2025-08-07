@@ -1,0 +1,1217 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<Customizable>false</Customizable>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="2022">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заголовок</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокРасширеннаяПодсказка" id="2037"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела" id="2023">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>78</MaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Администрирование пользователей, настройка групп доступа, предоставление доступа для внешних пользователей, управление пользовательскими настройками.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<ContextMenu name="ОписаниеРазделаКонтекстноеМеню" id="2024"/>
+					<ExtendedTooltip name="ОписаниеРазделаРасширеннаяПодсказка" id="2038"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаСправка" id="2025">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справка</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСправкаРасширеннаяПодсказка" id="2040"/>
+					<ChildItems>
+						<Button name="Справка" id="2026">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="2041"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПользователи" id="830">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаПользователиРасширеннаяПодсказка" id="2042"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПользователиКолонки" id="2279">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователи колонки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПользователиКолонкиРасширеннаяПодсказка" id="2280"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПользователиЛеваяКолонка" id="1876">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользователи левая колонка</v8:content>
+								</v8:item>
+							</Title>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПользователиЛеваяКолонкаРасширеннаяПодсказка" id="2043"/>
+							<ChildItems>
+								<Button name="ОткрытьПользователи" id="831">
+									<Type>Hyperlink</Type>
+									<CommandName>Catalog.Пользователи.StandardCommand.OpenList</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьПользователиРасширеннаяПодсказка" id="2044">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Ведение списка пользователей, которые работают с приложением.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+								<CheckBoxField name="ИспользоватьГруппыПользователей" id="697">
+									<DataPath>НаборКонстант.ИспользоватьГруппыПользователей</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группы пользователей</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Объединение пользователей в группы.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьГруппыПользователейКонтекстноеМеню" id="698"/>
+									<ExtendedTooltip name="ИспользоватьГруппыПользователейРасширеннаяПодсказка" id="2047"/>
+									<SelectedItemsActionsPanel name="ИспользоватьГруппыПользователейПанельДействийВыделенныхСтрок" id="2319"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьГруппыПользователейПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПользователиПраваяКолонка" id="2241">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользователи правая колонка</v8:content>
+								</v8:item>
+							</Title>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПользователиПраваяКолонкаРасширеннаяПодсказка" id="2242"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНастройкиВходаПользователей" id="2142">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки входа пользователей</v8:content>
+										</v8:item>
+									</Title>
+									<Width>43</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиВходаПользователейРасширеннаяПодсказка" id="2143"/>
+									<ChildItems>
+										<Button name="НастройкиВхода" id="2196">
+											<Type>Hyperlink</Type>
+											<CommandName>CommonForm.НастройкиВходаПользователей.StandardCommand.Open</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройки входа</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ExtendedTooltip name="НастройкиВходаРасширеннаяПодсказка" id="2197">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сложность и смена паролей, ограничение работы неактивных пользователей.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<Button name="ВосстановлениеПаролей" id="2243">
+									<Type>Hyperlink</Type>
+									<CommandName>CommonForm.ВосстановлениеПаролей.StandardCommand.Open</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ВосстановлениеПаролейРасширеннаяПодсказка" id="2244">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Помощь при входе, восстановление паролей пользователей.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКонтрольРаботыПользователей" id="2290">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контроль работы пользователей</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКонтрольРаботыПользователейРасширеннаяПодсказка" id="2291"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКонтрольРаботыПользователейЛеваяКолонка" id="2292">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Контроль работы пользователей левая колонка</v8:content>
+								</v8:item>
+							</Title>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКонтрольРаботыПользователейЛеваяКолонкаРасширеннаяПодсказка" id="2293"/>
+							<ChildItems>
+								<CheckBoxField name="РегистрироватьИзмененияПравДоступа" id="2272">
+									<DataPath>НаборКонстант.РегистрироватьИзмененияПравДоступа</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РегистрироватьИзмененияПравДоступаКонтекстноеМеню" id="2273"/>
+									<ExtendedTooltip name="РегистрироватьИзмененияПравДоступаРасширеннаяПодсказка" id="2274">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Запись дополнительных событий в журнал регистрации при изменении участников групп пользователей, участников и разрешенных значений групп доступа, ролей профилей и прав ролей.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<SelectedItemsActionsPanel name="РегистрироватьИзмененияПравДоступаПанельДействийВыделенныхСтрок" id="2320"/>
+									<Events>
+										<Event name="OnChange">РегистрироватьИзмененияПравДоступаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<PictureDecoration name="ГруппаКонтрольРаботыПользователейЛеваяКолонкаВертикальныйОтступ" id="2316">
+									<Visible>false</Visible>
+									<Height>1</Height>
+									<ContextMenu name="ГруппаКонтрольРаботыПользователейЛеваяКолонкаВертикальныйОтступКонтекстноеМеню" id="2317"/>
+									<ExtendedTooltip name="ГруппаКонтрольРаботыПользователейЛеваяКолонкаВертикальныйОтступРасширеннаяПодсказка" id="2318"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКонтрольРаботыПользователейПраваяКолонка" id="2294">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Контроль работы пользователей правая колонка</v8:content>
+								</v8:item>
+							</Title>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКонтрольРаботыПользователейПраваяКолонкаРасширеннаяПодсказка" id="2295"/>
+							<ChildItems>
+								<Button name="КонтрольРаботыПользователей" id="2277">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.КонтрольРаботыПользователей</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Контроль работы пользователей</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="КонтрольРаботыПользователейРасширеннаяПодсказка" id="2278">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Открывает отчеты администратора с группой отчетов "Контроль работы пользователей" для анализа работы, настроек и прав пользователей.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВнешниеПользователи" id="2296">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внешние пользователи</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ExtendedTooltip name="ГруппаВнешниеПользователиРасширеннаяПодсказка" id="2297"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВнешниеПользователиЛеваяКолонка" id="2298">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Внешние пользователи левая колонка</v8:content>
+								</v8:item>
+							</Title>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВнешниеПользователиЛеваяКолонкаРасширеннаяПодсказка" id="2299"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьВнешнихПользователей" id="699">
+									<DataPath>НаборКонстант.ИспользоватьВнешнихПользователей</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Разрешить доступ внешним пользователям</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Предоставление удаленного доступа партнерам к приложению.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьВнешнихПользователейКонтекстноеМеню" id="700"/>
+									<ExtendedTooltip name="ИспользоватьВнешнихПользователейРасширеннаяПодсказка" id="2072"/>
+									<SelectedItemsActionsPanel name="ИспользоватьВнешнихПользователейПанельДействийВыделенныхСтрок" id="2321"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьВнешнихПользователейПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаВнешниеПользователиПраваяКолонка" id="2314">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Внешние пользователи правая колонка</v8:content>
+								</v8:item>
+							</Title>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВнешниеПользователиПраваяКолонкаРасширеннаяПодсказка" id="2315"/>
+							<ChildItems>
+								<Button name="ОткрытьВнешниеПользователи" id="2031">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ВнешниеПользователи</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Внешние пользователи</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьВнешниеПользователиРасширеннаяПодсказка" id="2075">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Ведение списка внешних пользователей, которым предоставлен удаленный доступ к приложению.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаГруппыДоступа" id="2174">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы доступа</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаГруппыДоступаРасширеннаяПодсказка" id="2175"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаГруппыДоступаПрофилиИОграничениеНаУровнеЗаписей" id="838">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группы доступа профили и ограничение на уровне записей</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаГруппыДоступаПрофилиИОграничениеНаУровнеЗаписейРасширеннаяПодсказка" id="2049"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаГруппыДоступаИОграничениеНаУровнеЗаписей" id="2176">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы доступа и ограничение на уровне записей</v8:content>
+								</v8:item>
+							</Title>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаГруппыДоступаИОграничениеНаУровнеЗаписейРасширеннаяПодсказка" id="2177"/>
+							<ChildItems>
+								<Button name="ОткрытьГруппыДоступа" id="849">
+									<Type>Hyperlink</Type>
+									<CommandName>Catalog.ГруппыДоступа.StandardCommand.OpenList</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьГруппыДоступаРасширеннаяПодсказка" id="2052">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Групповая настройка прав доступа.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+								<CheckBoxField name="ОграничиватьДоступНаУровнеЗаписей" id="701">
+									<DataPath>НаборКонстант.ОграничиватьДоступНаУровнеЗаписей</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расширенная настройка, позволяющая максимально гибко настраивать права доступа к справочникам, документам и другим данным приложения в предусмотренных разрезах.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОграничиватьДоступНаУровнеЗаписейКонтекстноеМеню" id="702"/>
+									<ExtendedTooltip name="ОграничиватьДоступНаУровнеЗаписейРасширеннаяПодсказка" id="2058">
+										<AutoMaxWidth>false</AutoMaxWidth>
+									</ExtendedTooltip>
+									<SelectedItemsActionsPanel name="ОграничиватьДоступНаУровнеЗаписейПанельДействийВыделенныхСтрок" id="2322"/>
+									<Events>
+										<Event name="OnChange">ОграничиватьДоступНаУровнеЗаписейПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПрофилиГруппДоступа" id="844">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Профили групп доступа</v8:content>
+								</v8:item>
+							</Title>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПрофилиГруппДоступаРасширеннаяПодсказка" id="2054"/>
+							<ChildItems>
+								<Button name="ОткрытьПрофилиГруппДоступа" id="845">
+									<Type>Hyperlink</Type>
+									<CommandName>Catalog.ПрофилиГруппДоступа.StandardCommand.OpenList</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьПрофилиГруппДоступаРасширеннаяПодсказка" id="2055">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Шаблоны настроек прав доступа пользователей.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+								<InputField name="ОграничиватьДоступНаУровнеЗаписейУниверсально" id="2236">
+									<DataPath>НаборКонстант.ОграничиватьДоступНаУровнеЗаписейУниверсально</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вариант работы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>24</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Стандартный</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:boolean">false</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Производительный</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:boolean">true</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ОграничиватьДоступНаУровнеЗаписейУниверсальноКонтекстноеМеню" id="2237"/>
+									<ExtendedTooltip name="ОграничиватьДоступНаУровнеЗаписейУниверсальноРасширеннаяПодсказка" id="2238">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Производительный вариант рекомендуется выбирать для клиент-серверной информационной базы,
+где он значительно эффективнее стандартного варианта. 
+
+Однако в многопользовательской файловой информационной базе он может ограничивать интенсивность
+одновременной работы нескольких пользователей, поэтому может потребоваться стандартный вариант.
+
+При этом если в файловой базе работает один пользователь, либо данные вводятся несколькими пользователями
+не интенсивно, то производительный вариант не накладывает каких-либо дополнительных ограничений и
+ускорит просмотр списков и формирование отчетов по сравнению со стандартным вариантом.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<SelectedItemsActionsPanel name="ОграничиватьДоступНаУровнеЗаписейУниверсальноПанельДействийВыделенныхСтрок" id="2323"/>
+									<Events>
+										<Event name="OnChange">ОграничиватьДоступНаУровнеЗаписейУниверсальноПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Button name="ОбновлениеДоступаНаУровнеЗаписей" id="2219">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОбновлениеДоступаНаУровнеЗаписей</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обновление доступа на уровне записей</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОбновлениеДоступаНаУровнеЗаписейРасширеннаяПодсказка" id="2220"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПерсональныеНастройкиПользователей" id="2194">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Персональные настройки пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаПерсональныеНастройкиПользователейРасширеннаяПодсказка" id="2195"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРаботаСНастройкамиПользователей" id="859">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Работа с настройками пользователей</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРаботаСНастройкамиПользователейРасширеннаяПодсказка" id="2060"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКопированиеНастроекПользователей" id="1999">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Копирование настроек пользователей</v8:content>
+								</v8:item>
+							</Title>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКопированиеНастроекПользователейРасширеннаяПодсказка" id="2061"/>
+							<ChildItems>
+								<Button name="КопированиеНастроекПользователей" id="2008">
+									<Type>Hyperlink</Type>
+									<CommandName>DataProcessor.НастройкиПользователей.Command.КопированиеНастроекПользователей</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="КопированиеНастроекПользователейРасширеннаяПодсказка" id="2062">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Копирование пользовательских настроек между учетными записями.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиПользователей" id="2000">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки пользователей</v8:content>
+								</v8:item>
+							</Title>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиПользователейРасширеннаяПодсказка" id="2064"/>
+							<ChildItems>
+								<Button name="НастройкиПользователей" id="2010">
+									<Type>Hyperlink</Type>
+									<CommandName>DataProcessor.НастройкиПользователей.StandardCommand.Open</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="НастройкиПользователейРасширеннаяПодсказка" id="2065">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Управление пользовательскими настройками отчетов, внешнего вида приложения и прочими настройками.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОчисткаНастроекПользователей" id="2017">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очистка настроек пользователей</v8:content>
+						</v8:item>
+					</Title>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОчисткаНастроекПользователейРасширеннаяПодсказка" id="2067"/>
+					<ChildItems>
+						<Button name="ОчисткаНастроекПользователей" id="2009">
+							<Type>Hyperlink</Type>
+							<CommandName>DataProcessor.НастройкиПользователей.Command.ОчисткаНастроекПользователей</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОчисткаНастроекПользователейРасширеннаяПодсказка" id="2068">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Удаление настроек у всех или выбранных пользователей.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДатыЗапретаИзменения" id="2198">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Даты запрета изменения</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаДатыЗапретаИзмененияРасширеннаяПодсказка" id="2199"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДатыЗапретаИзмененияИспользование" id="2200">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Даты запрета изменения использование</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрет изменения данных прошлых периодов.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДатыЗапретаИзмененияИспользованиеРасширеннаяПодсказка" id="2201"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьДатыЗапретаИзменения" id="2202">
+							<DataPath>НаборКонстант.ИспользоватьДатыЗапретаИзменения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Даты запрета изменения</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запрет изменения данных прошлых периодов.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьДатыЗапретаИзмененияКонтекстноеМеню" id="2203"/>
+							<ExtendedTooltip name="ИспользоватьДатыЗапретаИзмененияРасширеннаяПодсказка" id="2204"/>
+							<SelectedItemsActionsPanel name="ИспользоватьДатыЗапретаИзмененияПанельДействийВыделенныхСтрок" id="2324"/>
+							<Events>
+								<Event name="OnChange">Подключаемый_ПриИзмененииРеквизита</Event>
+							</Events>
+						</CheckBoxField>
+						<Button name="НастроитьДатыЗапретаИзменения" id="2207">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.НастроитьДатыЗапретаИзменения</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настроить</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="НастроитьДатыЗапретаИзмененияРасширеннаяПодсказка" id="2208">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Настроить даты запрета изменения</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗащитаПерсональныхДанных" id="2209">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Защита персональных данных</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаЗащитаПерсональныхДанныхРасширеннаяПодсказка" id="2210"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНастройкиЗащитыПерсональныхДанных" id="2221">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки защиты персональных данных</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>WeakSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиЗащитыПерсональныхДанныхРасширеннаяПодсказка" id="2222"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройкиРегистрацииСобытийДоступаКПерсональнымДанным" id="2211">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки регистрации событий доступа к персональным данным</v8:content>
+								</v8:item>
+							</Title>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиРегистрацииСобытийДоступаКПерсональнымДаннымРасширеннаяПодсказка" id="2212"/>
+							<ChildItems>
+								<Button name="НастройкиРегистрацииСобытийДоступаКПерсональнымДанным" id="2213">
+									<Type>Hyperlink</Type>
+									<CommandName>CommonForm.НастройкиРегистрацииСобытийДоступаКПерсональнымДанным.StandardCommand.Open</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="НастройкиРегистрацииСобытийДоступаКПерсональнымДаннымРасширеннаяПодсказка" id="2214">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Регистрация событий доступа в соответствии с требованиями Федерального закона от 27.07.2006 N152-ФЗ "О персональных данных".</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУничтожениеПерсональныхДанныхИспользование" id="2223">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уничтожение персональных данных использование</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУничтожениеПерсональныхДанныхИспользованиеРасширеннаяПодсказка" id="2224"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаДнейДоУничтожения" id="2225">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дней до уничтожения</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Причиной уничтожения данных может быть истечение срока действия согласия субъекта или его отсутствие.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Width>43</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДнейДоУничтоженияРасширеннаяПодсказка" id="2226"/>
+									<ChildItems>
+										<CheckBoxField name="ИспользоватьУничтожениеПерсональныхДанных" id="2227">
+											<DataPath>НаборКонстант.ИспользоватьСкрытиеПерсональныхДанныхСубъектов</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Уничтожать персональные данные</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьУничтожениеПерсональныхДанныхКонтекстноеМеню" id="2228"/>
+											<ExtendedTooltip name="ИспользоватьУничтожениеПерсональныхДанныхРасширеннаяПодсказка" id="2229"/>
+											<SelectedItemsActionsPanel name="ИспользоватьУничтожениеПерсональныхДанныхПанельДействийВыделенныхСтрок" id="2325"/>
+											<Events>
+												<Event name="OnChange">Подключаемый_НастройкиУничтоженияПДнПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<PictureDecoration name="ДекорацияОжиданиеИзмененияИспользованияУничтоженияПДн" id="2233">
+											<Visible>false</Visible>
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация ожидание изменения использования уничтожения ПДн</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.НезавершившаясяПроверка</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияОжиданиеИзмененияИспользованияУничтоженияПДнКонтекстноеМеню" id="2234"/>
+											<ExtendedTooltip name="ДекорацияОжиданиеИзмененияИспользованияУничтоженияПДнРасширеннаяПодсказка" id="2235"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОбработкаЗащитаПерсональныхДанных" id="2215">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Журнал доступа к персональным данным</v8:content>
+						</v8:item>
+					</Title>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОбработкаЗащитаПерсональныхДанныхРасширеннаяПодсказка" id="2216"/>
+					<ChildItems>
+						<Button name="ОбработкаЗащитаПерсональныхДанных" id="2217">
+							<Type>Hyperlink</Type>
+							<CommandName>DataProcessor.ЗащитаПерсональныхДанных.Command.ЗащитаПерсональныхДанных</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОбработкаЗащитаПерсональныхДанныхРасширеннаяПодсказка" id="2218">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Просмотр обращений к персональным данным выбранных объектов приложения.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаАудитДоступаКДанным" id="2245">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аудит доступа к данным</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаАудитДоступаКДаннымРасширеннаяПодсказка" id="2246"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНастройкиКонтроляДоступаКДанным" id="2247">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки контроля доступа к данным</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>WeakSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиКонтроляДоступаКДаннымРасширеннаяПодсказка" id="2248"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаРегистрироватьДоступКДанным" id="2267">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регистрировать доступ к данным</v8:content>
+								</v8:item>
+							</Title>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРегистрироватьДоступКДаннымРасширеннаяПодсказка" id="2268"/>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиРегистрацииСобытийДоступаКДанным" id="2249">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки регистрации событий доступа к данным</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>43</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиРегистрацииСобытийДоступаКДаннымРасширеннаяПодсказка" id="2250">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Регистрация событий для аудита доступа к данным.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="РегистрироватьДоступКДанным" id="2269">
+									<DataPath>РегистрироватьДоступКДанным</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Регистрировать доступ к данным</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РегистрироватьДоступКДаннымКонтекстноеМеню" id="2270"/>
+									<ExtendedTooltip name="РегистрироватьДоступКДаннымРасширеннаяПодсказка" id="2271"/>
+									<SelectedItemsActionsPanel name="РегистрироватьДоступКДаннымПанельДействийВыделенныхСтрок" id="2326"/>
+									<Events>
+										<Event name="OnChange">РегистрироватьДоступКДаннымПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<Button name="НастройкиРегистрацииСобытийДоступаКДанным" id="2251">
+									<Type>Hyperlink</Type>
+									<CommandName>CommonForm.НастройкиРегистрацииСобытийДоступаКДанным.StandardCommand.Open</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="НастройкиРегистрацииСобытийДоступаКДаннымРасширеннаяПодсказка" id="2252"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЖурналДоступаКДанным" id="2263">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Журнал доступа к данным</v8:content>
+						</v8:item>
+					</Title>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЖурналДоступаКДаннымРасширеннаяПодсказка" id="2264"/>
+					<ChildItems>
+						<Button name="ЖурналДоступаКДанным" id="2265">
+							<Type>Hyperlink</Type>
+							<CommandName>DataProcessor.ЖурналРегистрации.Command.ЖурналДоступаКДанным</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ЖурналДоступаКДаннымРасширеннаяПодсказка" id="2266">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Просмотр зарегистрированных событий доступа к данным.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.ДатаУведомленияОНовыхЗадачах</Field>
+				<Field>НаборКонстант.ЗаголовокСистемы</Field>
+				<Field>НаборКонстант.ЗапрещатьЗагрузкуФайловПоРасширению</Field>
+				<Field>НаборКонстант.ИзменятьЗаданияЗаднимЧислом</Field>
+				<Field>НаборКонстант.ИспользоватьАнкетирование</Field>
+				<Field>НаборКонстант.ИспользоватьБизнесПроцессыИЗадачи</Field>
+				<Field>НаборКонстант.ИспользоватьВерсионированиеОбъектов</Field>
+				<Field>НаборКонстант.ИспользоватьВнешнихПользователей</Field>
+				<Field>НаборКонстант.ИспользоватьГруппыПользователей</Field>
+				<Field>НаборКонстант.ИспользоватьДатуИВремяВСрокахЗадач</Field>
+				<Field>НаборКонстант.ИспользоватьДатуНачалаЗадач</Field>
+				<Field>НаборКонстант.ИспользоватьДополнительныеРеквизитыИСведения</Field>
+				<Field>НаборКонстант.ИспользоватьЗаметки</Field>
+				<Field>НаборКонстант.ИспользоватьНапоминанияПользователя</Field>
+				<Field>НаборКонстант.ИспользоватьПочтовыйКлиент</Field>
+				<Field>НаборКонстант.ИспользоватьПризнакРассмотрено</Field>
+				<Field>НаборКонстант.ИспользоватьПрочиеВзаимодействия</Field>
+				<Field>НаборКонстант.ИспользоватьСинхронизациюДанных</Field>
+				<Field>НаборКонстант.ИспользоватьЭлектронныеПодписи</Field>
+				<Field>НаборКонстант.КаталогСообщенийОбменаДаннымиДляLinux</Field>
+				<Field>НаборКонстант.КаталогСообщенийОбменаДаннымиДляWindows</Field>
+				<Field>НаборКонстант.МаксимальныйРазмерФайлаОбластиДанных</Field>
+				<Field>НаборКонстант.ОграничиватьДоступНаУровнеЗаписей</Field>
+				<Field>НаборКонстант.ОграничиватьДоступНаУровнеЗаписейУниверсально</Field>
+				<Field>НаборКонстант.ОтправлятьПисьмаВФорматеHTML</Field>
+				<Field>НаборКонстант.ПрефиксУзлаРаспределеннойИнформационнойБазы</Field>
+				<Field>НаборКонстант.СписокЗапрещенныхРасширенийОбластиДанных</Field>
+				<Field>НаборКонстант.СписокРасширенийТекстовыхФайлов</Field>
+				<Field>НаборКонстант.СписокРасширенийФайловOpenDocumentОбластиДанных</Field>
+				<Field>НаборКонстант.ХранитьФайлыВТомахНаДиске</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="РегистрироватьДоступКДанным" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрировать доступ к данным</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВнешниеПользователи" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внешние пользователи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внешние пользователи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СправочникВнешниеПользователи</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновлениеДоступаНаУровнеЗаписей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновление доступа на уровне записей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для отслеживания хода обновления прав доступа. Также для нештатных случаев позволяет:
+- обновить доступ отдельного объекта,
+- запланировать обновление доступа к требуемым спискам.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновлениеДоступаНаУровнеЗаписей</Action>
+		</Command>
+		<Command name="НастроитьДатыЗапретаИзменения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить даты запрета изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьДатыЗапретаИзменения</Action>
+		</Command>
+		<Command name="КонтрольРаботыПользователей" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контроль работы пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КонтрольРаботыПользователей</Action>
+		</Command>
+	</Commands>
+</Form>

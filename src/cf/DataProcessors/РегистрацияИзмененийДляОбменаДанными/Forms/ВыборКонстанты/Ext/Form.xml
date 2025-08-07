@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор константы</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВыбратьКонстанту" id="9">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ВыбратьКонстанту</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выбрать</v8:content>
+					</v8:item>
+				</Title>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="ФормаВыбратьКонстантуРасширеннаяПодсказка" id="28"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnReopen">ПриПовторномОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="СписокКонстант" id="4">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<HorizontalLinesBWA>false</HorizontalLinesBWA>
+			<VerticalLinesBWA>false</VerticalLinesBWA>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>СписокКонстант</DataPath>
+			<RowPictureDataPath>СписокКонстант.ИндексКартинки</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Abs>RowsPicture.png</xr:Abs>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</RowsPicture>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Констант</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокКонстантКонтекстноеМеню" id="5">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СписокКонстантКонтекстноеМенюВыбратьКонстанту" id="16">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ВыбратьКонстанту</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выбрать</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СписокКонстантКонтекстноеМенюВыбратьКонстантуРасширеннаяПодсказка" id="29"/>
+					</Button>
+					<ButtonGroup name="СписокКонстантКонтекстноеМенюГруппа1" id="17">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Констант контекстное меню группа 1</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СписокКонстантКонтекстноеМенюГруппа1РасширеннаяПодсказка" id="30"/>
+						<ChildItems>
+							<Button name="СписокКонстантКонтекстноеМенюНайти" id="18">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокКонстант.StandardCommand.Find</CommandName>
+								<ExtendedTooltip name="СписокКонстантКонтекстноеМенюНайтиРасширеннаяПодсказка" id="31"/>
+							</Button>
+							<Button name="СписокКонстантКонтекстноеМенюВыделитьВсе" id="19">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокКонстант.StandardCommand.SelectAll</CommandName>
+								<ExtendedTooltip name="СписокКонстантКонтекстноеМенюВыделитьВсеРасширеннаяПодсказка" id="32"/>
+							</Button>
+							<Button name="СписокКонстантКонтекстноеМенюОтменитьПоиск" id="20">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокКонстант.StandardCommand.CancelSearch</CommandName>
+								<ExtendedTooltip name="СписокКонстантКонтекстноеМенюОтменитьПоискРасширеннаяПодсказка" id="33"/>
+							</Button>
+							<Button name="СписокКонстантКонтекстноеМенюВывестиСписок" id="21">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокКонстант.StandardCommand.OutputList</CommandName>
+								<ExtendedTooltip name="СписокКонстантКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="34"/>
+							</Button>
+							<Button name="СписокКонстантКонтекстноеМенюКопироватьВБуферОбмена" id="22">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокКонстант.StandardCommand.CopyToClipboard</CommandName>
+								<ExtendedTooltip name="СписокКонстантКонтекстноеМенюКопироватьВБуферОбменаРасширеннаяПодсказка" id="35"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокКонстантКоманднаяПанель" id="6"/>
+			<ExtendedTooltip name="СписокКонстантРасширеннаяПодсказка" id="36"/>
+			<SearchStringAddition name="СписокКонстантСтрокаПоиска" id="42">
+				<AdditionSource>
+					<Item>СписокКонстант</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокКонстантСтрокаПоискаКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="СписокКонстантСтрокаПоискаРасширеннаяПодсказка" id="44"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокКонстантСостояниеПросмотра" id="45">
+				<AdditionSource>
+					<Item>СписокКонстант</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокКонстантСостояниеПросмотраКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="СписокКонстантСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокКонстантУправлениеПоиском" id="48">
+				<AdditionSource>
+					<Item>СписокКонстант</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокКонстантУправлениеПоискомКонтекстноеМеню" id="49"/>
+				<ExtendedTooltip name="СписокКонстантУправлениеПоискомРасширеннаяПодсказка" id="50"/>
+			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="СписокКонстантПанельДействийВыделенныхСтрок" id="51"/>
+			<Events>
+				<Event name="Selection">СписокКонстантВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="СписокКонстантНаименование" id="12">
+					<DataPath>СписокКонстант.Наименование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Константа</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="СписокКонстантНаименованиеКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="СписокКонстантНаименованиеРасширеннаяПодсказка" id="37"/>
+					<SelectedItemsActionsPanel name="СписокКонстантНаименованиеПанельДействийВыделенныхСтрок" id="52"/>
+				</InputField>
+				<PictureField name="СписокКонстантИндексКартинкиАвторегистрация" id="14">
+					<DataPath>СписокКонстант.ИндексКартинкиАвторегистрация</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Авторегистрация</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderPicture>
+						<xr:Abs>HeaderPicture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</HeaderPicture>
+					<AutoEditMode>true</AutoEditMode>
+					<ValuesPicture>
+						<xr:Abs>ValuesPicture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</ValuesPicture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="СписокКонстантИндексКартинкиАвторегистрацияКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СписокКонстантИндексКартинкиАвторегистрацияРасширеннаяПодсказка" id="38"/>
+					<SelectedItemsActionsPanel name="СписокКонстантИндексКартинкиАвторегистрацияПанельДействийВыделенныхСтрок" id="53"/>
+				</PictureField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="Группа1" id="23">
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Легенда</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<PictureDecoration name="Декорация1" id="24">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка авторегистрации</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="40"/>
+				</PictureDecoration>
+				<LabelDecoration name="ДекорацияАвторегистрация" id="26">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Авторегистрация для узла</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<ContextMenu name="ДекорацияАвторегистрацияКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДекорацияАвторегистрацияРасширеннаяПодсказка" id="41"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РегистрацияИзмененийДляОбменаДанными</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокКонстант" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокКонстант.Наименование</Field>
+			</UseAlways>
+			<Columns>
+				<Column name="МетаПолноеИмя" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="3">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинкиАвторегистрация" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки авторегистрация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьКонстанту" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать константу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ChooseValue</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьКонстанту</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="НачальноеЗначениеВыбора">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="МассивИменМетаданных">
+			<Type/>
+		</Parameter>
+		<Parameter name="МассивПредставлений">
+			<Type/>
+		</Parameter>
+		<Parameter name="МассивАвторегистрации">
+			<Type/>
+		</Parameter>
+		<Parameter name="УзелОбмена">
+			<Type>
+				<v8:TypeSet>cfg:ExchangePlanRef</v8:TypeSet>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

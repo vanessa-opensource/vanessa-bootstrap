@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанель" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Button name="ФормаВключитьВозможностьРедактирования" id="27">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включить возможность редактирования</v8:content>
+						</v8:item>
+					</Title>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаВключитьВозможностьРедактированияРасширеннаяПодсказка" id="28"/>
+				</Button>
+				<Button name="ФормаОбновитьДанныеРегистра" id="53">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ОбновитьДанныеРегистра</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить данные регистра</v8:content>
+						</v8:item>
+					</Title>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаОбновитьДанныеРегистраРасширеннаяПодсказка" id="54"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<HeaderHeight>3</HeaderHeight>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.НомерКартинки</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Ref>CommonPicture.СостоянияПользователей</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</RowsPicture>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="СписокПанельДействийВыделенныхСтрок" id="61"/>
+			<ChildItems>
+				<LabelField name="Пользователь" id="16">
+					<DataPath>Список.Пользователь</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПользовательКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="18"/>
+					<SelectedItemsActionsPanel name="ПользовательПанельДействийВыделенныхСтрок" id="62"/>
+				</LabelField>
+				<InputField name="НомерКартинкиСостояния" id="55">
+					<DataPath>Список.НомерКартинкиСостояния</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер
+картинки
+состояния</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерКартинкиСостоянияКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="НомерКартинкиСостоянияРасширеннаяПодсказка" id="57"/>
+					<SelectedItemsActionsPanel name="НомерКартинкиСостоянияПанельДействийВыделенныхСтрок" id="63"/>
+				</InputField>
+				<CheckBoxField name="ПотребоватьСменуПароляПриВходе" id="32">
+					<DataPath>Список.ПотребоватьСменуПароляПриВходе</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Потребовать
+смену пароля
+при входе</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПотребоватьСменуПароляПриВходеКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПотребоватьСменуПароляПриВходеРасширеннаяПодсказка" id="34"/>
+					<SelectedItemsActionsPanel name="ПотребоватьСменуПароляПриВходеПанельДействийВыделенныхСтрок" id="64"/>
+				</CheckBoxField>
+				<CheckBoxField name="СрокДействияНеОграничен" id="41">
+					<DataPath>Список.СрокДействияНеОграничен</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок
+действия
+не ограничен</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СрокДействияНеОграниченКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="СрокДействияНеОграниченРасширеннаяПодсказка" id="43"/>
+					<SelectedItemsActionsPanel name="СрокДействияНеОграниченПанельДействийВыделенныхСтрок" id="65"/>
+				</CheckBoxField>
+				<LabelField name="СрокДействия" id="35">
+					<DataPath>Список.СрокДействия</DataPath>
+					<ContextMenu name="СрокДействияКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="СрокДействияРасширеннаяПодсказка" id="37"/>
+					<SelectedItemsActionsPanel name="СрокДействияПанельДействийВыделенныхСтрок" id="66"/>
+				</LabelField>
+				<LabelField name="ПросрочкаРаботыВПрограммеДоЗапрещенияВхода" id="38">
+					<DataPath>Список.ПросрочкаРаботыВПрограммеДоЗапрещенияВхода</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Просрочка работы в
+приложении до
+запрещения входа</v8:content>
+						</v8:item>
+					</Title>
+					<Width>15</Width>
+					<ContextMenu name="ПросрочкаРаботыВПрограммеДоЗапрещенияВходаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ПросрочкаРаботыВПрограммеДоЗапрещенияВходаРасширеннаяПодсказка" id="40"/>
+					<SelectedItemsActionsPanel name="ПросрочкаРаботыВПрограммеДоЗапрещенияВходаПанельДействийВыделенныхСтрок" id="67"/>
+				</LabelField>
+				<LabelField name="ДатаРазрешенияВходаВПрограмму" id="47">
+					<DataPath>Список.ДатаРазрешенияВходаВПрограмму</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата
+разрешения входа
+в приложение</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаРазрешенияВходаВПрограммуКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ДатаРазрешенияВходаВПрограммуРасширеннаяПодсказка" id="49"/>
+					<SelectedItemsActionsPanel name="ДатаРазрешенияВходаВПрограммуПанельДействийВыделенныхСтрок" id="68"/>
+				</LabelField>
+				<LabelField name="ДатаПоследнейАктивности" id="19">
+					<DataPath>Список.ДатаПоследнейАктивности</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата
+последней
+активности</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="ДатаПоследнейАктивностиКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДатаПоследнейАктивностиРасширеннаяПодсказка" id="21"/>
+					<SelectedItemsActionsPanel name="ДатаПоследнейАктивностиПанельДействийВыделенныхСтрок" id="69"/>
+				</LabelField>
+				<LabelField name="ДатаАвтоматическогоЗапрещенияВхода" id="22">
+					<DataPath>Список.ДатаАвтоматическогоЗапрещенияВхода</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата
+автоматического
+запрещения входа</v8:content>
+						</v8:item>
+					</Title>
+					<Width>14</Width>
+					<ContextMenu name="ДатаАвтоматическогоЗапрещенияВходаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДатаАвтоматическогоЗапрещенияВходаРасширеннаяПодсказка" id="24"/>
+					<SelectedItemsActionsPanel name="ДатаАвтоматическогоЗапрещенияВходаПанельДействийВыделенныхСтрок" id="70"/>
+				</LabelField>
+				<InputField name="ПоследнийИспользуемыйКлиент" id="44">
+					<DataPath>Список.ПоследнийИспользуемыйКлиент</DataPath>
+					<Width>20</Width>
+					<ContextMenu name="ПоследнийИспользуемыйКлиентКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ПоследнийИспользуемыйКлиентРасширеннаяПодсказка" id="46"/>
+					<SelectedItemsActionsPanel name="ПоследнийИспользуемыйКлиентПанельДействийВыделенныхСтрок" id="71"/>
+				</InputField>
+				<LabelField name="УдалитьДатаНачалаИспользованияПароля" id="58">
+					<DataPath>Список.УдалитьДатаНачалаИспользованияПароля</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(не используется)
+Дата начала
+использования пароля</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УдалитьДатаНачалаИспользованияПароляКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="УдалитьДатаНачалаИспользованияПароляРасширеннаяПодсказка" id="60"/>
+					<SelectedItemsActionsPanel name="УдалитьДатаНачалаИспользованияПароляПанельДействийВыделенныхСтрок" id="72"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Сведения.НомерКартинкиСостояния - 1 КАК НомерКартинки,
+	Сведения.Пользователь КАК Пользователь,
+	Сведения.ПотребоватьСменуПароляПриВходе КАК ПотребоватьСменуПароляПриВходе,
+	Сведения.СрокДействияНеОграничен КАК СрокДействияНеОграничен,
+	Сведения.СрокДействия КАК СрокДействия,
+	Сведения.ПросрочкаРаботыВПрограммеДоЗапрещенияВхода КАК ПросрочкаРаботыВПрограммеДоЗапрещенияВхода,
+	Сведения.ДатаРазрешенияВходаВПрограмму КАК ДатаРазрешенияВходаВПрограмму,
+	Сведения.ДатаПоследнейАктивности КАК ДатаПоследнейАктивности,
+	Сведения.ДатаАвтоматическогоЗапрещенияВхода КАК ДатаАвтоматическогоЗапрещенияВхода,
+	Сведения.УдалитьДатаНачалаИспользованияПароля КАК УдалитьДатаНачалаИспользованияПароля,
+	Сведения.ПоследнийИспользуемыйКлиент КАК ПоследнийИспользуемыйКлиент,
+	Сведения.НомерКартинкиСостояния КАК НомерКартинкиСостояния,
+	Сведения.ВходВПрограммуРазрешен КАК ВходВПрограммуРазрешен,
+	Сведения.ВходВПрограммуОграничен КАК ВходВПрограммуОграничен,
+	Сведения.НетПрав КАК НетПрав,
+	Сведения.НедостаточноПравДляВхода КАК НедостаточноПравДляВхода,
+	Сведения.Имя КАК Имя,
+	Сведения.АдресЭлектроннойПочты КАК АдресЭлектроннойПочты,
+	Сведения.АутентификацияСтандартная КАК АутентификацияСтандартная,
+	Сведения.ЗапрещеноИзменятьПароль КАК ЗапрещеноИзменятьПароль,
+	Сведения.ЗапрещеноВосстанавливатьПароль КАК ЗапрещеноВосстанавливатьПароль,
+	Сведения.ПоказыватьВСпискеВыбора КАК ПоказыватьВСпискеВыбора,
+	Сведения.АутентификацияOpenID КАК АутентификацияOpenID,
+	Сведения.АутентификацияOpenIDConnect КАК АутентификацияOpenIDConnect,
+	Сведения.АутентификацияТокеномДоступа КАК АутентификацияТокеномДоступа,
+	Сведения.АутентификацияОС КАК АутентификацияОС,
+	Сведения.ПользовательОС КАК ПользовательОС,
+	Сведения.Язык КАК Язык,
+	Сведения.ЗащитаОтОпасныхДействий КАК ЗащитаОтОпасныхДействий
+ИЗ
+	РегистрСведений.СведенияОПользователях КАК Сведения</QueryText>
+				<MainTable>InformationRegister.СведенияОПользователях</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВключитьВозможностьРедактирования" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность редактирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность редактирования только для целей поиска неисправности (требуется углубленное понимание работы механизма)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьВозможностьРедактирования</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьДанныеРегистра" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить данные регистра</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить данные регистра</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьДанныеРегистра</Action>
+		</Command>
+	</Commands>
+</Form>

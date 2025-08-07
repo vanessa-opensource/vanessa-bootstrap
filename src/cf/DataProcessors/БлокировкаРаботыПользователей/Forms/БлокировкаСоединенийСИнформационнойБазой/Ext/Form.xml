@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<Group>Vertical</Group>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="АктивныеПользователи" id="41">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.АктивныеПользователи</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Активные пользователи</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="АктивныеПользователиРасширеннаяПодсказка" id="83"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОшибка" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОшибкаРасширеннаяПодсказка" id="85"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияОшибка" id="69">
+					<Picture>
+						<xr:Ref>StdPicture.DialogExclamation</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДекорацияОшибкаКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="ДекорацияОшибкаРасширеннаяПодсказка" id="86"/>
+				</PictureDecoration>
+				<LabelDecoration name="ТекстОшибки" id="71">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>50</MaxWidth>
+					<Height>2</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст ошибки</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<ContextMenu name="ТекстОшибкиКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="ТекстОшибкиРасширеннаяПодсказка" id="88"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаРежим" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>false</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаРежимРасширеннаяПодсказка" id="94"/>
+			<ChildItems>
+				<Page name="СтраницаНастройки" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница настройки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаНастройкиРасширеннаяПодсказка" id="95"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСтатус" id="131">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСтатусРасширеннаяПодсказка" id="132"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияСтатус" id="128">
+									<Picture>
+										<xr:Ref>StdPicture.Information</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияСтатусКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="ДекорацияСтатусРасширеннаяПодсказка" id="130"/>
+								</PictureDecoration>
+								<LabelField name="НачальныйСтатусЗапретаРаботыПользователей" id="64">
+									<DataPath>НачальныйСтатусЗапретаРаботыПользователей</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ='работа пользователей разрешена'; БИ='работа пользователей временно запрещена'</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="НачальныйСтатусЗапретаРаботыПользователейКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="НачальныйСтатусЗапретаРаботыПользователейРасширеннаяПодсказка" id="97"/>
+									<SelectedItemsActionsPanel name="НачальныйСтатусЗапретаРаботыПользователейПанельДействийВыделенныхСтрок" id="133"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="СообщениеДляПользователей" id="60">
+							<DataPath>Объект.СообщениеДляПользователей</DataPath>
+							<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<BorderColor>style:BorderColor</BorderColor>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание причины и сроков блокировки, которое выводится при попытке войти в заблокированное приложение</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="СообщениеДляПользователейКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="СообщениеДляПользователейРасширеннаяПодсказка" id="98"/>
+							<SelectedItemsActionsPanel name="СообщениеДляПользователейПанельДействийВыделенныхСтрок" id="134"/>
+						</InputField>
+						<UsualGroup name="ГруппаПериодБлокировки" id="18">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период блокировки</v8:content>
+								</v8:item>
+							</Title>
+							<Shortcut>Ctrl+S</Shortcut>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>DontUse</ThroughAlign>
+							<ExtendedTooltip name="ГруппаПериодБлокировкиРасширеннаяПодсказка" id="99"/>
+							<ChildItems>
+								<InputField name="НачалоБлокировки" id="4">
+									<DataPath>Объект.НачалоДействияБлокировки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>с</v8:content>
+										</v8:item>
+									</Title>
+									<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+									<Wrap>false</Wrap>
+									<BorderColor>style:BorderColor</BorderColor>
+									<ContextMenu name="НачалоБлокировкиКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="НачалоБлокировкиРасширеннаяПодсказка" id="100"/>
+									<SelectedItemsActionsPanel name="НачалоБлокировкиПанельДействийВыделенныхСтрок" id="135"/>
+								</InputField>
+								<InputField name="ОкончаниеБлокировки" id="6">
+									<DataPath>Объект.ОкончаниеДействияБлокировки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по</v8:content>
+										</v8:item>
+									</Title>
+									<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+									<Wrap>false</Wrap>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДП=бессрочно</v8:content>
+										</v8:item>
+									</EditFormat>
+									<BorderColor>style:BorderColor</BorderColor>
+									<ContextMenu name="ОкончаниеБлокировкиКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="ОкончаниеБлокировкиРасширеннаяПодсказка" id="101"/>
+									<SelectedItemsActionsPanel name="ОкончаниеБлокировкиПанельДействийВыделенныхСтрок" id="136"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="КодДляРазблокировки" id="10">
+							<DataPath>Объект.КодДляРазблокировки</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Wrap>false</Wrap>
+							<BorderColor>style:BorderColor</BorderColor>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для администратора, чтобы войти в заблокированное приложение</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="КодДляРазблокировкиКонтекстноеМеню" id="11">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<ExtendedTooltip name="КодДляРазблокировкиРасширеннаяПодсказка" id="102"/>
+							<SelectedItemsActionsPanel name="КодДляРазблокировкиПанельДействийВыделенныхСтрок" id="137"/>
+						</InputField>
+						<Pages name="ГруппаЗапретитьРаботуРегламентныхЗаданий" id="120">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запретить работу регламентных заданий</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ГруппаЗапретитьРаботуРегламентныхЗаданийРасширеннаяПодсказка" id="121"/>
+							<ChildItems>
+								<Page name="ГруппаВводаПараметровАдминистрирования" id="124">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ввода параметров администрирования</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ScrollOnCompress>false</ScrollOnCompress>
+									<ExtendedTooltip name="ГруппаВводаПараметровАдминистрированияРасширеннаяПодсказка" id="125"/>
+									<ChildItems>
+										<Button name="ПараметрыАдминистрирования" id="126">
+											<Type>Hyperlink</Type>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<CommandName>Form.Command.ПараметрыАдминистрирования</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Включить возможность управления блокировкой регламентных заданий</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПараметрыАдминистрированияРасширеннаяПодсказка" id="127"/>
+										</Button>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаУправлениеРегламентнымиЗаданиями" id="122">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Управление регламентными заданиями</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ScrollOnCompress>false</ScrollOnCompress>
+									<ExtendedTooltip name="ГруппаУправлениеРегламентнымиЗаданиямиРасширеннаяПодсказка" id="123"/>
+									<ChildItems>
+										<CheckBoxField name="ЗапретитьРаботуРегламентныхЗаданий" id="44">
+											<DataPath>Объект.ЗапретитьРаботуРегламентныхЗаданий</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Также запретить работу регламентных заданий</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЗапретитьРаботуРегламентныхЗаданийКонтекстноеМеню" id="45"/>
+											<ExtendedTooltip name="ЗапретитьРаботуРегламентныхЗаданийРасширеннаяПодсказка" id="104"/>
+											<SelectedItemsActionsPanel name="ЗапретитьРаботуРегламентныхЗаданийПанельДействийВыделенныхСтрок" id="138"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСостоянияБлокировки" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница состояния блокировки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаСостоянияБлокировкиРасширеннаяПодсказка" id="105"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСостояние" id="53">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Состояние</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalStretch>false</VerticalStretch>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="106"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияСостояние" id="51">
+									<Picture>
+										<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияСостояниеКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="ДекорацияСостояниеРасширеннаяПодсказка" id="107"/>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаСодержимое" id="66">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Содержимое</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСодержимоеРасширеннаяПодсказка" id="108"/>
+									<ChildItems>
+										<LabelDecoration name="Состояние" id="49">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>45</MaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пожалуйста, подождите...
+Работа пользователей завершается. Осталось активных сеансов: %1</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="СостояниеКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="109"/>
+										</LabelDecoration>
+										<InputField name="СообщениеДляПользователей1" id="8">
+											<DataPath>Объект.СообщениеДляПользователей</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Блокировка установлена по причине</v8:content>
+												</v8:item>
+											</Title>
+											<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>2</Height>
+											<BorderColor>style:BorderColor</BorderColor>
+											<ContextMenu name="СообщениеДляПользователей1КонтекстноеМеню" id="9"/>
+											<ExtendedTooltip name="СообщениеДляПользователей1РасширеннаяПодсказка" id="110"/>
+											<SelectedItemsActionsPanel name="СообщениеДляПользователей1ПанельДействийВыделенныхСтрок" id="139"/>
+										</InputField>
+										<UsualGroup name="ГруппаПериодБлокировки1" id="55">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Период блокировки 1</v8:content>
+												</v8:item>
+											</Title>
+											<Shortcut>Ctrl+S</Shortcut>
+											<Group>HorizontalIfPossible</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ChildItemsWidth>Equal</ChildItemsWidth>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПериодБлокировки1РасширеннаяПодсказка" id="111"/>
+											<ChildItems>
+												<LabelField name="НачалоБлокировки1" id="56">
+													<DataPath>Объект.НачалоДействияБлокировки</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>с</v8:content>
+														</v8:item>
+													</Title>
+													<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+													<ContextMenu name="НачалоБлокировки1КонтекстноеМеню" id="57"/>
+													<ExtendedTooltip name="НачалоБлокировки1РасширеннаяПодсказка" id="112"/>
+													<SelectedItemsActionsPanel name="НачалоБлокировки1ПанельДействийВыделенныхСтрок" id="140"/>
+												</LabelField>
+												<LabelField name="ОкончаниеБлокировки1" id="58">
+													<DataPath>Объект.ОкончаниеДействияБлокировки</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>по</v8:content>
+														</v8:item>
+													</Title>
+													<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ДП=бессрочно</v8:content>
+														</v8:item>
+													</Format>
+													<ContextMenu name="ОкончаниеБлокировки1КонтекстноеМеню" id="59"/>
+													<ExtendedTooltip name="ОкончаниеБлокировки1РасширеннаяПодсказка" id="113"/>
+													<SelectedItemsActionsPanel name="ОкончаниеБлокировки1ПанельДействийВыделенныхСтрок" id="141"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<CommandBar name="ОсновнаяКоманднаяПанель" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="ОсновнаяКоманднаяПанельРасширеннаяПодсказка" id="114"/>
+			<ChildItems>
+				<Button name="КомандаПрименить" id="15">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.Применить</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Применить</v8:content>
+						</v8:item>
+					</Title>
+					<ButtonImportance>Main</ButtonImportance>
+					<ExtendedTooltip name="КомандаПрименитьРасширеннаяПодсказка" id="115"/>
+				</Button>
+				<Button name="КомандаОстановить" id="54">
+					<Type>CommandBarButton</Type>
+					<Visible>false</Visible>
+					<CommandName>Form.Command.Остановить</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остановить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КомандаОстановитьРасширеннаяПодсказка" id="116"/>
+				</Button>
+				<Button name="КомандаЗакрыть" id="16">
+					<Type>CommandBarButton</Type>
+					<Representation>Text</Representation>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="КомандаЗакрытьРасширеннаяПодсказка" id="117"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.БлокировкаРаботыПользователей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Объект.СообщениеДляПользователей</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="КоличествоСеансов" id="2">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачальныйСтатусЗапретаРаботыПользователей" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КлиентПодключенЧерезВебСервер" id="4">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НачальныйСтатусЗапретаРаботыПользователейЗначение" id="5">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусЗапретаРаботыПользователей" id="6">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоФайловаяБаза" id="7">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоАдминистраторСистемы" id="8">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВведеныКорректныеПараметрыАдминистрирования" id="9">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СеансЗапущенБезРазделителей" id="10">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Применить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Применить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="АктивныеПользователи" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Активные пользователи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Активные пользователи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ActiveUsers</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>АктивныеПользователи</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Остановить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановить завершение работы пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Остановить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПараметрыАдминистрирования" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность управления блокировкой регламентных заданий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры администрирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПараметрыАдминистрирования</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

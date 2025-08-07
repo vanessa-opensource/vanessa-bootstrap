@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Информационная база была перемещена или восстановлена из резервной копии</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Center</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаПараметрыФормы" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры формы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаПараметрыФормыРасширеннаяПодсказка" id="19"/>
+			<ChildItems>
+				<Page name="ГруппаПринятиеРешенияОБлокировке" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Принятие решения о блокировке</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ГруппаПринятиеРешенияОБлокировкеРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьПредупреждение" id="1">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Работа со всеми внешними ресурсами (синхронизация данных, отправка почты и т.п.), выполняемая по расписанию, 
+заблокирована для предотвращения конфликтов с основой информационной базой.
+
+Блокировка выполнена на сервере &lt;b&gt;Server-1C2 &lt;/&gt;в&lt;b&gt; 10.01.2019 15:00 &lt;/&gt;при попытке выполнения регламентного задания &lt;b&gt;Отправка SMS&lt;/&gt;.
+
+Размещение информационной базы изменилось с 
+&lt;b&gt;C:\1c\db\&lt;/&gt;&lt;b&gt;
+&lt;/&gt;на 
+&lt;b&gt;Srvr="server-1c.local";Ref="db";&lt;/&gt;
+
+&lt;link ЖурналРегистрации&gt;Техническая информация о причине блокировки&lt;/&gt;
+
+• Если информационная база будет использоваться для ведения учета, нажмите &lt;b&gt;Информационная база перемещена&lt;/&gt;.
+• Если это копия информационной базы, нажмите &lt;b&gt;Это копия информационной базы&lt;/&gt;&lt;b&gt;.&lt;/&gt;
+• При работе в масштабируемом кластере для предотвращения ложных срабатываний из-за смены компьютеров, выступающих
+  в роли рабочих серверов, отключите проверку имени компьютера, нажмите &lt;b&gt;Еще - Проверять имя сервера&lt;/&gt;.
+
+Блокировку также можно снять позднее в разделе &lt;b&gt;Администрирование&lt;/&gt;&lt;b&gt; - &lt;/&gt;&lt;b&gt;Обслуживание&lt;/&gt;.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПредупреждениеКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НадписьПредупреждениеРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="URLProcessing">НадписьПредупреждениеОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+						<CommandBar name="ГруппаКоманднаяПанель" id="27">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Center</HorizontalLocation>
+							<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="28"/>
+							<ChildItems>
+								<Button name="ИнформационнаяБазаПеремещена" id="6">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ИнформационнаяБазаПеремещена</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информационная база перемещена</v8:content>
+										</v8:item>
+									</Title>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ИнформационнаяБазаПеремещенаРасширеннаяПодсказка" id="7"/>
+								</Button>
+								<Button name="ЭтоКопияИнформационнойБазы" id="8">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЭтоКопияИнформационнойБазы</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Это копия информационной базы</v8:content>
+										</v8:item>
+									</Title>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ЭтоКопияИнформационнойБазыРасширеннаяПодсказка" id="9"/>
+								</Button>
+								<Popup name="ФормаГруппаЕще" id="14">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Еще</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ФормаГруппаЕщеРасширеннаяПодсказка" id="15"/>
+									<ChildItems>
+										<Button name="ФормаПроверятьИмяСервера" id="10">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ПроверятьИмяСервера</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Проверять имя сервера</v8:content>
+												</v8:item>
+											</Title>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ФормаПроверятьИмяСервераРасширеннаяПодсказка" id="11"/>
+										</Button>
+										<Button name="ФормаСправкаВГруппе" id="12">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.StandardCommand.Help</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ФормаСправкаВГруппеРасширеннаяПодсказка" id="13"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+								<Button name="ФормаСправка" id="16">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="17"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПараметрыБлокировки" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры блокировки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ГруппаПараметрыБлокировкиРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<CommandBar name="ГруппаКоманднаяПанельПараметры" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель параметры</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаКоманднаяПанельПараметрыРасширеннаяПодсказка" id="33"/>
+							<ChildItems>
+								<Button name="ЗаписатьИЗакрыть" id="34">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Записать и закрыть</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="35"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<CheckBoxField name="ПроверятьИмяСервера" id="29">
+							<DataPath>ПроверятьИмяСервера</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверять имя сервера</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПроверятьИмяСервераКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ПроверятьИмяСервераРасширеннаяПодсказка" id="31"/>
+							<SelectedItemsActionsPanel name="ПроверятьИмяСервераПанельДействийВыделенныхСтрок" id="36"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПроверятьИмяСервера" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверять имя сервера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяСобытияЖурналаРегистрации" id="1">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ИнформационнаяБазаПеремещена" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационная база перемещена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационная база перемещена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИнформационнаяБазаПеремещена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЭтоКопияИнформационнойБазы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это копия информационной базы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это копия информационной базы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЭтоКопияИнформационнойБазы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПроверятьИмяСервера" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверять имя сервера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверять имя сервера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверятьИмяСервера</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаписатьИЗакрыть" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрыть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ПринятиеРешенияОБлокировке">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="ПодменюОрганайзер" id="121">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Органайзер</v8:content>
+					</v8:item>
+				</Title>
+				<Picture>
+					<xr:Ref>CommonPicture.Органайзер</xr:Ref>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ПодменюОрганайзерРасширеннаяПодсказка" id="122"/>
+			</Popup>
+			<ButtonGroup name="КоманднаяПанельРедактирования" id="79">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Командная панель редактирования</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>Item.Содержание</CommandSource>
+				<ExtendedTooltip name="КоманднаяПанельРедактированияРасширеннаяПодсказка" id="107"/>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СодержаниеЗаметки" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Содержание заметки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СодержаниеЗаметкиРасширеннаяПодсказка" id="108"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПредмет" id="102">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПредметРасширеннаяПодсказка" id="109"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьПредмет" id="65">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предмет:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПредметКонтекстноеМеню" id="66"/>
+							<ExtendedTooltip name="НадписьПредметРасширеннаяПодсказка" id="110"/>
+						</LabelDecoration>
+						<LabelDecoration name="Предмет" id="63">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предмет</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предмет, по которому сделана заметка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="ПредметКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="ПредметРасширеннаяПодсказка" id="111"/>
+							<Events>
+								<Event name="Click">ПредметНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<FormattedDocumentField name="Содержание" id="9">
+			<DataPath>ФорматированныйТекст</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Содержание</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>None</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст заметки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<Width>20</Width>
+			<ContextMenu name="СодержаниеКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="СодержаниеРасширеннаяПодсказка" id="112"/>
+			<SelectedItemsActionsPanel name="СодержаниеПанельДействийВыделенныхСтрок" id="123"/>
+		</FormattedDocumentField>
+		<UsualGroup name="ПараметрыОтображения" id="90">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры отображения</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПараметрыОтображенияРасширеннаяПодсказка" id="113"/>
+			<ChildItems>
+				<CheckBoxField name="ОтображатьНаРабочемСтоле" id="80">
+					<DataPath>Объект.ДляРабочегоСтола</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отображать на рабочем столе</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтображатьНаРабочемСтолеКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="ОтображатьНаРабочемСтолеРасширеннаяПодсказка" id="114"/>
+					<SelectedItemsActionsPanel name="ОтображатьНаРабочемСтолеПанельДействийВыделенныхСтрок" id="124"/>
+				</CheckBoxField>
+				<InputField name="Пометка" id="82">
+					<DataPath>Объект.Пометка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цвет</v8:content>
+						</v8:item>
+					</Title>
+					<Width>15</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПометкаКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="ПометкаРасширеннаяПодсказка" id="115"/>
+					<SelectedItemsActionsPanel name="ПометкаПанельДействийВыделенныхСтрок" id="125"/>
+				</InputField>
+				<InputField name="ГруппаЗаметок" id="105">
+					<DataPath>Объект.Parent</DataPath>
+					<Width>20</Width>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="ГруппаЗаметокКонтекстноеМеню" id="106"/>
+					<ExtendedTooltip name="ГруппаЗаметокРасширеннаяПодсказка" id="116"/>
+					<SelectedItemsActionsPanel name="ГруппаЗаметокПанельДействийВыделенныхСтрок" id="126"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ИнформацияОбАвторе" id="91">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация об авторе</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ИнформацияОбАвтореРасширеннаяПодсказка" id="117"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьАвтор" id="92">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автор:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьАвторКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="НадписьАвторРасширеннаяПодсказка" id="118"/>
+				</LabelDecoration>
+				<LabelDecoration name="Автор" id="94">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автор</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автор заметки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="АвторКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="119"/>
+					<Events>
+						<Event name="Click">АвторНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ДатаЗаметки" id="103">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записана: 25 ноября 2011 г.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДатаЗаметкиКонтекстноеМеню" id="104"/>
+			<ExtendedTooltip name="ДатаЗаметкиРасширеннаяПодсказка" id="120"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Заметки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ФорматированныйТекст" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форматированный текст</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="Предмет">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

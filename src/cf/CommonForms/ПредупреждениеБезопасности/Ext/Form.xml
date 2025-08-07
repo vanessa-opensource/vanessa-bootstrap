@@ -1,0 +1,1061 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Предупреждение безопасности</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Horizontal</Group>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+	</CommandSet>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<PictureDecoration name="КартинкаПредупреждение32" id="21">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Картинка предупреждение32</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.DialogExclamation</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<FileDragMode>AsFile</FileDragMode>
+			<ContextMenu name="КартинкаПредупреждение32КонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="КартинкаПредупреждение32РасширеннаяПодсказка" id="23"/>
+		</PictureDecoration>
+		<Pages name="Страницы" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="16"/>
+			<ChildItems>
+				<Page name="ПослеОбновления" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>После обновления</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПослеОбновленияРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<LabelDecoration name="Надпись1" id="42">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В целях безопасности рекомендуется запретить открытие внешних отчетов 
+и обработок из меню &lt;b&gt;Файл - &lt;/&gt;&lt;b&gt;Открыть&lt;/&gt;.
+Файлы внешних обработок (отчетов), полученные из источников, 
+с которыми у вас нет договоренности о разработке таких обработок (отчетов),
+могут нанести вред вашему компьютеру и данным в приложении.
+
+Вместо открытия внешних отчетов и обработок рекомендуется использовать 
+&lt;link e1cib/list/Справочник.ДополнительныеОтчетыИОбработки&gt;дополнительные отчеты и обработки&lt;/&gt; и &lt;link e1cib/app/ОбщаяФорма.Расширения&gt;расширения&lt;/&gt;, полученные из надежных источников.
+
+См. также: &lt;link http://1c.ru/news/info.jsp?id=21537&gt;Пример проблемы с вирусом во внешней обработке&lt;/&gt;.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Надпись1КонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="Надпись1РасширеннаяПодсказка" id="44"/>
+						</LabelDecoration>
+						<CommandBar name="КоманднаяПанель1" id="47">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель 1</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанель1РасширеннаяПодсказка" id="48"/>
+							<ChildItems>
+								<Button name="ЗапретитьОткрытиеВнешнихОтчетовИОбработок" id="104">
+									<Type>CommandBarButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<CommandName>Form.Command.ЗапретитьОткрытиеВнешнихОтчетовИОбработок</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запретить открытие внешних отчетов и обработок</v8:content>
+										</v8:item>
+									</Title>
+									<ButtonImportance>Main</ButtonImportance>
+									<ExtendedTooltip name="ЗапретитьОткрытиеВнешнихОтчетовИОбработокРасширеннаяПодсказка" id="105"/>
+								</Button>
+								<Button name="НеЗапрещать" id="64">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.НеЗапрещатьОткрытиеВнешнихОтчетовИОбработок</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не запрещать</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="НеЗапрещатьРасширеннаяПодсказка" id="65"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="ПослеПоявленияПрава" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>После появления права</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПослеПоявленияПраваРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<LabelDecoration name="Надпись2" id="55">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В настройках прав доступа вам разрешено открывать файлы внешних отчетов и обработок
+из меню &lt;b&gt;Файл - &lt;/&gt;&lt;b&gt;Открыть&lt;/&gt;. При открытии таких файлов следует обращать особое внимание 
+на их источник и не открывать файлы, полученные из источников, 
+с которыми у вас нет договоренности о разработке таких обработок (отчетов).
+
+В противном случае, такие файлы могут нанести вред вашему компьютеру и данным в приложении.
+См. также: &lt;link http://1c.ru/news/info.jsp?id=21537&gt;Пример проблемы с вирусом во внешней обработке&lt;/&gt;.
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Надпись2КонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="Надпись2РасширеннаяПодсказка" id="57"/>
+						</LabelDecoration>
+						<CommandBar name="КоманднаяПанель2" id="58">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель 2</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанель2РасширеннаяПодсказка" id="59"/>
+							<ChildItems>
+								<Button name="ЯОзнакомлен" id="106">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЯОзнакомлен</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ОК</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЯОзнакомленРасширеннаяПодсказка" id="107"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="ПередДобавлениемДополнительногоОтчетаИлиОбработки" id="68">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед добавлением дополнительного отчета или обработки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПередДобавлениемДополнительногоОтчетаИлиОбработкиРасширеннаяПодсказка" id="69"/>
+					<ChildItems>
+						<LabelDecoration name="Надпись3" id="70">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>60</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При подключении дополнительного отчета или обработки рекомендуется 
+обращать внимание на источник, из которого был получен файл.
+Если вы не уверены в содержимом этого файла или в источнике, 
+то файл не рекомендуется подключать к приложению.
+
+См. также: &lt;link http://1c.ru/news/info.jsp?id=21537&gt;Пример проблемы с вирусом во внешней обработке&lt;/&gt;.
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Надпись3КонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="Надпись3РасширеннаяПодсказка" id="72"/>
+						</LabelDecoration>
+						<CommandBar name="КоманднаяПанель3" id="78">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель 3</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанель3РасширеннаяПодсказка" id="79"/>
+							<ChildItems>
+								<Button name="Продолжить3" id="84">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Продолжить</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Продолжить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Продолжить3РасширеннаяПодсказка" id="85"/>
+								</Button>
+								<Button name="Отмена3" id="82">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Cancel</CommandName>
+									<ExtendedTooltip name="Отмена3РасширеннаяПодсказка" id="83"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="ПередДобавлениемРасширений" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед добавлением расширений</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПередДобавлениемРасширенийРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<LabelDecoration name="Надпись4" id="26">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При подключении расширения конфигурации рекомендуется обращать 
+внимание на источник, из которого был получен файл расширения.
+Если вы не уверены в содержимом расширения или в его источнике, 
+то расширение не рекомендуется подключать к приложению.
+
+См. также: &lt;link http://1c.ru/news/info.jsp?id=21537&gt;Пример проблемы с вирусом во внешней обработке&lt;/&gt;.
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Надпись4КонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="Надпись4РасширеннаяПодсказка" id="28"/>
+						</LabelDecoration>
+						<CommandBar name="КоманднаяПанель4" id="34">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель 4</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанель4РасширеннаяПодсказка" id="35"/>
+							<ChildItems>
+								<Button name="Продолжить4" id="66">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Продолжить</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Продолжить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Продолжить4РасширеннаяПодсказка" id="67"/>
+								</Button>
+								<Button name="Отмена4" id="38">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Cancel</CommandName>
+									<ExtendedTooltip name="Отмена4РасширеннаяПодсказка" id="39"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="ПередВыборомФайлаОбновления" id="153">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед выбором файла обновления</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед добавлением расширений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПередВыборомФайлаОбновленияРасширеннаяПодсказка" id="154"/>
+					<ChildItems>
+						<LabelDecoration name="Надпись7" id="155">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При установке обновления конфигурации рекомендуется обращать 
+внимание на источник, из которого был получен файл обновления.
+Если вы не уверены в содержимом обновления или в его источнике, 
+то обновление не рекомендуется устанавливать.
+
+См. также: &lt;link http://1c.ru/news/info.jsp?id=21537&gt;Пример проблемы с вирусом во внешней обработке&lt;/&gt;.
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Надпись7КонтекстноеМеню" id="156"/>
+							<ExtendedTooltip name="Надпись7РасширеннаяПодсказка" id="157"/>
+						</LabelDecoration>
+						<CommandBar name="КоманднаяПанель8" id="160">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель 8</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанель8РасширеннаяПодсказка" id="161"/>
+							<ChildItems>
+								<Button name="Продолжить8" id="162">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Продолжить</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Продолжить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Продолжить8РасширеннаяПодсказка" id="163"/>
+								</Button>
+								<Button name="Отмена8" id="164">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Cancel</CommandName>
+									<ExtendedTooltip name="Отмена8РасширеннаяПодсказка" id="165"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="ПередВыборомРоли" id="108">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед выбором роли</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПередВыборомРолиРасширеннаяПодсказка" id="109"/>
+					<ChildItems>
+						<LabelDecoration name="Надпись5" id="110">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбранная роль позволяет открывать файлы внешних отчетов и обработок 
+из меню &lt;b&gt;Файл - &lt;/&gt;&lt;b&gt;Открыть&lt;/&gt;. При открытии таких файлов следует обращать особое внимание 
+на источник, из которого он был получен, и не открывать файлы, в которых вы не уверены.
+
+В противном случае, такие файлы могут нанести вред вашему компьютеру и данным в приложении.
+См. также: &lt;link http://1c.ru/news/info.jsp?id=21537&gt;Пример проблемы с вирусом во внешней обработке&lt;/&gt;.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Надпись5КонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="Надпись5РасширеннаяПодсказка" id="112"/>
+						</LabelDecoration>
+						<CommandBar name="КоманднаяПанель5" id="118">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель 5</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанель5РасширеннаяПодсказка" id="119"/>
+							<ChildItems>
+								<Button name="Продолжить5" id="120">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Продолжить</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Продолжить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Продолжить5РасширеннаяПодсказка" id="121"/>
+								</Button>
+								<Button name="Отмена5" id="122">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Cancel</CommandName>
+									<ExtendedTooltip name="Отмена5РасширеннаяПодсказка" id="123"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="ПриИзмененииСпискаЗапрещенныхРасширений" id="124">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>При изменении списка запрещенных расширений</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПриИзмененииСпискаЗапрещенныхРасширенийРасширеннаяПодсказка" id="125"/>
+					<ChildItems>
+						<LabelDecoration name="Надпись6" id="126">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отключение данной настройки позволяет загружать потенциально опасные файлы в приложение.
+При добавлении таких файлов следует обращать особое внимание 
+на источник, из которого он был получен, и не загружать файлы, в которых вы не уверены.
+
+В противном случае, такие файлы могут нанести вред компьютерам пользователей.
+См. также: &lt;link http://1c.ru/news/info.jsp?id=21537&gt;Пример проблемы с вирусом во внешней обработке&lt;/&gt;.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Надпись6КонтекстноеМеню" id="127"/>
+							<ExtendedTooltip name="Надпись6РасширеннаяПодсказка" id="128"/>
+						</LabelDecoration>
+						<CommandBar name="КоманднаяПанель6" id="131">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель 6</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанель6РасширеннаяПодсказка" id="132"/>
+							<ChildItems>
+								<Button name="Продолжить6" id="133">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Продолжить</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Продолжить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Продолжить6РасширеннаяПодсказка" id="134"/>
+								</Button>
+								<Button name="Отмена6" id="135">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Cancel</CommandName>
+									<ExtendedTooltip name="Отмена6РасширеннаяПодсказка" id="136"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="ПередОткрытиемФайла" id="137">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед открытием файла</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПередОткрытиемФайлаРасширеннаяПодсказка" id="138"/>
+					<ChildItems>
+						<LabelDecoration name="ПредупреждениеПриОткрытииФайла" id="139">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>%1</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПредупреждениеПриОткрытииФайлаКонтекстноеМеню" id="140"/>
+							<ExtendedTooltip name="ПредупреждениеПриОткрытииФайлаРасширеннаяПодсказка" id="141"/>
+						</LabelDecoration>
+						<LabelDecoration name="ПредупреждениеПриОткрытииФайлаПояснение" id="142">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Файл содержит исполняемый код, который может быть потенциально опасен для компьютера.
+Открывайте файлы, только если доверяете их содержимому.
+
+В противном случае, такие файлы могут нанести вред компьютеру.
+См. также: &lt;link http://1c.ru/news/info.jsp?id=21537&gt;Пример проблемы с вирусом во внешней обработке&lt;/&gt;.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПредупреждениеПриОткрытииФайлаПояснениеКонтекстноеМеню" id="143"/>
+							<ExtendedTooltip name="ПредупреждениеПриОткрытииФайлаПояснениеРасширеннаяПодсказка" id="144"/>
+						</LabelDecoration>
+						<CommandBar name="КоманднаяПанель7" id="147">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель 7</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанель7РасширеннаяПодсказка" id="148"/>
+							<ChildItems>
+								<Button name="Продолжить7" id="149">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Продолжить</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Продолжить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Продолжить7РасширеннаяПодсказка" id="150"/>
+								</Button>
+								<Button name="Отмена7" id="151">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Cancel</CommandName>
+									<ExtendedTooltip name="Отмена7РасширеннаяПодсказка" id="152"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="ПередДобавлениемВнешнейКомпоненты" id="166">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед добавлением внешней компоненты</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПередДобавлениемВнешнейКомпонентыРасширеннаяПодсказка" id="167"/>
+					<ChildItems>
+						<LabelDecoration name="ПредупреждениеПриДобавленииВнешнейКомпоненты" id="168">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При подключении внешней компоненты рекомендуется обращать 
+внимание на источник, из которого был получен файл компоненты.
+Если вы не уверены в содержимом компоненты или в его источнике, 
+то компоненту не рекомендуется подключать к приложению.
+
+См. также: &lt;link http://1c.ru/news/info.jsp?id=21537&gt;Пример проблемы с вирусом во внешней обработке&lt;/&gt;.
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПредупреждениеПриДобавленииВнешнейКомпонентыКонтекстноеМеню" id="169"/>
+							<ExtendedTooltip name="ПредупреждениеПриДобавленииВнешнейКомпонентыРасширеннаяПодсказка" id="170"/>
+						</LabelDecoration>
+						<CommandBar name="КоманднаяПанель9" id="173">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель 9</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанель9РасширеннаяПодсказка" id="174"/>
+							<ChildItems>
+								<Button name="Продолжить9" id="175">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Продолжить</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Продолжить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Продолжить9РасширеннаяПодсказка" id="176"/>
+								</Button>
+								<Button name="Отмена9" id="177">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Cancel</CommandName>
+									<ExtendedTooltip name="Отмена9РасширеннаяПодсказка" id="178"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="ПередУдалениемРасширенияБезДанных" id="211">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед удалением расширения без данных</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПередУдалениемРасширенияБезДанныхРасширеннаяПодсказка" id="212"/>
+					<ChildItems>
+						<LabelDecoration name="ПредупреждениеПередУдалениемРасширенияБезДанных" id="213">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Удаление расширения необратимо.
+Будут потеряны сделанные настройки (например, варианты отчетов).</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ContextMenu name="ПредупреждениеПередУдалениемРасширенияБезДанныхКонтекстноеМеню" id="214"/>
+							<ExtendedTooltip name="ПредупреждениеПередУдалениемРасширенияБезДанныхРасширеннаяПодсказка" id="215">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Если требуется...
+• обновить расширение, то вместо удаления и добавления нажмите кнопку &lt;b&gt;Обновить из файла...&lt;/&gt;;
+• временно отключить расширение, следует снять флажок &lt;b&gt;Подключать расширение при входе&lt;/&gt;.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаОтступРасширенияБезДанных" id="243">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отступ расширения без данных</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтступРасширенияБезДанныхРасширеннаяПодсказка" id="244"/>
+							<ChildItems>
+								<LabelDecoration name="ПредупреждениеПередУдалениемРасширенияБезДанныхРезервноеКопирование" id="234">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перед удалением расширения рекомендуется 
+выполнить резервное копирование информационной базы.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПредупреждениеПередУдалениемРасширенияБезДанныхРезервноеКопированиеКонтекстноеМеню" id="235"/>
+									<ExtendedTooltip name="ПредупреждениеПередУдалениемРасширенияБезДанныхРезервноеКопированиеРасширеннаяПодсказка" id="236"/>
+									<Events>
+										<Event name="URLProcessing">ПредупреждениеПередУдалениемРасширенияРезервноеКопированиеОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ПредупреждениеПередУдалениемРасширенияБезДанныхТекстУдалить" id="240">
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;&lt;Удалить выделенные расширения?&gt;&gt;
+&lt;&lt;Удалить расширение?&gt;&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Top</VerticalAlign>
+							<ContextMenu name="ПредупреждениеПередУдалениемРасширенияБезДанныхТекстУдалитьКонтекстноеМеню" id="241"/>
+							<ExtendedTooltip name="ПредупреждениеПередУдалениемРасширенияБезДанныхТекстУдалитьРасширеннаяПодсказка" id="242"/>
+						</LabelDecoration>
+						<CommandBar name="КоманднаяПанель12" id="222">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель 12</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанель12РасширеннаяПодсказка" id="223"/>
+							<ChildItems>
+								<Button name="Продолжить12" id="224">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Продолжить</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Удалить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Продолжить12РасширеннаяПодсказка" id="225"/>
+								</Button>
+								<Button name="Отмена12" id="226">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Cancel</CommandName>
+									<ExtendedTooltip name="Отмена12РасширеннаяПодсказка" id="227"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="ПередУдалениемРасширенияСДанными" id="179">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед удалением расширения с данными</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПередУдалениемРасширенияСДаннымиРасширеннаяПодсказка" id="180"/>
+					<ChildItems>
+						<LabelDecoration name="ПредупреждениеПередУдалениемРасширения" id="228">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Удаляемое расширение хранит данные в информационной базе, которые будут безвозвратно потеряны.</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ContextMenu name="ПредупреждениеПередУдалениемРасширенияКонтекстноеМеню" id="229"/>
+							<ExtendedTooltip name="ПредупреждениеПередУдалениемРасширенияРасширеннаяПодсказка" id="230">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>64</MaxWidth>
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ознакомьтесь с документацией по расширению, которую можно получить от поставщика расширения.
+Если требуется...
+• обновить расширение, то вместо удаления и добавления нажмите кнопку &lt;b&gt;Обновить из файла...&lt;/&gt;;
+• временно отключить расширение, следует снять флажок &lt;b&gt;Подключать расширение при входе&lt;/&gt;.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаОтступРасширениеСДанными" id="245">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отступ расширение с данными</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтступРасширениеСДаннымиРасширеннаяПодсказка" id="246"/>
+							<ChildItems>
+								<LabelDecoration name="ПредупреждениеПередУдалениемРасширенияСДаннымиРезервноеКопирование" id="205">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перед удалением расширения рекомендуется 
+выполнить резервное копирование информационной базы.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПредупреждениеПередУдалениемРасширенияСДаннымиРезервноеКопированиеКонтекстноеМеню" id="206"/>
+									<ExtendedTooltip name="ПредупреждениеПередУдалениемРасширенияСДаннымиРезервноеКопированиеРасширеннаяПодсказка" id="207"/>
+									<Events>
+										<Event name="URLProcessing">ПредупреждениеПередУдалениемРасширенияРезервноеКопированиеОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ПредупреждениеПередУдалениемРасширенияСДаннымиТекстУдалить" id="208">
+							<VerticalStretch>true</VerticalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;&lt;Удалить выделенные расширения?&gt;&gt;
+&lt;&lt;Удалить расширение?&gt;&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Top</VerticalAlign>
+							<ContextMenu name="ПредупреждениеПередУдалениемРасширенияСДаннымиТекстУдалитьКонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="ПредупреждениеПередУдалениемРасширенияСДаннымиТекстУдалитьРасширеннаяПодсказка" id="210"/>
+						</LabelDecoration>
+						<CommandBar name="КоманднаяПанель10" id="186">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель 10</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанель10РасширеннаяПодсказка" id="187"/>
+							<ChildItems>
+								<Button name="Продолжить10" id="188">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Продолжить</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Удалить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Продолжить10РасширеннаяПодсказка" id="189"/>
+								</Button>
+								<Button name="Отмена10" id="190">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Cancel</CommandName>
+									<ExtendedTooltip name="Отмена10РасширеннаяПодсказка" id="191"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="ПередОтключениемРасширенияСДанными" id="192">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед удалением расширения</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПередОтключениемРасширенияСДаннымиРасширеннаяПодсказка" id="193"/>
+					<ChildItems>
+						<LabelDecoration name="ПредупреждениеПередОтключениемРасширения" id="194">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>60</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отключаемое расширение хранит данные в приложении, которые станут недоступными. 
+Кроме того некоторые данные самого приложения могут также стать недоступными для изменения.</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ContextMenu name="ПредупреждениеПередОтключениемРасширенияКонтекстноеМеню" id="195"/>
+							<ExtendedTooltip name="ПредупреждениеПередОтключениемРасширенияРасширеннаяПодсказка" id="196">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>60</MaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ознакомьтесь с документацией по расширению, которую можно получить от поставщика расширения.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаОтступПередОтключениемРасширенияСДанными" id="247">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отступ перед отключением расширения с данными</v8:content>
+								</v8:item>
+							</Title>
+							<Shortcut>F7</Shortcut>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтступПередОтключениемРасширенияСДаннымиРасширеннаяПодсказка" id="248"/>
+							<ChildItems>
+								<LabelDecoration name="ПредупреждениеПередОтключениемРасширенияТекстОтключить" id="231">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<VerticalStretch>true</VerticalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отключить расширение?</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ПредупреждениеПередОтключениемРасширенияТекстОтключитьКонтекстноеМеню" id="232"/>
+									<ExtendedTooltip name="ПредупреждениеПередОтключениемРасширенияТекстОтключитьРасширеннаяПодсказка" id="233"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<CommandBar name="КоманднаяПанель11" id="199">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель 11</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманднаяПанель11РасширеннаяПодсказка" id="200"/>
+							<ChildItems>
+								<Button name="Продолжить11" id="201">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Продолжить</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отключить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Продолжить11РасширеннаяПодсказка" id="202"/>
+								</Button>
+								<Button name="Отмена11" id="203">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Cancel</CommandName>
+									<ExtendedTooltip name="Отмена11РасширеннаяПодсказка" id="204"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НуженПерезапуск" id="1">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяНажатойКнопки" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешитьИнтерактивноеОткрытие" id="3">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НеЗапрещатьОткрытиеВнешнихОтчетовИОбработок" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не запрещать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не запрещать открытие внешних отчетов и обработок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НеЗапрещатьОткрытиеВнешнихОтчетовИОбработок</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Продолжить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПродолжить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗапретитьОткрытиеВнешнихОтчетовИОбработок" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запретить открытие внешних отчетов и обработок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роль "Интерактивное открытие внешних отчетов и обработок" будет отключена у всех пользователей и администраторов.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапретитьОткрытиеВнешнихОтчетовИОбработок</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЯОзнакомлен" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЯОзнакомлен</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РазрешитьТолькоАдминистраторам" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить только администраторам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить только администраторам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РазрешитьВсем" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить всем</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить всем</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗапретитьВсем" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запретить всем</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запретить всем</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Ключ">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ДополнительныйПараметр">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

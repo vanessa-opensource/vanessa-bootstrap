@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Дополнительно</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>HorizontalIfPossible</Group>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="Закрыть" id="37">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="73"/>
+			</Button>
+			<Button name="Справка" id="70">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="74"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Документ" id="99">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="100"/>
+			<ChildItems>
+				<InputField name="Наименование" id="41">
+					<DataPath>Объект.Description</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>50</MaxWidth>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="76"/>
+					<SelectedItemsActionsPanel name="НаименованиеПанельДействийВыделенныхСтрок" id="101"/>
+				</InputField>
+				<UsualGroup name="ГруппаРезультат" id="63">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат выполнения задачи</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаРезультатРасширеннаяПодсказка" id="89"/>
+					<ChildItems>
+						<CheckBoxField name="Выполнена" id="64">
+							<DataPath>Объект.Executed</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыполненаКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ВыполненаРасширеннаяПодсказка" id="90"/>
+							<SelectedItemsActionsPanel name="ВыполненаПанельДействийВыделенныхСтрок" id="102"/>
+						</CheckBoxField>
+						<InputField name="ДатаИсполнения" id="66">
+							<DataPath>Объект.ДатаИсполнения</DataPath>
+							<Wrap>false</Wrap>
+							<ContextMenu name="ДатаИсполненияКонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="ДатаИсполненияРасширеннаяПодсказка" id="91"/>
+							<SelectedItemsActionsPanel name="ДатаИсполненияПанельДействийВыделенныхСтрок" id="103"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаБизнесПроцесс" id="51">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бизнес-процесс</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаБизнесПроцессРасширеннаяПодсказка" id="86"/>
+					<ChildItems>
+						<InputField name="БизнесПроцесс" id="52">
+							<DataPath>Объект.BusinessProcess</DataPath>
+							<Width>40</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<OpenButton>true</OpenButton>
+							<ContextMenu name="БизнесПроцессКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="БизнесПроцессРасширеннаяПодсказка" id="87"/>
+							<SelectedItemsActionsPanel name="БизнесПроцессПанельДействийВыделенныхСтрок" id="104"/>
+						</InputField>
+						<InputField name="ТочкаМаршрута" id="54">
+							<DataPath>Объект.RoutePoint</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<Wrap>false</Wrap>
+							<ContextMenu name="ТочкаМаршрутаКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ТочкаМаршрутаРасширеннаяПодсказка" id="88"/>
+							<SelectedItemsActionsPanel name="ТочкаМаршрутаПанельДействийВыделенныхСтрок" id="105"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаАдресация" id="69">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача адресована</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаАдресацияРасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<InputField name="Исполнитель" id="27">
+							<DataPath>Объект.Исполнитель</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<ContextMenu name="ИсполнительКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ИсполнительРасширеннаяПодсказка" id="82"/>
+							<SelectedItemsActionsPanel name="ИсполнительПанельДействийВыделенныхСтрок" id="106"/>
+						</InputField>
+						<InputField name="РольИсполнителя" id="29">
+							<DataPath>Объект.РольИсполнителя</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<ContextMenu name="РольИсполнителяКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="РольИсполнителяРасширеннаяПодсказка" id="83"/>
+							<SelectedItemsActionsPanel name="РольИсполнителяПанельДействийВыделенныхСтрок" id="107"/>
+						</InputField>
+						<UsualGroup name="ГруппаУточнение" id="92">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уточнение</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУточнениеРасширеннаяПодсказка" id="93"/>
+							<ChildItems>
+								<LabelDecoration name="Отступ" id="96">
+									<ContextMenu name="ОтступКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="ОтступРасширеннаяПодсказка" id="98"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаОбъектыАдресации" id="94">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Объекты адресации</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОбъектыАдресацииРасширеннаяПодсказка" id="95"/>
+									<ChildItems>
+										<InputField name="ОсновнойОбъектАдресации" id="31">
+											<DataPath>Объект.ОсновнойОбъектАдресации</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleHeight>2</TitleHeight>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<OpenButton>true</OpenButton>
+											<ContextMenu name="ОсновнойОбъектАдресацииКонтекстноеМеню" id="32"/>
+											<ExtendedTooltip name="ОсновнойОбъектАдресацииРасширеннаяПодсказка" id="84"/>
+											<SelectedItemsActionsPanel name="ОсновнойОбъектАдресацииПанельДействийВыделенныхСтрок" id="108"/>
+										</InputField>
+										<InputField name="ДополнительныйОбъектАдресации" id="33">
+											<DataPath>Объект.ДополнительныйОбъектАдресации</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleHeight>2</TitleHeight>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<OpenButton>true</OpenButton>
+											<ContextMenu name="ДополнительныйОбъектАдресацииКонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="ДополнительныйОбъектАдресацииРасширеннаяПодсказка" id="85"/>
+											<SelectedItemsActionsPanel name="ДополнительныйОбъектАдресацииПанельДействийВыделенныхСтрок" id="109"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВходящие" id="56">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="ГруппаВходящиеРасширеннаяПодсказка" id="78"/>
+					<ChildItems>
+						<InputField name="Дата" id="57">
+							<DataPath>Объект.Date</DataPath>
+							<Wrap>false</Wrap>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="79"/>
+							<SelectedItemsActionsPanel name="ДатаПанельДействийВыделенныхСтрок" id="110"/>
+						</InputField>
+						<InputField name="СрокИсполнения" id="71">
+							<DataPath>Объект.СрокИсполнения</DataPath>
+							<ContextMenu name="СрокИсполненияКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="СрокИсполненияРасширеннаяПодсказка" id="80"/>
+							<SelectedItemsActionsPanel name="СрокИсполненияПанельДействийВыделенныхСтрок" id="111"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСправа" id="45">
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справа</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<United>false</United>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСправаРасширеннаяПодсказка" id="75"/>
+			<ChildItems>
+				<InputField name="Номер" id="43">
+					<DataPath>Объект.Number</DataPath>
+					<Width>14</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НомерКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="77"/>
+					<SelectedItemsActionsPanel name="НомерПанельДействийВыделенныхСтрок" id="112"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:TaskObject.ЗадачаИсполнителя</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="Ключ">
+			<Type>
+				<v8:Type>cfg:TaskRef.ЗадачаИсполнителя</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

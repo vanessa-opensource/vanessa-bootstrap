@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ГруппаКоманднаяПанель" id="34">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Командная панель</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="35"/>
+				<ChildItems>
+					<Button name="ЗаписатьИЗакрыть" id="36">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+						<ButtonImportance>Main</ButtonImportance>
+						<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="37"/>
+					</Button>
+					<Button name="Записать" id="38">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Write</CommandName>
+						<ExtendedTooltip name="ЗаписатьРасширеннаяПодсказка" id="39"/>
+					</Button>
+					<Popup name="Добавить" id="44">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Добавить</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ДобавитьРасширеннаяПодсказка" id="45"/>
+						<ChildItems>
+							<Button name="ДобавитьЭлементОтбора" id="40">
+								<Type>CommandBarButton</Type>
+								<Representation>PictureAndText</Representation>
+								<CommandName>Form.Item.ПравилоНастройкиОтбор.StandardCommand.AddFilterItem</CommandName>
+								<ExtendedTooltip name="ДобавитьЭлементОтбораРасширеннаяПодсказка" id="41"/>
+							</Button>
+							<Button name="ДобавитьУсловиеПоДате" id="46">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ДобавитьУсловиеПоДате</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Добавить условие по дате</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ДобавитьУсловиеПоДатеРасширеннаяПодсказка" id="47"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Button name="СгруппироватьЭлементыОтбора" id="42">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ПравилоНастройкиОтбор.StandardCommand.GroupFilterItems</CommandName>
+						<ExtendedTooltip name="СгруппироватьЭлементыОтбораРасширеннаяПодсказка" id="43"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Popup name="ПодменюОтчеты" id="53">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отчеты</v8:content>
+					</v8:item>
+				</Title>
+				<Picture>
+					<xr:Ref>CommonPicture.Отчеты</xr:Ref>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<Representation>PictureAndText</Representation>
+				<ExtendedTooltip name="ПодменюОтчетыРасширеннаяПодсказка" id="54"/>
+			</Popup>
+			<SearchStringAddition name="СтрокаПоиска" id="50">
+				<AdditionSource>
+					<Item>ПравилоНастройкиОтбор</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Поиск</v8:content>
+					</v8:item>
+				</Title>
+				<ContextMenu name="СтрокаПоискаКонтекстноеМеню" id="51"/>
+				<ExtendedTooltip name="СтрокаПоискаРасширеннаяПодсказка" id="52"/>
+			</SearchStringAddition>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ПравилоНастройкиОтбор" id="10">
+			<Representation>Tree</Representation>
+			<Autofill>true</Autofill>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Правило.Settings.Filter</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правило настройки отбор</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>AddFilterItemGroup</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Detailed</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>HierarchicalList</ExcludedCommand>
+				<ExcludedCommand>List</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SetPresentation</ExcludedCommand>
+				<ExcludedCommand>Tree</ExcludedCommand>
+				<ExcludedCommand>UseFieldAsValue</ExcludedCommand>
+				<ExcludedCommand>UserSettingItemProperties</ExcludedCommand>
+			</CommandSet>
+			<CurrentRowUse>SelectionPresentationAndChoice</CurrentRowUse>
+			<ViewMode>All</ViewMode>
+			<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+			<ContextMenu name="ПравилоНастройкиОтборКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ПравилоНастройкиОтборКоманднаяПанель" id="12">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПравилоНастройкиОтборРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ПравилоНастройкиОтборСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>ПравилоНастройкиОтбор</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПравилоНастройкиОтборСтрокаПоискаКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ПравилоНастройкиОтборСтрокаПоискаРасширеннаяПодсказка" id="18"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПравилоНастройкиОтборСостояниеПросмотра" id="19">
+				<AdditionSource>
+					<Item>ПравилоНастройкиОтбор</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПравилоНастройкиОтборСостояниеПросмотраКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="ПравилоНастройкиОтборСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПравилоНастройкиОтборУправлениеПоиском" id="24">
+				<AdditionSource>
+					<Item>ПравилоНастройкиОтбор</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПравилоНастройкиОтборУправлениеПоискомКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ПравилоНастройкиОтборУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="ПравилоНастройкиОтборПанельДействийВыделенныхСтрок" id="55"/>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НастройкиОчисткиФайлов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Правило" id="2">
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МассивРеквизитовСТипомДата" id="3">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьУсловиеПоДате" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить условие по дате</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить условие по дате</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьУсловиеПоДате</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

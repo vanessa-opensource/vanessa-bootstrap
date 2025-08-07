@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<Customizable>false</Customizable>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="1580">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заголовок</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокРасширеннаяПодсказка" id="1600"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела" id="1581">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интернет-сервисы и поддержка. Загрузка классификаторов.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<ContextMenu name="ОписаниеРазделаКонтекстноеМеню" id="1582"/>
+					<ExtendedTooltip name="ОписаниеРазделаРасширеннаяПодсказка" id="1601"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаСправка" id="1583">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справка</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСправкаРасширеннаяПодсказка" id="1603"/>
+					<ChildItems>
+						<Button name="Справка" id="1584">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="1604"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКлассификаторы" id="1637">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Классификаторы и курсы валют</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаКлассификаторыРасширеннаяПодсказка" id="1638"/>
+			<ChildItems>
+				<UsualGroup name="АдресныйКлассификаторНастройки" id="1874">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адресный классификатор настройки</v8:content>
+						</v8:item>
+					</Title>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="АдресныйКлассификаторНастройкиРасширеннаяПодсказка" id="1875"/>
+					<ChildItems>
+						<UsualGroup name="ЗагрузкаИОчисткаАдресногоКлассификатора" id="1941">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для экономии трафика при автоподборе и проверке адресов, а также при работе без доступа к Интернету возможно загружать и обновлять адресные сведения в приложении. Требуется до 2 Гб места на компьютере.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ЗагрузкаИОчисткаАдресногоКлассификатораРасширеннаяПодсказка" id="1942"/>
+							<ChildItems>
+								<Button name="ЗагрузкаАдресногоКлассификатора" id="1876">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ЗагрузкаАдресногоКлассификатора</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Загрузка адресного классификатора</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЗагрузкаАдресногоКлассификатораРасширеннаяПодсказка" id="1877">
+										<AutoMaxWidth>false</AutoMaxWidth>
+									</ExtendedTooltip>
+								</Button>
+								<Button name="ОчисткаАдресныхСведений" id="1878">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОчисткаАдресныхСведений</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Очистка</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ОчисткаАдресныхСведенийРасширеннаяПодсказка" id="1879">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Очистка адресного классификатора.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="ИспользоватьВебСервисАдресов" id="1943">
+							<DataPath>ИспользоватьВебСервисАдресов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подбирать и проверять адреса через Интернет, которые не загружены в приложение</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьВебСервисАдресовКонтекстноеМеню" id="1944"/>
+							<ExtendedTooltip name="ИспользоватьВебСервисАдресовРасширеннаяПодсказка" id="1945"/>
+							<SelectedItemsActionsPanel name="ИспользоватьВебСервисАдресовПанельДействийВыделенныхСтрок" id="1946"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьВебСервисАдресовПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОбработкаЗагрузкаКурсовВалют" id="1643">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обработка загрузка курсов валют</v8:content>
+						</v8:item>
+					</Title>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОбработкаЗагрузкаКурсовВалютРасширеннаяПодсказка" id="1644"/>
+					<ChildItems>
+						<Button name="ЗагрузкаКурсовВалют" id="1645">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ЗагрузкаКурсовВалют</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Загрузка курсов валют</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ЗагрузкаКурсовВалютРасширеннаяПодсказка" id="1646">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Загрузка курсов выбранных валют за указанный период с Портала 1С:ИТС.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОбсуждения" id="1818">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обсуждения</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаОбсужденияРасширеннаяПодсказка" id="1819"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПодключениеОбсуждений" id="1820">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключение обсуждений</v8:content>
+						</v8:item>
+					</Title>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПодключениеОбсужденийРасширеннаяПодсказка" id="1821"/>
+					<ChildItems>
+						<LabelDecoration name="СостояниеПодключенияОбсуждений" id="1822">
+							<Visible>false</Visible>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Состояние подключения обсуждений&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СостояниеПодключенияОбсужденийКонтекстноеМеню" id="1823"/>
+							<ExtendedTooltip name="СостояниеПодключенияОбсужденийРасширеннаяПодсказка" id="1824"/>
+						</LabelDecoration>
+						<Button name="ПодключитьОтключитьОбсуждения" id="1825">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПодключитьОтключитьОбсуждения</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подключить</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПодключитьОтключитьОбсужденияРасширеннаяПодсказка" id="1826"/>
+						</Button>
+						<LabelDecoration name="ПояснениеПодключениеОбсуждений" id="1829">
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общение пользователей друг с другом в режиме реального времени.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеПодключениеОбсужденийКонтекстноеМеню" id="1830"/>
+							<ExtendedTooltip name="ПояснениеПодключениеОбсужденийРасширеннаяПодсказка" id="1831"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ОбсужденияНастроитьИнтеграциюСВнешнимиСистемами" id="1939">
+					<Type>Hyperlink</Type>
+					<Height>2</Height>
+					<CommandName>Form.Command.ОбсужденияНастроитьИнтеграциюСВнешнимиСистемами</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сообщения из других приложений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ОбсужденияНастроитьИнтеграциюСВнешнимиСистемамиРасширеннаяПодсказка" id="1940">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Получать и отправлять сообщения в мессенджеры. Например в Telegram, VK.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСклонения" id="1705">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склонения представлений объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаСклоненияРасширеннаяПодсказка" id="1706"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРазрешениеСклонения" id="1707">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разрешение склонения</v8:content>
+						</v8:item>
+					</Title>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРазрешениеСклоненияРасширеннаяПодсказка" id="1708"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьСервисСклоненияMorpher" id="1709">
+							<DataPath>ИспользоватьСервисСклоненияMorpher</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать альтернативный сервис склонения Морфер</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьСервисСклоненияMorpherКонтекстноеМеню" id="1710"/>
+							<ExtendedTooltip name="ИспользоватьСервисСклоненияMorpherРасширеннаяПодсказка" id="1711">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Разрешить использование внешнего сервиса Морфер для получения альтернативного варианта склонения представлений объектов в падежах (требуется подключение к Интернет).
+Если внешний сервис не используется, склонение представлений выполняется с применением встроенных возможностей приложения.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<SelectedItemsActionsPanel name="ИспользоватьСервисСклоненияMorpherПанельДействийВыделенныхСтрок" id="1947"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьСервисСклоненияMorpherПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНастройкаСклонения" id="1712">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка склонения</v8:content>
+						</v8:item>
+					</Title>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкаСклоненияРасширеннаяПодсказка" id="1713"/>
+					<ChildItems>
+						<Button name="НастройкаДоступаКСервисуMorpher" id="1714">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.НастройкаДоступаКСервисуMorpher</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка доступа к сервису Морфер</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="НастройкаДоступаКСервисуMorpherРасширеннаяПодсказка" id="1715">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ввод параметров авторизации на сервере склонения.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЦентрМониторинга" id="1663">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Центр мониторинга</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа оценка производительности</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаЦентрМониторингаРасширеннаяПодсказка" id="1664"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРазрешитьОтправлятьДанные" id="1665">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разрешить отправлять данные</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРазрешитьОтправлятьДанныеРасширеннаяПодсказка" id="1666"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПояснение" id="1667">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отчеты об использовании приложения помогают нам определить, над чем следует поработать в первую очередь.
+Собранные сведения являются обезличенными и содержат только статистические показатели. Подготовка
+и отправка отчетов не замедлит работу приложения.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПояснениеКонтекстноеМеню" id="1668"/>
+							<ExtendedTooltip name="ДекорацияПояснениеРасширеннаяПодсказка" id="1669"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаПереключатель" id="1670">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Переключатель</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПереключательРасширеннаяПодсказка" id="1671"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПереключатель" id="1672">
+									<Width>1</Width>
+									<ContextMenu name="ДекорацияПереключательКонтекстноеМеню" id="1673"/>
+									<ExtendedTooltip name="ДекорацияПереключательРасширеннаяПодсказка" id="1674"/>
+								</LabelDecoration>
+								<RadioButtonField name="ЦентрМониторингаРазрешитьОтправлятьДанные" id="1675">
+									<DataPath>ЦентрМониторингаРазрешитьОтправлятьДанные</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Центр мониторинга разрешить отправлять данные</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>RadioButtons</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Разрешить автоматическую отправку сведений об использовании приложения в фирму "1С"</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ЦентрМониторингаРазрешитьОтправлятьДанныеКонтекстноеМеню" id="1676"/>
+									<ExtendedTooltip name="ЦентрМониторингаРазрешитьОтправлятьДанныеРасширеннаяПодсказка" id="1677"/>
+									<SelectedItemsActionsPanel name="ЦентрМониторингаРазрешитьОтправлятьДанныеПанельДействийВыделенныхСтрок" id="1948"/>
+									<Events>
+										<Event name="OnChange">РазрешитьОтправлятьДанныеПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиОтправкиОтчетовОбОшибках" id="1842">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки отправки отчетов об ошибках</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиОтправкиОтчетовОбОшибкахРасширеннаяПодсказка" id="1843"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОтчетыОбОшибках" id="1844">
+									<Width>3</Width>
+									<ContextMenu name="ДекорацияОтчетыОбОшибкахКонтекстноеМеню" id="1845"/>
+									<ExtendedTooltip name="ДекорацияОтчетыОбОшибкахРасширеннаяПодсказка" id="1846"/>
+								</LabelDecoration>
+								<Button name="ЦентрМониторингаНастройки" id="1840">
+									<Type>Hyperlink</Type>
+									<Enabled>false</Enabled>
+									<CommandName>Form.Command.ЦентрМониторингаНастройки</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки центра мониторинга</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЦентрМониторингаНастройкиРасширеннаяПодсказка" id="1841"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОтправитьКонтактнуюИнформацию" id="1847">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отправить контактную информацию</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтправитьКонтактнуюИнформациюРасширеннаяПодсказка" id="1848"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОтправитьКонтактнуюИнформацию" id="1849">
+									<Width>3</Width>
+									<ContextMenu name="ДекорацияОтправитьКонтактнуюИнформациюКонтекстноеМеню" id="1850"/>
+									<ExtendedTooltip name="ДекорацияОтправитьКонтактнуюИнформациюРасширеннаяПодсказка" id="1851"/>
+								</LabelDecoration>
+								<Button name="ЦентрМониторингаОтправитьКонтактнуюИнформацию" id="1852">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ЦентрМониторингаОтправитьКонтактнуюИнформацию</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сообщить о проблемах производительности</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЦентрМониторингаОтправитьКонтактнуюИнформациюРасширеннаяПодсказка" id="1853"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСтороннему" id="1832">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стороннему</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСтороннемуРасширеннаяПодсказка" id="1833"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияСтороннему" id="1834">
+							<Width>1</Width>
+							<Height>1</Height>
+							<ContextMenu name="ДекорацияСтороннемуКонтекстноеМеню" id="1835"/>
+							<ExtendedTooltip name="ДекорацияСтороннемуРасширеннаяПодсказка" id="1836"/>
+						</LabelDecoration>
+						<RadioButtonField name="ЦентрМониторингаРазрешитьОтправлятьДанныеСтороннему" id="1837">
+							<DataPath>ЦентрМониторингаРазрешитьОтправлятьДанные</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Центр мониторинга разрешить отправлять данные</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>RadioButtons</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Разрешить отправку сведений стороннему разработчику</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ЦентрМониторингаРазрешитьОтправлятьДанныеСтороннемуКонтекстноеМеню" id="1838"/>
+							<ExtendedTooltip name="ЦентрМониторингаРазрешитьОтправлятьДанныеСтороннемуРасширеннаяПодсказка" id="1839"/>
+							<SelectedItemsActionsPanel name="ЦентрМониторингаРазрешитьОтправлятьДанныеСтороннемуПанельДействийВыделенныхСтрок" id="1949"/>
+							<Events>
+								<Event name="OnChange">РазрешитьОтправлятьДанныеСтороннемуПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОтправкиДанныхНастройкаРесурсаОбщая" id="1678">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправки данных настройка ресурса общая</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОтправкиДанныхНастройкаРесурсаОбщаяРасширеннаяПодсказка" id="1679"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияАдресСервиса" id="1680">
+							<Width>3</Width>
+							<ContextMenu name="ДекорацияАдресСервисаКонтекстноеМеню" id="1681"/>
+							<ExtendedTooltip name="ДекорацияАдресСервисаРасширеннаяПодсказка" id="1682"/>
+						</LabelDecoration>
+						<InputField name="ЦентрМониторингаАдресСервиса" id="1683">
+							<DataPath>ЦентрМониторингаАдресСервиса</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Адрес сервиса</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЦентрМониторингаАдресСервисаКонтекстноеМеню" id="1684"/>
+							<ExtendedTooltip name="ЦентрМониторингаАдресСервисаРасширеннаяПодсказка" id="1685"/>
+							<SelectedItemsActionsPanel name="ЦентрМониторингаАдресСервисаПанельДействийВыделенныхСтрок" id="1950"/>
+							<Events>
+								<Event name="OnChange">ЦентрМониторингаАдресСервисаПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЗапретитьОтправлятьДанные" id="1686">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запретить отправлять данные</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗапретитьОтправлятьДанныеРасширеннаяПодсказка" id="1687"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияЗапретитьОтправлятьДанные" id="1688">
+							<Width>1</Width>
+							<ContextMenu name="ДекорацияЗапретитьОтправлятьДанныеКонтекстноеМеню" id="1689"/>
+							<ExtendedTooltip name="ДекорацияЗапретитьОтправлятьДанныеРасширеннаяПодсказка" id="1690"/>
+						</LabelDecoration>
+						<RadioButtonField name="ЦентрМониторингаЗапретитьОтправлятьДанные" id="1691">
+							<DataPath>ЦентрМониторингаРазрешитьОтправлятьДанные</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Центр мониторинга разрешить отправлять данные</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>RadioButtons</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Запретить отправку сведений</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ЦентрМониторингаЗапретитьОтправлятьДанныеКонтекстноеМеню" id="1692"/>
+							<ExtendedTooltip name="ЦентрМониторингаЗапретитьОтправлятьДанныеРасширеннаяПодсказка" id="1693"/>
+							<SelectedItemsActionsPanel name="ЦентрМониторингаЗапретитьОтправлятьДанныеПанельДействийВыделенныхСтрок" id="1951"/>
+							<Events>
+								<Event name="OnChange">ЗапретитьОтправлятьДанныеПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВнешниеКомпоненты" id="1716">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внешние компоненты</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаВнешниеКомпонентыРасширеннаяПодсказка" id="1717"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаУправлениеВнешнимиКомпонентами" id="1718">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управление внешними компонентами</v8:content>
+						</v8:item>
+					</Title>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУправлениеВнешнимиКомпонентамиРасширеннаяПодсказка" id="1719"/>
+					<ChildItems>
+						<Button name="ОткрытьВнешниеКомпоненты" id="1720">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьВнешниеКомпоненты</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка внешних компонент</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьВнешниеКомпонентыРасширеннаяПодсказка" id="1721">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Настройка автообновления внешних компонент сторонних поставщиков, подключенных к приложению.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ЦентрМониторингаАдресСервиса" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Центр мониторинга адрес сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦентрМониторингаРазрешитьОтправлятьДанные" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Центр мониторинга разрешить отправлять данные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦентрМониторингаИдентификаторЗадания" id="26">
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦентрМониторингаАдресРезультатаЗадания" id="27">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбсужденияПодключены" id="29">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоАдминистраторСистемы" id="30">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазделениеВключено" id="31">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоАвтономноеРабочееМесто" id="32">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьСервисСклоненияMorpher" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать сервис склонения morpher</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьВебСервисАдресов" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбирать и проверять адреса через Интернет, которые не загружены в приложение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодключитьОтключитьОбсуждения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить/Отключить обсуждения</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПодключитьОтключитьОбсуждения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбсужденияНастроитьИнтеграциюСВнешнимиСистемами" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщения из других приложений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить получение и отправку сообщений в другие мессенджеры. Например в Telegram, VK</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбсужденияНастроитьИнтеграциюСВнешнимиСистемами</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="ЗагрузкаАдресногоКлассификатора" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка адресного классификатора</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗагрузкаАдресногоКлассификатора</Action>
+		</Command>
+		<Command name="ОчисткаАдресныхСведений" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистка</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОчисткаАдресныхСведений</Action>
+		</Command>
+		<Command name="ЗагрузкаКурсовВалют" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка курсов валют</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗагрузкаКурсовВалют</Action>
+		</Command>
+		<Command name="НастройкаДоступаКСервисуMorpher" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка доступа к сервису Морфер</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастройкаДоступаКСервисуMorpher</Action>
+		</Command>
+		<Command name="ЦентрМониторингаНастройки" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки центра мониторинга</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЦентрМониторингаНастройки</Action>
+		</Command>
+		<Command name="ЦентрМониторингаОтправитьКонтактнуюИнформацию" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщить о проблемах производительности</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЦентрМониторингаОтправитьКонтактнуюИнформацию</Action>
+		</Command>
+		<Command name="ОткрытьВнешниеКомпоненты" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка внешних компонент</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьВнешниеКомпоненты</Action>
+		</Command>
+	</Commands>
+</Form>

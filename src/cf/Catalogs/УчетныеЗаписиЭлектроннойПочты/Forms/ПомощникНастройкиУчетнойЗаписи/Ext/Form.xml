@@ -1,0 +1,2123 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="НастройкаУчетнойЗаписи" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка почты</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="НастройкаУчетнойЗаписиРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<LabelDecoration name="НастройкаУчетнойЗаписиЗаголовок" id="207">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Введите настройки почты</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НастройкаУчетнойЗаписиЗаголовокКонтекстноеМеню" id="208"/>
+							<ExtendedTooltip name="НастройкаУчетнойЗаписиЗаголовокРасширеннаяПодсказка" id="209"/>
+						</LabelDecoration>
+						<UsualGroup name="НеУдалосьПодключитьсяКартинкаИНадпись" id="158">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Не удалось подключиться картинка и надпись</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="НеУдалосьПодключитьсяКартинкаИНадписьРасширеннаяПодсказка" id="159"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаПредупреждение" id="160">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка вопрос</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>StdPicture.DialogExclamation</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаПредупреждениеКонтекстноеМеню" id="161"/>
+									<ExtendedTooltip name="КартинкаПредупреждениеРасширеннаяПодсказка" id="162"/>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаСообщенияОбОшибках" id="270">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сообщения об ошибках</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСообщенияОбОшибкахРасширеннаяПодсказка" id="271"/>
+									<ChildItems>
+										<InputField name="СообщенияОбОшибках" id="238">
+											<DataPath>СообщенияОбОшибках</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сообщения об ошибках</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>2</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<MultiLine>true</MultiLine>
+											<OpenButton>true</OpenButton>
+											<BackColor>style:FormBackColor</BackColor>
+											<BorderColor>style:FormBackColor</BorderColor>
+											<ContextMenu name="СообщенияОбОшибкахКонтекстноеМеню" id="239"/>
+											<ExtendedTooltip name="СообщенияОбОшибкахРасширеннаяПодсказка" id="240"/>
+											<SelectedItemsActionsPanel name="СообщенияОбОшибкахПанельДействийВыделенныхСтрок" id="431"/>
+											<Events>
+												<Event name="Opening">СообщенияОбОшибкахОткрытие</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="НужнаПомощь" id="272">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Нужна помощь?</v8:content>
+												</v8:item>
+											</Title>
+											<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="НужнаПомощьКонтекстноеМеню" id="273"/>
+											<ExtendedTooltip name="НужнаПомощьРасширеннаяПодсказка" id="274"/>
+											<Events>
+												<Event name="Click">НужнаПомощьНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Аутентификация" id="200">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Аутентификация</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>DontUse</ThroughAlign>
+							<ExtendedTooltip name="АутентификацияРасширеннаяПодсказка" id="201"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаАдресПочты" id="426">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Адрес почты</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаАдресПочтыРасширеннаяПодсказка" id="427"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияАдресПочты" id="428">
+											<Width>11</Width>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Адрес почты:</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияАдресПочтыКонтекстноеМеню" id="429"/>
+											<ExtendedTooltip name="ДекорацияАдресПочтыРасширеннаяПодсказка" id="430">
+												<AutoMaxWidth>false</AutoMaxWidth>
+											</ExtendedTooltip>
+										</LabelDecoration>
+										<InputField name="АдресЭлектроннойПочты" id="44">
+											<DataPath>АдресЭлектроннойПочты</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Адрес почты</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<Width>25</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<EditTextUpdate>OnValueChange</EditTextUpdate>
+											<ContextMenu name="АдресЭлектроннойПочтыКонтекстноеМеню" id="45"/>
+											<ExtendedTooltip name="АдресЭлектроннойПочтыРасширеннаяПодсказка" id="46">
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<MaxWidth>30</MaxWidth>
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Электронная почта для рассылки уведомлений из приложения.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<SelectedItemsActionsPanel name="АдресЭлектроннойПочтыПанельДействийВыделенныхСтрок" id="432"/>
+											<Events>
+												<Event name="OnChange">АдресЭлектроннойПочтыПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<RadioButtonField name="СпособАутентификации" id="362">
+									<DataPath>ВариантАутентификации</DataPath>
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Способ аутентификации</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>RadioButtons</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Авторизоваться на почтовом сервисе</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">OAuth</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Ввести пароль</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Пароль</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="СпособАутентификацииКонтекстноеМеню" id="363"/>
+									<ExtendedTooltip name="СпособАутентификацииРасширеннаяПодсказка" id="364"/>
+									<SelectedItemsActionsPanel name="СпособАутентификацииПанельДействийВыделенныхСтрок" id="433"/>
+								</RadioButtonField>
+								<UsualGroup name="ГруппаСпособАутентификацииПароль" id="298">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Способ аутентификации пароль</v8:content>
+										</v8:item>
+									</Title>
+									<Group>HorizontalIfPossible</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСпособАутентификацииПарольРасширеннаяПодсказка" id="299"/>
+									<ChildItems>
+										<RadioButtonField name="СпособАутентификацииПароль" id="302">
+											<DataPath>ВариантАутентификации</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Способ аутентификации</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ColumnsCount>1</ColumnsCount>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Пароль почты:</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Пароль</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="СпособАутентификацииПарольКонтекстноеМеню" id="303"/>
+											<ExtendedTooltip name="СпособАутентификацииПарольРасширеннаяПодсказка" id="304"/>
+											<SelectedItemsActionsPanel name="СпособАутентификацииПарольПанельДействийВыделенныхСтрок" id="434"/>
+											<Events>
+												<Event name="OnChange">СпособАутентификацииПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<InputField name="Пароль" id="47">
+											<DataPath>ПарольДляПолученияПисем</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пароль</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<TitleHeight>1</TitleHeight>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В целях безопасности рекомендуется создать на сайте почтового сервиса отдельный пароль приложения и использовать его в приложении вместо основного пароля.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<Width>23</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<PasswordMode>true</PasswordMode>
+											<ChoiceButton>true</ChoiceButton>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<EditTextUpdate>OnValueChange</EditTextUpdate>
+											<ChoiceButtonPicture>
+												<xr:Ref>CommonPicture.ВводимыеСимволыВидны</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ChoiceButtonPicture>
+											<ContextMenu name="ПарольКонтекстноеМеню" id="48"/>
+											<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="49"/>
+											<SelectedItemsActionsPanel name="ПарольПанельДействийВыделенныхСтрок" id="435"/>
+											<Events>
+												<Event name="OnChange">ПарольПриИзменении</Event>
+												<Event name="StartChoice">ПарольНачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<RadioButtonField name="СпособАутентификацииПочтовыйСервис" id="305">
+									<DataPath>ВариантАутентификации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Способ аутентификации</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<Shortcut>Ctrl+S</Shortcut>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Авторизоваться на почтовом сервисе</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">OAuth</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="СпособАутентификацииПочтовыйСервисКонтекстноеМеню" id="306"/>
+									<ExtendedTooltip name="СпособАутентификацииПочтовыйСервисРасширеннаяПодсказка" id="307"/>
+									<SelectedItemsActionsPanel name="СпособАутентификацииПочтовыйСервисПанельДействийВыделенныхСтрок" id="436"/>
+									<Events>
+										<Event name="OnChange">СпособАутентификацииПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ИспользоватьУчетнуюЗапись" id="189">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Почта будет использоваться</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ИспользоватьУчетнуюЗаписьРасширеннаяПодсказка" id="190"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьДляОтправки" id="191">
+									<DataPath>ИспользоватьДляОтправки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для отправки писем</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьДляОтправкиКонтекстноеМеню" id="192"/>
+									<ExtendedTooltip name="ИспользоватьДляОтправкиРасширеннаяПодсказка" id="193"/>
+									<SelectedItemsActionsPanel name="ИспользоватьДляОтправкиПанельДействийВыделенныхСтрок" id="437"/>
+								</CheckBoxField>
+								<CheckBoxField name="ИспользоватьДляПолучения" id="194">
+									<DataPath>ИспользоватьДляПолучения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для получения писем</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьДляПолученияКонтекстноеМеню" id="195"/>
+									<ExtendedTooltip name="ИспользоватьДляПолученияРасширеннаяПодсказка" id="196"/>
+									<SelectedItemsActionsPanel name="ИспользоватьДляПолученияПанельДействийВыделенныхСтрок" id="438"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ДляКогоУчетнаяЗапись" id="247">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для кого учетная запись</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ДляКогоУчетнаяЗаписьРасширеннаяПодсказка" id="248"/>
+							<ChildItems>
+								<RadioButtonField name="ВидУчетнойЗаписи" id="249">
+									<DataPath>ВидУчетнойЗаписи</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид почты</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Всеми пользователями (общая почта)</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Общая</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Только мной</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Персональная</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ВидУчетнойЗаписиКонтекстноеМеню" id="250"/>
+									<ExtendedTooltip name="ВидУчетнойЗаписиРасширеннаяПодсказка" id="251"/>
+									<SelectedItemsActionsPanel name="ВидУчетнойЗаписиПанельДействийВыделенныхСтрок" id="439"/>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ИмяОтправителя" id="202">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Имя отправителя</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ИмяОтправителяРасширеннаяПодсказка" id="203"/>
+							<ChildItems>
+								<InputField name="ИмяОтправителяПисем" id="151">
+									<DataPath>ИмяОтправителяПисем</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Имя отправителя</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Width>25</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ИмяОтправителяПисемКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="ИмяОтправителяПисемРасширеннаяПодсказка" id="153">
+										<TextColor>style:ПоясняющийТекст</TextColor>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Например, Ваше имя или название организации.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<SelectedItemsActionsPanel name="ИмяОтправителяПисемПанельДействийВыделенныхСтрок" id="440"/>
+									<Events>
+										<Event name="OnChange">ИмяОтправителяПисемПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="ПояснениеКИмени" id="204">
+									<Visible>false</Visible>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Например, Ваше имя или название организации.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеКИмениКонтекстноеМеню" id="205"/>
+									<ExtendedTooltip name="ПояснениеКИмениРасширеннаяПодсказка" id="206"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="НастройкаСервераИсходящейПочты" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка сервера исходящей почты</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="НастройкаСервераИсходящейПочтыРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<InputField name="Протокол" id="116">
+							<DataPath>Протокол</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип почты</v8:content>
+								</v8:item>
+							</Title>
+							<Width>8</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ListChoiceMode>true</ListChoiceMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<TextEdit>false</TextEdit>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:string">IMAP</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:string">POP</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПротоколКонтекстноеМеню" id="117"/>
+							<ExtendedTooltip name="ПротоколРасширеннаяПодсказка" id="118"/>
+							<SelectedItemsActionsPanel name="ПротоколПанельДействийВыделенныхСтрок" id="441"/>
+							<Events>
+								<Event name="OnChange">ПротоколПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ПротоколИПортСервераВходящейПочты" id="114">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Протокол и порт сервера входящей почты</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПротоколИПортСервераВходящейПочтыРасширеннаяПодсказка" id="115"/>
+							<ChildItems>
+								<InputField name="СерверВходящейПочты" id="111">
+									<DataPath>СерверВходящейПочты</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сервер IMAP</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<Width>22</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="СерверВходящейПочтыКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="СерверВходящейПочтыРасширеннаяПодсказка" id="113"/>
+									<SelectedItemsActionsPanel name="СерверВходящейПочтыПанельДействийВыделенныхСтрок" id="442"/>
+								</InputField>
+								<InputField name="ПортВходящейПочты" id="119">
+									<DataPath>ПортСервераВходящейПочты</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Порт</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="ПортВходящейПочтыКонтекстноеМеню" id="120"/>
+									<ExtendedTooltip name="ПортВходящейПочтыРасширеннаяПодсказка" id="121"/>
+									<SelectedItemsActionsPanel name="ПортВходящейПочтыПанельДействийВыделенныхСтрок" id="443"/>
+								</InputField>
+								<RadioButtonField name="ШифрованиеПриПолученииПочты" id="265">
+									<DataPath>ШифрованиеПриПолученииПочты</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Шифрование</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>STARTTLS</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Авто</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>SSL</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">SSL</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ШифрованиеПриПолученииПочтыКонтекстноеМеню" id="266"/>
+									<ExtendedTooltip name="ШифрованиеПриПолученииПочтыРасширеннаяПодсказка" id="267"/>
+									<SelectedItemsActionsPanel name="ШифрованиеПриПолученииПочтыПанельДействийВыделенныхСтрок" id="444"/>
+									<Events>
+										<Event name="OnChange">ШифрованиеПриПолученииПочтыПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="НастройкиСервераИсходящейПочты" id="89">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки сервера исходящей почты</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="НастройкиСервераИсходящейПочтыРасширеннаяПодсказка" id="90"/>
+							<ChildItems>
+								<InputField name="СерверИсходящейПочты" id="91">
+									<DataPath>СерверИсходящейПочты</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сервер SMTP</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<Width>22</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="СерверИсходящейПочтыКонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="СерверИсходящейПочтыРасширеннаяПодсказка" id="93"/>
+									<SelectedItemsActionsPanel name="СерверИсходящейПочтыПанельДействийВыделенныхСтрок" id="445"/>
+								</InputField>
+								<InputField name="ПортСервераИсходящейПочты" id="94">
+									<DataPath>ПортСервераИсходящейПочты</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Порт</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="ПортСервераИсходящейПочтыКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ПортСервераИсходящейПочтыРасширеннаяПодсказка" id="96"/>
+									<SelectedItemsActionsPanel name="ПортСервераИсходящейПочтыПанельДействийВыделенныхСтрок" id="446"/>
+								</InputField>
+								<RadioButtonField name="ШифрованиеПриОтправкеПочты" id="262">
+									<DataPath>ШифрованиеПриОтправкеПочты</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Шифрование</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>STARTTLS</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Авто</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>SSL</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">SSL</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ШифрованиеПриОтправкеПочтыКонтекстноеМеню" id="263"/>
+									<ExtendedTooltip name="ШифрованиеПриОтправкеПочтыРасширеннаяПодсказка" id="264"/>
+									<SelectedItemsActionsPanel name="ШифрованиеПриОтправкеПочтыПанельДействийВыделенныхСтрок" id="447"/>
+									<Events>
+										<Event name="OnChange">ШифрованиеПриОтправкеПочтыПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ОставлятьПисьмаНаСервере" id="135">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оставлять письма на сервере</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ОставлятьПисьмаНаСервереРасширеннаяПодсказка" id="136"/>
+							<ChildItems>
+								<CheckBoxField name="ОставлятьКопииПисемНаСервере" id="137">
+									<DataPath>ОставлятьКопииПисемНаСервере</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оставлять копии писем на сервере</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОставлятьКопииПисемНаСервереКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="ОставлятьКопииПисемНаСервереРасширеннаяПодсказка" id="139"/>
+									<SelectedItemsActionsPanel name="ОставлятьКопииПисемНаСервереПанельДействийВыделенныхСтрок" id="448"/>
+									<Events>
+										<Event name="OnChange">ОставлятьКопииПисемНаСервереПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="НастройкаУдаленияПисем" id="140">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка удаления писем</v8:content>
+										</v8:item>
+									</Title>
+									<Group>HorizontalIfPossible</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="НастройкаУдаленияПисемРасширеннаяПодсказка" id="141"/>
+									<ChildItems>
+										<CheckBoxField name="УдалятьПисьмаССервера" id="244">
+											<DataPath>УдалятьПисьмаССервера</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Удалять письма с сервера через:</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="УдалятьПисьмаССервераКонтекстноеМеню" id="245"/>
+											<ExtendedTooltip name="УдалятьПисьмаССервераРасширеннаяПодсказка" id="246"/>
+											<SelectedItemsActionsPanel name="УдалятьПисьмаССервераПанельДействийВыделенныхСтрок" id="449"/>
+											<Events>
+												<Event name="OnChange">УдалятьПисьмаССервераПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ПериодХраненияСообщенийНаСервере" id="241">
+											<DataPath>ПериодХраненияСообщенийНаСервере</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Период хранения сообщений на сервере</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<SpinButton>true</SpinButton>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<MinValue xsi:type="xs:decimal">1</MinValue>
+											<ContextMenu name="ПериодХраненияСообщенийНаСервереКонтекстноеМеню" id="242"/>
+											<ExtendedTooltip name="ПериодХраненияСообщенийНаСервереРасширеннаяПодсказка" id="243"/>
+											<SelectedItemsActionsPanel name="ПериодХраненияСообщенийНаСервереПанельДействийВыделенныхСтрок" id="450"/>
+										</InputField>
+										<LabelDecoration name="НадписьДней" id="145">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>дней</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьДнейКонтекстноеМеню" id="146"/>
+											<ExtendedTooltip name="НадписьДнейРасширеннаяПодсказка" id="147"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="НастройкиАвторизацииПриложения" id="310">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа2</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="НастройкиАвторизацииПриложенияРасширеннаяПодсказка" id="311"/>
+					<ChildItems>
+						<LabelDecoration name="ПояснениеПоРегистрацииПриложения" id="347">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для авторизации средствами почтового сервиса необходимо зарегистрировать это приложение в почтовом сервисе.
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеПоРегистрацииПриложенияКонтекстноеМеню" id="348"/>
+							<ExtendedTooltip name="ПояснениеПоРегистрацииПриложенияРасширеннаяПодсказка" id="349"/>
+						</LabelDecoration>
+						<LabelDecoration name="ПояснениеПоАдресуПеренаправления" id="312">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>
+Из настроек регистрации приложения заполните следующие поля:
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеПоАдресуПеренаправленияКонтекстноеМеню" id="313"/>
+							<ExtendedTooltip name="ПояснениеПоАдресуПеренаправленияРасширеннаяПодсказка" id="314"/>
+						</LabelDecoration>
+						<InputField name="АдресПеренаправления" id="321">
+							<DataPath>АдресПеренаправления</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Адрес перенаправления (redirect_uri)</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="АдресПеренаправленияКонтекстноеМеню" id="322"/>
+							<ExtendedTooltip name="АдресПеренаправленияРасширеннаяПодсказка" id="323"/>
+							<SelectedItemsActionsPanel name="АдресПеренаправленияПанельДействийВыделенныхСтрок" id="451"/>
+						</InputField>
+						<LabelDecoration name="ПояснениеПоИдентификаторуПриложения" id="330">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<Title formatted="true"/>
+							<ContextMenu name="ПояснениеПоИдентификаторуПриложенияКонтекстноеМеню" id="331"/>
+							<ExtendedTooltip name="ПояснениеПоИдентификаторуПриложенияРасширеннаяПодсказка" id="332"/>
+						</LabelDecoration>
+						<InputField name="ИдентификаторПриложения" id="315">
+							<DataPath>ИдентификаторПриложения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификатор приложения (client_id)</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ИдентификаторПриложенияКонтекстноеМеню" id="316"/>
+							<ExtendedTooltip name="ИдентификаторПриложенияРасширеннаяПодсказка" id="317"/>
+							<SelectedItemsActionsPanel name="ИдентификаторПриложенияПанельДействийВыделенныхСтрок" id="452"/>
+						</InputField>
+						<LabelDecoration name="ПояснениеПоПаролюПриложения" id="333">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<Title formatted="true"/>
+							<ContextMenu name="ПояснениеПоПаролюПриложенияКонтекстноеМеню" id="334"/>
+							<ExtendedTooltip name="ПояснениеПоПаролюПриложенияРасширеннаяПодсказка" id="335"/>
+						</LabelDecoration>
+						<InputField name="ПарольПриложения" id="318">
+							<DataPath>ПарольПриложения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пароль приложения (client_secret)</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ПарольПриложенияКонтекстноеМеню" id="319"/>
+							<ExtendedTooltip name="ПарольПриложенияРасширеннаяПодсказка" id="320"/>
+							<SelectedItemsActionsPanel name="ПарольПриложенияПанельДействийВыделенныхСтрок" id="453"/>
+						</InputField>
+						<LabelDecoration name="ДополнительноеПояснение" id="420">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>У некоторых сервисов новое зарегистрированное приложение становится доступным не сразу. Рекомендуется после регистрации подождать несколько минут, прежде чем продолжить настройку.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДополнительноеПояснениеКонтекстноеМеню" id="421"/>
+							<ExtendedTooltip name="ДополнительноеПояснениеРасширеннаяПодсказка" id="422"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="Авторизация" id="308">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа2</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="АвторизацияРасширеннаяПодсказка" id="309"/>
+					<ChildItems>
+						<Pages name="ВариантыАвторизации" id="350">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Варианты авторизации</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ВариантыАвторизацииРасширеннаяПодсказка" id="351"/>
+							<ChildItems>
+								<Page name="ВстроенныйБраузер" id="352">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Встроенный браузер</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ScrollOnCompress>false</ScrollOnCompress>
+									<ExtendedTooltip name="ВстроенныйБраузерРасширеннаяПодсказка" id="353"/>
+									<ChildItems>
+										<HTMLDocumentField name="ВебСтраница" id="327">
+											<DataPath>ВебСтраница</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Веб страница</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ВебСтраницаКонтекстноеМеню" id="328"/>
+											<ExtendedTooltip name="ВебСтраницаРасширеннаяПодсказка" id="329"/>
+											<SelectedItemsActionsPanel name="ВебСтраницаПанельДействийВыделенныхСтрок" id="454"/>
+											<Events>
+												<Event name="DocumentComplete">ВебСтраницаДокументСформирован</Event>
+											</Events>
+										</HTMLDocumentField>
+									</ChildItems>
+								</Page>
+								<Page name="БраузерОперационнойСистемы" id="354">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Браузер операционной системы</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ScrollOnCompress>false</ScrollOnCompress>
+									<ExtendedTooltip name="БраузерОперационнойСистемыРасширеннаяПодсказка" id="355"/>
+									<ChildItems>
+										<LabelDecoration name="ПояснениеПоКодуПодтверждения" id="359">
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Авторизуйтесь на странице почтового сервиса и введите полученный код в поле ниже:</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ПояснениеПоКодуПодтвержденияКонтекстноеМеню" id="360"/>
+											<ExtendedTooltip name="ПояснениеПоКодуПодтвержденияРасширеннаяПодсказка" id="361"/>
+										</LabelDecoration>
+										<InputField name="КодПодтверждения" id="356">
+											<DataPath>КодПодтверждения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Код подтверждения</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="КодПодтвержденияКонтекстноеМеню" id="357"/>
+											<ExtendedTooltip name="КодПодтвержденияРасширеннаяПодсказка" id="358"/>
+											<SelectedItemsActionsPanel name="КодПодтвержденияПанельДействийВыделенныхСтрок" id="455"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="ПроверкаНастроекУчетнойЗаписи" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка настроек почты</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПроверкаНастроекУчетнойЗаписиРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<UsualGroup name="ПроверкаНастроекУчетнойЗаписиКартинкаИНадпись" id="53">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверка настроек почты.</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПроверкаНастроекУчетнойЗаписиКартинкаИНадписьРасширеннаяПодсказка" id="54"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаДлительнаяОперация" id="55">
+									<Picture>
+										<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаДлительнаяОперацияКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="КартинкаДлительнаяОперацияРасширеннаяПодсказка" id="57"/>
+								</PictureDecoration>
+								<LabelDecoration name="НадписьПроверкаНастроекУчетнойЗаписи" id="58">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выполняется проверка настроек почты.
+Это может занять несколько минут.</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<ContextMenu name="НадписьПроверкаНастроекУчетнойЗаписиКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="НадписьПроверкаНастроекУчетнойЗаписиРасширеннаяПодсказка" id="60"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ТехническиеПодробностиОшибки" id="275">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Технические подробности ошибки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ТехническиеПодробностиОшибкиРасширеннаяПодсказка" id="276"/>
+					<ChildItems>
+						<PictureDecoration name="КартинкаТехническиеПодробностиОшибки" id="279">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинка вопрос</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>StdPicture.DialogExclamation</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="КартинкаТехническиеПодробностиОшибкиКонтекстноеМеню" id="280"/>
+							<ExtendedTooltip name="КартинкаТехническиеПодробностиОшибкиРасширеннаяПодсказка" id="281"/>
+						</PictureDecoration>
+						<UsualGroup name="ГруппаТехническиеПодробностиОшибки" id="282">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При проверке обнаружены ошибки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТехническиеПодробностиОшибкиРасширеннаяПодсказка" id="283"/>
+							<ChildItems>
+								<InputField name="ТекстТехническиеПодробностиОшибки" id="284">
+									<DataPath>СообщенияОбОшибках</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сообщения об ошибках</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>7</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<OpenButton>true</OpenButton>
+									<BackColor>style:FormBackColor</BackColor>
+									<BorderColor>style:FormBackColor</BorderColor>
+									<ContextMenu name="ТекстТехническиеПодробностиОшибкиКонтекстноеМеню" id="285"/>
+									<ExtendedTooltip name="ТекстТехническиеПодробностиОшибкиРасширеннаяПодсказка" id="286"/>
+									<SelectedItemsActionsPanel name="ТекстТехническиеПодробностиОшибкиПанельДействийВыделенныхСтрок" id="456"/>
+									<Events>
+										<Event name="Opening">ТекстТехническиеПодробностиОшибкиОткрытие</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="НужнаПомощьТехническиеПодробностиОшибки" id="287">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Нужна помощь?</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="НужнаПомощьТехническиеПодробностиОшибкиКонтекстноеМеню" id="288"/>
+									<ExtendedTooltip name="НужнаПомощьТехническиеПодробностиОшибкиРасширеннаяПодсказка" id="289"/>
+									<Events>
+										<Event name="Click">НужнаПомощьНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="УчетнаяЗаписьУспешноНастроена" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Почта успешно настроена</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="УчетнаяЗаписьУспешноНастроенаРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<LabelDecoration name="УчетнаяЗаписьУспешноНастроенаЗаголовок" id="235">
+							<Visible>false</Visible>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Почта успешно настроена</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="УчетнаяЗаписьУспешноНастроенаЗаголовокКонтекстноеМеню" id="236"/>
+							<ExtendedTooltip name="УчетнаяЗаписьУспешноНастроенаЗаголовокРасширеннаяПодсказка" id="237"/>
+						</LabelDecoration>
+						<UsualGroup name="УчетнаяЗаписьУспешноНастроенаКартинкаИНадпись" id="64">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Почта успешно настроена.</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="УчетнаяЗаписьУспешноНастроенаКартинкаИНадписьРасширеннаяПодсказка" id="65"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаУспешно" id="66">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка успешно</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаУспешноКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="КартинкаУспешноРасширеннаяПодсказка" id="68"/>
+								</PictureDecoration>
+								<LabelDecoration name="НадписьУчетнаяЗаписьУспешноНастроена" id="69">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка параметров почты завершена.</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<ContextMenu name="НадписьУчетнаяЗаписьУспешноНастроенаКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="НадписьУчетнаяЗаписьУспешноНастроенаРасширеннаяПодсказка" id="71"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ПриПроверкеОбнаруженыОшибки" id="393">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>При проверке обнаружены ошибки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ПриПроверкеОбнаруженыОшибкиРасширеннаяПодсказка" id="394"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОписаниеОшибки" id="395">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание ошибки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОписаниеОшибкиРасширеннаяПодсказка" id="396"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаПриПроверкеОбнаруженыОшибки" id="397">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка при проверке обнаружены ошибки</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>StdPicture.DialogExclamation</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="КартинкаПриПроверкеОбнаруженыОшибкиКонтекстноеМеню" id="398"/>
+									<ExtendedTooltip name="КартинкаПриПроверкеОбнаруженыОшибкиРасширеннаяПодсказка" id="399"/>
+								</PictureDecoration>
+								<InputField name="ТекстСообщенияОбОшибках" id="402">
+									<DataPath>СообщенияОбОшибках</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сообщения об ошибках</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<Width>40</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>2</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<BackColor>style:FormBackColor</BackColor>
+									<BorderColor>style:FormBackColor</BorderColor>
+									<ContextMenu name="ТекстСообщенияОбОшибкахКонтекстноеМеню" id="403"/>
+									<ExtendedTooltip name="ТекстСообщенияОбОшибкахРасширеннаяПодсказка" id="404"/>
+									<SelectedItemsActionsPanel name="ТекстСообщенияОбОшибкахПанельДействийВыделенныхСтрок" id="457"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаВозможныеПричины" id="405">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Возможные причины</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаВозможныеПричиныРасширеннаяПодсказка" id="406"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияВозможныеПричины" id="407">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация возможные причины</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияВозможныеПричиныКонтекстноеМеню" id="408"/>
+									<ExtendedTooltip name="ДекорацияВозможныеПричиныРасширеннаяПодсказка" id="409"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСпособыУстранения" id="410">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Способы устранения</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаСпособыУстраненияРасширеннаяПодсказка" id="411"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияСпособыУстранения" id="412">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация способы устранения</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияСпособыУстраненияКонтекстноеМеню" id="413"/>
+									<ExtendedTooltip name="ДекорацияСпособыУстраненияРасширеннаяПодсказка" id="414"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДополнительныеСсылки" id="415">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнительные ссылки</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>HorizontalIfPossible</Group>
+							<VerticalAlign>Bottom</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДополнительныеСсылкиРасширеннаяПодсказка" id="416"/>
+							<ChildItems>
+								<LabelDecoration name="РекомендацииПоРешениюТиповыхПроблем" id="417">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Рекомендации по решению типовых проблем</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="РекомендацииПоРешениюТиповыхПроблемКонтекстноеМеню" id="418"/>
+									<ExtendedTooltip name="РекомендацииПоРешениюТиповыхПроблемРасширеннаяПодсказка" id="419"/>
+									<Events>
+										<Event name="Click">НужнаПомощьНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="КоманднаяПанель" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>HorizontalIfPossible</Group>
+			<VerticalAlign>Bottom</VerticalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<CommandBar name="КоманднаяПанельЛеваяЧасть" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель левая часть</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КоманднаяПанельЛеваяЧастьРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<Button name="КнопкаНазад" id="20">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Назад</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt; Назад</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаНазадРасширеннаяПодсказка" id="21"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<CommandBar name="КоманднаяПанельПраваяЧасть" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель правая часть</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="КоманднаяПанельПраваяЧастьРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<Button name="КнопкаПерейтиКНастройкам" id="156">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ПерейтиКНастройкам</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перейти к настройкам</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаПерейтиКНастройкамРасширеннаяПодсказка" id="157"/>
+						</Button>
+						<Button name="КнопкаДалее" id="22">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.Далее</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создать</v8:content>
+								</v8:item>
+							</Title>
+							<ButtonImportance>Main</ButtonImportance>
+							<ExtendedTooltip name="КнопкаДалееРасширеннаяПодсказка" id="23"/>
+						</Button>
+						<Button name="КнопкаОтмена" id="268">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Отмена</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отмена</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаОтменаРасширеннаяПодсказка" id="269"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="АдресЭлектроннойПочты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес электронной почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособНастройки" id="3">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>13</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТребуетсяВходНаСерверПередОтправкой" id="4">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяПользователяДляОтправкиПисем" id="5">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольДляОтправкиПисем" id="6">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СерверИсходящейПочты" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервер исходящей почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПортСервераИсходящейПочты" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порт сервера исходящей почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьЗащищенноеСоединениеДляИсходящейПочты" id="10">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяПользователяДляПолученияПисем" id="11">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольДляПолученияПисем" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль для получения писем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СерверВходящейПочты" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервер входящей почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Протокол" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Протокол</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>4</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПортСервераВходящейПочты" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порт сервера входящей почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьЗащищенноеСоединениеДляВходящейПочты" id="17">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДлительностьОжиданияСервера" id="18">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОставлятьКопииПисемНаСервере" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оставлять копии писем на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НазваниеУчетнойЗаписи" id="21">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяОтправителяПисем" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя отправителя писем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроверкаЗавершиласьСОшибками" id="23">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтекстныйРежим" id="2">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОткрытьКарточкуУчетнойЗаписи" id="24">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДлительностьОжиданияСервераПриОтправкеПисем" id="26">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиЗаполнены" id="27">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьДляОтправки" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для отправки почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьДляПолучения" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для получения почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УчетнаяЗаписьСсылка" id="30">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СообщенияОбОшибках" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщения об ошибках</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТребуетсяПодтверждениеЗакрытияФормы" id="32">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СсылкаНовойУчетнойЗаписи" id="25">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуютсяПрофилиБезопасности" id="33">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыОбработчикаОжидания" id="34">
+			<Type/>
+		</Attribute>
+		<Attribute name="РезультатФоновогоЗадания" id="35">
+			<Type/>
+		</Attribute>
+		<Attribute name="ПериодХраненияСообщенийНаСервере" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период хранения сообщений на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УдалятьПисьмаССервера" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалять письма с сервера через:</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="38">
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидУчетнойЗаписи" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТребуетсяАвторизацияПриОтправкеПисем" id="40">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ШифрованиеПриОтправкеПочты" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шифрование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ШифрованиеПриПолученииПочты" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шифрование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Перенастройка" id="7">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроверкаПропущена" id="43">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантАутентификации" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ аутентификации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторПриложения" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор приложения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольПриложения" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ключ доступа приложения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресПеренаправления" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес перенаправления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВебСтраница" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Веб страница</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗапроса" id="49">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроверочныйКод" id="50">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТокенДоступа" id="51">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТокенОбновления" id="52">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СрокДействияТокенаДоступа" id="53">
+			<Type/>
+		</Attribute>
+		<Attribute name="НастройкиАвторизацииНаПочтовомСервере" id="55">
+			<Type/>
+		</Attribute>
+		<Attribute name="ТолькоАвторизация" id="57">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторУстройства" id="59">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодПодтверждения" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код подтверждения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СрокДействияИдентификатораУстройства" id="61">
+			<Type/>
+		</Attribute>
+		<Attribute name="ИнтервалВыполненияЗапросов" id="62">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресАвторизацииПользователя" id="63">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Назад" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt; Назад</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Назад</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Далее" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее &gt;</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Далее</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПерейтиКНастройкам" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к настройкам</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПерейтиКНастройкам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отмена" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="КонтекстныйРежим">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Перенастройка">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ТолькоАвторизация">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Ключ">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

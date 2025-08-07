@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВключитьВозможностьРедактирования" id="31">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Включить возможность редактирования</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаВключитьВозможностьРедактированияРасширеннаяПодсказка" id="32"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ОбъектМетаданных" id="3">
+			<DataPath>Запись.ОбъектМетаданных</DataPath>
+			<Width>40</Width>
+			<ContextMenu name="ОбъектМетаданныхКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ОбъектМетаданныхРасширеннаяПодсказка" id="33"/>
+			<SelectedItemsActionsPanel name="ОбъектМетаданныхПанельДействийВыделенныхСтрок" id="50"/>
+		</InputField>
+		<InputField name="Роль" id="1">
+			<DataPath>Запись.Роль</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роль</v8:content>
+				</v8:item>
+			</Title>
+			<Width>40</Width>
+			<ContextMenu name="РольКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="РольРасширеннаяПодсказка" id="34"/>
+			<SelectedItemsActionsPanel name="РольПанельДействийВыделенныхСтрок" id="51"/>
+		</InputField>
+		<UsualGroup name="ПрограммныеПраваПользователя" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Программные права пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
+			<ExtendedTooltip name="ПрограммныеПраваПользователяРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<UsualGroup name="ПерваяКолонка" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Первая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПерваяКолонкаРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<CheckBoxField name="ПравоЧтение" id="27">
+							<DataPath>ПравоЧтение</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Право чтение</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Право Чтение включено всегда, когда есть запись регистра.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПравоЧтениеКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ПравоЧтениеРасширеннаяПодсказка" id="37"/>
+							<SelectedItemsActionsPanel name="ПравоЧтениеПанельДействийВыделенныхСтрок" id="52"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПравоИзменение" id="7">
+							<DataPath>Запись.ПравоИзменение</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПравоИзменениеКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПравоИзменениеРасширеннаяПодсказка" id="39"/>
+							<SelectedItemsActionsPanel name="ПравоИзменениеПанельДействийВыделенныхСтрок" id="53"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПравоДобавление" id="5">
+							<DataPath>Запись.ПравоДобавление</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПравоДобавлениеКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ПравоДобавлениеРасширеннаяПодсказка" id="38"/>
+							<SelectedItemsActionsPanel name="ПравоДобавлениеПанельДействийВыделенныхСтрок" id="54"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ВтораяКолонка" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вторая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ВтораяКолонкаРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<CheckBoxField name="ПравоЧтениеБезОграничения" id="11">
+							<DataPath>Запись.ПравоЧтениеБезОграничения</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПравоЧтениеБезОграниченияКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ПравоЧтениеБезОграниченияРасширеннаяПодсказка" id="42"/>
+							<SelectedItemsActionsPanel name="ПравоЧтениеБезОграниченияПанельДействийВыделенныхСтрок" id="55"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПравоИзменениеБезОграничения" id="15">
+							<DataPath>Запись.ПравоИзменениеБезОграничения</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПравоИзменениеБезОграниченияКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ПравоИзменениеБезОграниченияРасширеннаяПодсказка" id="44"/>
+							<SelectedItemsActionsPanel name="ПравоИзменениеБезОграниченияПанельДействийВыделенныхСтрок" id="56"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПравоДобавлениеБезОграничения" id="13">
+							<DataPath>Запись.ПравоДобавлениеБезОграничения</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПравоДобавлениеБезОграниченияКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ПравоДобавлениеБезОграниченияРасширеннаяПодсказка" id="43"/>
+							<SelectedItemsActionsPanel name="ПравоДобавлениеБезОграниченияПанельДействийВыделенныхСтрок" id="57"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ИнтерактивныеПраваПользователя" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интерактивные права пользователя (основные)</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
+			<ExtendedTooltip name="ИнтерактивныеПраваПользователяРасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<CheckBoxField name="ПравоПросмотр" id="19">
+					<DataPath>Запись.ПравоПросмотр</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПравоПросмотрКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ПравоПросмотрРасширеннаяПодсказка" id="47"/>
+					<SelectedItemsActionsPanel name="ПравоПросмотрПанельДействийВыделенныхСтрок" id="58"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПравоРедактирование" id="23">
+					<DataPath>Запись.ПравоРедактирование</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПравоРедактированиеКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПравоРедактированиеРасширеннаяПодсказка" id="49"/>
+					<SelectedItemsActionsPanel name="ПравоРедактированиеПанельДействийВыделенныхСтрок" id="59"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПравоИнтерактивноеДобавление" id="21">
+					<DataPath>Запись.ПравоИнтерактивноеДобавление</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПравоИнтерактивноеДобавлениеКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ПравоИнтерактивноеДобавлениеРасширеннаяПодсказка" id="48"/>
+					<SelectedItemsActionsPanel name="ПравоИнтерактивноеДобавлениеПанельДействийВыделенныхСтрок" id="60"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ПраваРолей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПравоЧтение" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Право чтение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВключитьВозможностьРедактирования" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность редактирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность редактирования только для целей поиска неисправности (требуется углубленное понимание работы механизма)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьВозможностьРедактирования</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<Wrap>false</Wrap>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="96"/>
+			<SelectedItemsActionsPanel name="НаименованиеПанельДействийВыделенныхСтрок" id="122"/>
+		</InputField>
+		<InputField name="Родитель" id="94">
+			<DataPath>Объект.Parent</DataPath>
+			<ContextMenu name="РодительКонтекстноеМеню" id="95"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="97"/>
+			<SelectedItemsActionsPanel name="РодительПанельДействийВыделенныхСтрок" id="123"/>
+		</InputField>
+		<Table name="ДополнительныеРеквизиты" id="72">
+			<CommandBarLocation>None</CommandBarLocation>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ДополнительныеРеквизиты</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительные реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДополнительныеРеквизитыКонтекстноеМеню" id="73"/>
+			<AutoCommandBar name="ДополнительныеРеквизитыКоманднаяПанель" id="74"/>
+			<ExtendedTooltip name="ДополнительныеРеквизитыРасширеннаяПодсказка" id="98"/>
+			<SearchStringAddition name="ДополнительныеРеквизитыSearchString" id="104">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыSearchStringContextMenu" id="105"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыSearchStringExtendedTooltip" id="106"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДополнительныеРеквизитыViewStatus" id="107">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыViewStatusContextMenu" id="108"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыViewStatusExtendedTooltip" id="109"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДополнительныеРеквизитыSearchControl" id="110">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыSearchControlContextMenu" id="111"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыSearchControlExtendedTooltip" id="112"/>
+			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="ДополнительныеРеквизитыПанельДействийВыделенныхСтрок" id="124"/>
+			<ChildItems>
+				<InputField name="ДополнительныеРеквизитыСвойство" id="77">
+					<DataPath>Объект.ДополнительныеРеквизиты.Свойство</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="ДополнительныеРеквизитыСвойствоКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыСвойствоРасширеннаяПодсказка" id="99"/>
+					<SelectedItemsActionsPanel name="ДополнительныеРеквизитыСвойствоПанельДействийВыделенныхСтрок" id="125"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="ДополнительныеСведения" id="85">
+			<CommandBarLocation>None</CommandBarLocation>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ДополнительныеСведения</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительные сведения</v8:content>
+				</v8:item>
+			</Title>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДополнительныеСведенияКонтекстноеМеню" id="86"/>
+			<AutoCommandBar name="ДополнительныеСведенияКоманднаяПанель" id="87"/>
+			<ExtendedTooltip name="ДополнительныеСведенияРасширеннаяПодсказка" id="101"/>
+			<SearchStringAddition name="ДополнительныеСведенияSearchString" id="113">
+				<AdditionSource>
+					<Item>ДополнительныеСведения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеСведенияSearchStringContextMenu" id="114"/>
+				<ExtendedTooltip name="ДополнительныеСведенияSearchStringExtendedTooltip" id="115"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДополнительныеСведенияViewStatus" id="116">
+				<AdditionSource>
+					<Item>ДополнительныеСведения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеСведенияViewStatusContextMenu" id="117"/>
+				<ExtendedTooltip name="ДополнительныеСведенияViewStatusExtendedTooltip" id="118"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДополнительныеСведенияSearchControl" id="119">
+				<AdditionSource>
+					<Item>ДополнительныеСведения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеСведенияSearchControlContextMenu" id="120"/>
+				<ExtendedTooltip name="ДополнительныеСведенияSearchControlExtendedTooltip" id="121"/>
+			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="ДополнительныеСведенияПанельДействийВыделенныхСтрок" id="127"/>
+			<ChildItems>
+				<InputField name="ДополнительныеСведенияСвойство" id="90">
+					<DataPath>Объект.ДополнительныеСведения.Свойство</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="ДополнительныеСведенияСвойствоКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ДополнительныеСведенияСвойствоРасширеннаяПодсказка" id="102"/>
+					<SelectedItemsActionsPanel name="ДополнительныеСведенияСвойствоПанельДействийВыделенныхСтрок" id="128"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НаборыДополнительныхРеквизитовИСведений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="СкрытьДополнительныеРеквизиты">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="СкрытьДополнительныеСведения">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

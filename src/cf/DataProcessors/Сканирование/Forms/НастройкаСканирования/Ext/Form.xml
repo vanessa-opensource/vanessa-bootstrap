@@ -1,0 +1,1242 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<ShowCommandBar>false</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастройки" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="55"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапка" id="108">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="109"/>
+					<ChildItems>
+						<InputField name="ИмяУстройства" id="4">
+							<DataPath>ИмяУстройства</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сканер</v8:content>
+								</v8:item>
+							</Title>
+							<Width>35</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<DropListButton>true</DropListButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ИмяУстройстваКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ИмяУстройстваРасширеннаяПодсказка" id="56"/>
+							<SelectedItemsActionsPanel name="ИмяУстройстваПанельДействийВыделенныхСтрок" id="177"/>
+							<Events>
+								<Event name="OnChange">ИмяУстройстваПриИзменении</Event>
+								<Event name="StartChoice">ИмяУстройстваНачалоВыбора</Event>
+								<Event name="ChoiceProcessing">ИмяУстройстваОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаДиалога" id="137">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Диалога</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДиалогаРасширеннаяПодсказка" id="138"/>
+					<ChildItems>
+						<InputField name="ПоказыватьДиалогСканера" id="142">
+							<DataPath>ПоказыватьДиалогСканера</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Задать настройки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>37</MaxWidth>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChooseType>false</ChooseType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Основные в приложении</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:boolean">false</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Расширенные в диалоге сканера</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:boolean">true</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПоказыватьДиалогСканераКонтекстноеМеню" id="143"/>
+							<ExtendedTooltip name="ПоказыватьДиалогСканераРасширеннаяПодсказка" id="144">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>&lt;b&gt;Основные&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;в&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;приложении&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;-&lt;/&gt; диалог сканера не открывается, а применяются настройки, заданные в приложении.
+&lt;b&gt;Расширенные&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;в&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;диалоге&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;сканера&lt;/&gt; - отображается диалог сканера, в котором можно задать другие дополнительные настройки, специфичные для конкретного устройства.
+</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<SelectedItemsActionsPanel name="ПоказыватьДиалогСканераПанельДействийВыделенныхСтрок" id="178"/>
+							<Events>
+								<Event name="OnChange">ПоказыватьДиалогСканераПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПараметры" id="106">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="107"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОсновное" id="81">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основное</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОсновноеРасширеннаяПодсказка" id="82"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПараметрыСканирования" id="38">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Основное</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>NormalSeparation</Representation>
+									<ExtendedTooltip name="ГруппаПараметрыСканированияРасширеннаяПодсказка" id="71"/>
+									<ChildItems>
+										<InputField name="Разрешение" id="14">
+											<DataPath>Разрешение</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Разрешение</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>р</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<Width>13</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="РазрешениеКонтекстноеМеню" id="15"/>
+											<ExtendedTooltip name="РазрешениеРасширеннаяПодсказка" id="72">
+												<Title formatted="true">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>&lt;b&gt;200&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;dpi&lt;/&gt; достаточно для отправки изображений по электронной почте, факсу, размещения на сайте или просмотра на экране.
+&lt;b&gt;300&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;dpi&lt;/&gt; подходит для большинства документов и изображений, а также для распознавания текста.
+&lt;b&gt;600&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;dpi&lt;/&gt; подходит для сканирования цветных изображений типографского качества, которые потом можно вывести на высококачественном или широкоформатном принтере. Изображения занимают большой объем.
+&lt;b&gt;1200&lt;/&gt;&lt;b&gt; &lt;/&gt;&lt;b&gt;dpi&lt;/&gt; для сканирования профессиональных фотографий типографского качества. Изображения занимают большой объем.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<SelectedItemsActionsPanel name="РазрешениеПанельДействийВыделенныхСтрок" id="179"/>
+										</InputField>
+										<InputField name="Цветность" id="16">
+											<DataPath>Цветность</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Цветность</v8:content>
+												</v8:item>
+											</Title>
+											<Width>13</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ЦветностьКонтекстноеМеню" id="17"/>
+											<ExtendedTooltip name="ЦветностьРасширеннаяПодсказка" id="73"/>
+											<SelectedItemsActionsPanel name="ЦветностьПанельДействийВыделенныхСтрок" id="180"/>
+										</InputField>
+										<InputField name="Поворот" id="20">
+											<DataPath>Поворот</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Поворот</v8:content>
+												</v8:item>
+											</Title>
+											<Width>13</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ПоворотКонтекстноеМеню" id="21"/>
+											<ExtendedTooltip name="ПоворотРасширеннаяПодсказка" id="74"/>
+											<SelectedItemsActionsPanel name="ПоворотПанельДействийВыделенныхСтрок" id="181"/>
+										</InputField>
+										<InputField name="РазмерБумаги" id="22">
+											<DataPath>РазмерБумаги</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Размер бумаги</v8:content>
+												</v8:item>
+											</Title>
+											<Width>13</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="РазмерБумагиКонтекстноеМеню" id="23"/>
+											<ExtendedTooltip name="РазмерБумагиРасширеннаяПодсказка" id="75"/>
+											<SelectedItemsActionsPanel name="РазмерБумагиПанельДействийВыделенныхСтрок" id="182"/>
+										</InputField>
+										<UsualGroup name="ГруппаАвтоПодача" id="175">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Авто подача</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>NormalSeparation</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаАвтоПодачаРасширеннаяПодсказка" id="176"/>
+											<ChildItems>
+												<CheckBoxField name="ДвустороннееСканирование" id="28">
+													<DataPath>ДвустороннееСканирование</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Двустороннее сканирование</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДвустороннееСканированиеКонтекстноеМеню" id="29"/>
+													<ExtendedTooltip name="ДвустороннееСканированиеРасширеннаяПодсказка" id="76">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Это функция сканеров и многофункциональных устройств (МФУ), позволяющая производить автоматическое сканирование документа с двух сторон. Доступна не во всех моделях устройств.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<SelectedItemsActionsPanel name="ДвустороннееСканированиеПанельДействийВыделенныхСтрок" id="183"/>
+												</CheckBoxField>
+												<CheckBoxField name="АвтоматическаяПодачаДокументов" id="172">
+													<DataPath>АвтоматическаяПодачаДокументов</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Автоматическая подача документов</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="АвтоматическаяПодачаДокументовКонтекстноеМеню" id="173"/>
+													<ExtendedTooltip name="АвтоматическаяПодачаДокументовРасширеннаяПодсказка" id="174"/>
+													<SelectedItemsActionsPanel name="АвтоматическаяПодачаДокументовПанельДействийВыделенныхСтрок" id="184"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<Button name="ОткрытьНомераОтсканированныхФайлов" id="79">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьНомераОтсканированныхФайлов</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номера отсканированных файлов</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ОткрытьНомераОтсканированныхФайловРасширеннаяПодсказка" id="80"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДополнительныеНастройки" id="83">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнительные настройки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДополнительныеНастройкиРасширеннаяПодсказка" id="84"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаФорматСканированногоИзображения" id="37">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для одностраничных изображений</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>NormalSeparation</Representation>
+									<ExtendedTooltip name="ГруппаФорматСканированногоИзображенияРасширеннаяПодсказка" id="60"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаФорматаСканированногоИзображения" id="44">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Формата сканированного изображения</v8:content>
+												</v8:item>
+											</Title>
+											<Group>HorizontalIfPossible</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФорматаСканированногоИзображенияРасширеннаяПодсказка" id="61"/>
+											<ChildItems>
+												<InputField name="ФорматСканированногоИзображения" id="42">
+													<DataPath>ФорматСканированногоИзображения</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Сохранить как</v8:content>
+														</v8:item>
+													</Title>
+													<Width>9</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<DropListWidth>9</DropListWidth>
+													<ContextMenu name="ФорматСканированногоИзображенияКонтекстноеМеню" id="43"/>
+													<ExtendedTooltip name="ФорматСканированногоИзображенияРасширеннаяПодсказка" id="62"/>
+													<SelectedItemsActionsPanel name="ФорматСканированногоИзображенияПанельДействийВыделенныхСтрок" id="185"/>
+													<Events>
+														<Event name="OnChange">ФорматСканированногоИзображенияПриИзменении</Event>
+													</Events>
+												</InputField>
+												<CheckBoxField name="ПреобразоватьВPDF" id="112">
+													<DataPath>СохранятьВPDF</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Преобразовать в PDF</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПреобразоватьВPDFКонтекстноеМеню" id="113"/>
+													<ExtendedTooltip name="ПреобразоватьВPDFРасширеннаяПодсказка" id="114">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>&lt;b&gt;JPG&lt;/&gt; подходит для большинства документов и изображений. Позволяет сжимать изображение с потерей качества. Можно настроить величину сжатия. 
+&lt;b&gt;PNG&lt;/&gt; подходит для большинства документов и изображений. Изображения без потери качества, файлы небольших размеров. 
+&lt;b&gt;TIF&lt;/&gt; позволяет сохранять изображение без потери качества, используется для хранения изображений для дальнейшей печати. Возможно хранение многостраничных изображений.
+&lt;b&gt;GIF&lt;/&gt; устаревший формат для хранения изображений в низком качестве. Файлы небольшого размера.
+
+&lt;b&gt;Преобразовать в PDF&lt;/&gt; позволяет поместить отсканированное изображение в PDF-файл. Возможно хранение многостраничных изображений.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<SelectedItemsActionsPanel name="ПреобразоватьВPDFПанельДействийВыделенныхСтрок" id="186"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="ОписаниеФорматаОдностраничногоДокумента" id="115">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>50</MaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подходит для большинства документов и изображений. Позволяет сжимать изображение с потерей качества. Можно настроить величину сжатия.
+</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ОписаниеФорматаОдностраничногоДокументаКонтекстноеМеню" id="116"/>
+											<ExtendedTooltip name="ОписаниеФорматаОдностраничногоДокументаРасширеннаяПодсказка" id="117"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаКачествоJPG" id="121">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Качество</v8:content>
+												</v8:item>
+											</Title>
+											<Height>2</Height>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКачествоJPGРасширеннаяПодсказка" id="122"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияСжатиеJPG" id="126">
+													<VerticalStretch>true</VerticalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Лучше
+сжатие</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="ДекорацияСжатиеJPGКонтекстноеМеню" id="127"/>
+													<ExtendedTooltip name="ДекорацияСжатиеJPGРасширеннаяПодсказка" id="128"/>
+												</LabelDecoration>
+												<TrackBarField name="КачествоJPG" id="30">
+													<DataPath>КачествоJPG</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Качество</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Top</TitleLocation>
+													<Width>35</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="КачествоJPGКонтекстноеМеню" id="31"/>
+													<ExtendedTooltip name="КачествоJPGРасширеннаяПодсказка" id="67"/>
+													<SelectedItemsActionsPanel name="КачествоJPGПанельДействийВыделенныхСтрок" id="187"/>
+													<Events>
+														<Event name="OnChange">КачествоJPGПриИзменении</Event>
+													</Events>
+												</TrackBarField>
+												<LabelDecoration name="ДекорацияКачествоJPG" id="123">
+													<VerticalStretch>true</VerticalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Лучше
+качество</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="ДекорацияКачествоJPGКонтекстноеМеню" id="124"/>
+													<ExtendedTooltip name="ДекорацияКачествоJPGРасширеннаяПодсказка" id="125"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="СжатиеTIFF" id="32">
+											<DataPath>СжатиеTIFF</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сжатие</v8:content>
+												</v8:item>
+											</Title>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<DropListWidth>9</DropListWidth>
+											<ContextMenu name="СжатиеTIFFКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="СжатиеTIFFРасширеннаяПодсказка" id="68"/>
+											<SelectedItemsActionsPanel name="СжатиеTIFFПанельДействийВыделенныхСтрок" id="188"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаФорматХраненияМногостраничный" id="39">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для многостраничных изображений</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>NormalSeparation</Representation>
+									<ExtendedTooltip name="ГруппаФорматХраненияМногостраничныйРасширеннаяПодсказка" id="69"/>
+									<ChildItems>
+										<InputField name="ФорматХраненияМногостраничный" id="40">
+											<DataPath>ФорматХраненияМногостраничный</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сохранить как</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>PDF - Отображается в большинстве браузеров.	
+TIF - Не все браузеры отображают этот формат.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<DropListWidth>9</DropListWidth>
+											<ContextMenu name="ФорматХраненияМногостраничныйКонтекстноеМеню" id="41"/>
+											<ExtendedTooltip name="ФорматХраненияМногостраничныйРасширеннаяПодсказка" id="70"/>
+											<SelectedItemsActionsPanel name="ФорматХраненияМногостраничныйПанельДействийВыделенныхСтрок" id="189"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаPDF" id="36">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>PDF</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаPDFРасширеннаяПодсказка" id="57"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаИспользоватьImageMagick" id="101">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Использовать ImageMagik</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаИспользоватьImageMagickРасширеннаяПодсказка" id="102"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаПереключательImageMagik" id="132">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Переключатель ImageMagik</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>false</HorizontalStretch>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПереключательImageMagikРасширеннаяПодсказка" id="133"/>
+													<ChildItems>
+														<RadioButtonField name="СпособПреобразованияВPDF" id="134">
+															<DataPath>СпособПреобразованияВPDF</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Преобразовывать в PDF</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Встроенными средствами</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:decimal">0</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>С помощью ImageMagick</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:decimal">1</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="СпособПреобразованияВPDFКонтекстноеМеню" id="135"/>
+															<ExtendedTooltip name="СпособПреобразованияВPDFРасширеннаяПодсказка" id="136">
+																<Title formatted="true">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>
+Преобразование с помощью &lt;link https://imagemagick.org/&gt;ImageMagick&lt;/&gt; может выполняться быстрее и формировать файлы изображений меньшего размера, чем встроенными средствами. Также при работе в клиент-серверном варианте, это не требует дополнительной передачи изображений на сервер 1С:Предприятие. При выборе этого способа на рабочем компьютере должно быть предварительно установлено бесплатное приложение ImageMagick.
+
+
+</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<SelectedItemsActionsPanel name="СпособПреобразованияВPDFПанельДействийВыделенныхСтрок" id="190"/>
+															<Events>
+																<Event name="OnChange">СпособПреобразованияВPDFПриИзменении</Event>
+															</Events>
+														</RadioButtonField>
+													</ChildItems>
+												</UsualGroup>
+												<LabelDecoration name="ИспользоватьImageMagickДляПреобразованияВPDFЗаголовок" id="103">
+													<Visible>false</Visible>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Использовать &lt;link https://imagemagick.org/&gt;ImageMagick&lt;/&gt; для преобразования в PDF:</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>С помощью приложения ImageMagick можно конвертировать отсканированные изображения в PDF. Если флажок не установлен, конвертация проводится встроенными средствами.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ContextMenu name="ИспользоватьImageMagickДляПреобразованияВPDFЗаголовокКонтекстноеМеню" id="104"/>
+													<ExtendedTooltip name="ИспользоватьImageMagickДляПреобразованияВPDFЗаголовокРасширеннаяПодсказка" id="105"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="ПутьКПрограммеКонвертации" id="34">
+											<DataPath>ПутьКПрограммеКонвертации</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Путь к ImageMagick</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Width>50</Width>
+											<ChoiceButton>true</ChoiceButton>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Путь к ImageMagick</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ПутьКПрограммеКонвертацииКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="ПутьКПрограммеКонвертацииРасширеннаяПодсказка" id="59"/>
+											<SelectedItemsActionsPanel name="ПутьКПрограммеКонвертацииПанельДействийВыделенныхСтрок" id="191"/>
+											<Events>
+												<Event name="StartChoice">ПутьКПрограммеКонвертацииНачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаДиагностикаПроблем" id="160">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Диагностика проблем</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Collapsible</Behavior>
+					<CollapsedRepresentationTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Диагностика проблем</v8:content>
+						</v8:item>
+					</CollapsedRepresentationTitle>
+					<Collapsed>true</Collapsed>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаДиагностикаПроблемРасширеннаяПодсказка" id="161"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКаталогЖурналаДиагностики" id="168">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Каталог журнала диагностики</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКаталогЖурналаДиагностикиРасширеннаяПодсказка" id="169"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьКаталогЖурналаСканирования" id="162">
+									<DataPath>ИспользоватьКаталогЖурналаСканирования</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сохранять информацию для технической поддержки:</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьКаталогЖурналаСканированияКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="ИспользоватьКаталогЖурналаСканированияРасширеннаяПодсказка" id="164"/>
+									<SelectedItemsActionsPanel name="ИспользоватьКаталогЖурналаСканированияПанельДействийВыделенныхСтрок" id="192"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьКаталогЖурналаСканированияПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="КаталогЖурналаСканирования" id="157">
+									<DataPath>КаталогЖурналаСканирования</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Каталог журнала сканирования</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>60</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ChoiceButton>true</ChoiceButton>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Каталог журнала диагностики</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="КаталогЖурналаСканированияКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="КаталогЖурналаСканированияРасширеннаяПодсказка" id="159">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>При аварийном завершении приложения в указанный каталог будет сохранена информация для технической поддержки. 
+Предоставьте ее в службу поддержки фирмы "1С".</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<SelectedItemsActionsPanel name="КаталогЖурналаСканированияПанельДействийВыделенныхСтрок" id="193"/>
+									<Events>
+										<Event name="StartChoice">КаталогЖурналаСканированияНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ИнформацияДляТехническойПоддержки" id="165">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Информация для технической поддержки</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<HorizontalAlign>Auto</HorizontalAlign>
+							<ContextMenu name="ИнформацияДляТехническойПоддержкиКонтекстноеМеню" id="166"/>
+							<ExtendedTooltip name="ИнформацияДляТехническойПоддержкиРасширеннаяПодсказка" id="167"/>
+							<Events>
+								<Event name="Click">ИнформацияДляТехническойПоддержкиНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодвал" id="153">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="154"/>
+			<ChildItems>
+				<UsualGroup name="ОшибкаСканирования" id="145">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибка сканирования</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ОшибкаСканированияРасширеннаяПодсказка" id="146"/>
+					<ChildItems>
+						<PictureDecoration name="КартинкаОшибкиСканирования" id="147">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинка ошибки сканирования</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="КартинкаОшибкиСканированияКонтекстноеМеню" id="148"/>
+							<ExtendedTooltip name="КартинкаОшибкиСканированияРасширеннаяПодсказка" id="149"/>
+						</PictureDecoration>
+						<LabelDecoration name="ТекстОшибкиСканирования" id="150">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сканирование завершилось аварийно, сохранить &lt;link ТехническаяИнформация&gt;информацию для технической поддержки&lt;/&gt;.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТекстОшибкиСканированияКонтекстноеМеню" id="151"/>
+							<ExtendedTooltip name="ТекстОшибкиСканированияРасширеннаяПодсказка" id="152"/>
+							<Events>
+								<Event name="URLProcessing">ТекстОшибкиСканированияОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<CommandBar name="ГруппаКоманднаяПанель" id="155">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="156"/>
+					<ChildItems>
+						<Button name="ОК" id="7">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Command.ОК</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ОК</v8:content>
+								</v8:item>
+							</Title>
+							<ButtonImportance>Main</ButtonImportance>
+							<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="50"/>
+						</Button>
+						<Button name="Отмена" id="8">
+							<Type>CommandBarButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.StandardCommand.Cancel</CommandName>
+							<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="51"/>
+						</Button>
+						<Button name="Справка" id="9">
+							<Type>CommandBarButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="52"/>
+						</Button>
+						<Popup name="ГруппаЕще" id="94">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Еще</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаЕщеРасширеннаяПодсказка" id="95"/>
+							<ChildItems>
+								<Button name="УстановитьСтандартныеНастройки" id="25">
+									<Type>CommandBarButton</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.УстановитьСтандартныеНастройки</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Установить стандартные параметры</v8:content>
+										</v8:item>
+									</Title>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="УстановитьСтандартныеНастройкиРасширеннаяПодсказка" id="78"/>
+								</Button>
+								<Button name="ИзменитьФорму" id="170">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ИзменитьФормуРасширеннаяПодсказка" id="171"/>
+								</Button>
+							</ChildItems>
+						</Popup>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПоказыватьДиалогСканера" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задать настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИмяУстройства" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сканер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ВерсияКомпонентыСканирования" id="4">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Разрешение" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.РазрешенияСканированногоИзображения</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Цветность" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цветность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ЦветностиИзображения</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ФорматСканированногоИзображения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить как</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ФорматыСканированногоИзображения</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Поворот" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поворот</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СпособыПоворотаИзображения</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РазмерБумаги" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер бумаги</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.РазмерыБумаги</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИспользоватьImageMagickДляПреобразованияВPDF" id="9">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДвустороннееСканирование" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Двустороннее сканирование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КачествоJPG" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Качество</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СжатиеTIFF" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сжатие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВариантыСжатияTIFF</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ФорматJPG" id="13">
+			<Type>
+				<v8:Type>cfg:EnumRef.ФорматыСканированногоИзображения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФорматTIF" id="14">
+			<Type>
+				<v8:Type>cfg:EnumRef.ФорматыСканированногоИзображения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКПрограммеКонвертации" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к приложению для преобразования в PDF</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ФорматХраненияМногостраничный" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить как</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ФорматыХраненияМногостраничныхФайлов</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ФорматМногостраничныйTIF" id="18">
+			<Type>
+				<v8:Type>cfg:EnumRef.ФорматыХраненияМногостраничныхФайлов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФорматСканированногоИзображенияПредыдущее" id="23">
+			<Type>
+				<v8:Type>cfg:EnumRef.ФорматыСканированногоИзображения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантСохранения" id="24">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособПреобразованияВPDF" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать ImageMagick для преобразования в PDF</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СохранятьВPDF" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранять ВPDF</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПовторноеСканирование" id="28">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗадатьНастройки" id="19">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КаталогЖурналаСканирования" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог журнала сканирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИспользоватьКаталогЖурналаСканирования" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать каталог журнала сканирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтоматическаяПодачаДокументов" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматическая подача документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьСтандартныеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить стандартные параметры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить стандартные настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьСтандартныеНастройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьНомераОтсканированныхФайлов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть номера отсканированных файлов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть номера отсканированных файлов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНомераОтсканированныхФайлов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ПовторноеСканирование">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ИдентификаторКлиента">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<ShowCommandBar>false</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="ПоказатьТолькоОбработанныеВКонфигураторе" id="91">
+			<DataPath>ПоказатьТолькоОбработанныеВКонфигураторе</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать только добавленные, измененные или удаленные с помощью конфигуратора</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПоказатьТолькоОбработанныеВКонфигуратореКонтекстноеМеню" id="92"/>
+			<ExtendedTooltip name="ПоказатьТолькоОбработанныеВКонфигуратореРасширеннаяПодсказка" id="93"/>
+			<SelectedItemsActionsPanel name="ПоказатьТолькоОбработанныеВКонфигуратореПанельДействийВыделенныхСтрок" id="140"/>
+			<Events>
+				<Event name="OnChange">ПоказатьТолькоОбработанныеВКонфигуратореПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<CommandBar name="КоманднаяПанель" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="55"/>
+			<ChildItems>
+				<Button name="Сопоставить" id="94">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.Сопоставить</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сопоставить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СопоставитьРасширеннаяПодсказка" id="95"/>
+				</Button>
+				<Button name="СопоставитьСНовым" id="98">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.СопоставитьСНовым</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сопоставить с новым</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СопоставитьСНовымРасширеннаяПодсказка" id="99"/>
+				</Button>
+				<Button name="ОтменитьСопоставление" id="102">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ОтменитьСопоставление</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отменить сопоставление</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ОтменитьСопоставлениеРасширеннаяПодсказка" id="103"/>
+				</Button>
+				<Button name="Найти" id="20">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Item.ПользователиИБ.StandardCommand.Find</CommandName>
+					<ExtendedTooltip name="НайтиРасширеннаяПодсказка" id="59"/>
+				</Button>
+				<Button name="ОтменитьПоиск" id="21">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Item.ПользователиИБ.StandardCommand.CancelSearch</CommandName>
+					<ExtendedTooltip name="ОтменитьПоискРасширеннаяПодсказка" id="60"/>
+				</Button>
+				<Button name="Обновить" id="31">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.Обновить</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="58"/>
+				</Button>
+				<Button name="Удалить" id="40">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<SkipOnInput>false</SkipOnInput>
+					<Enabled>false</Enabled>
+					<CommandName>Form.Item.ПользователиИБ.StandardCommand.Delete</CommandName>
+					<ExtendedTooltip name="УдалитьРасширеннаяПодсказка" id="57"/>
+				</Button>
+				<Button name="ПерейтиКПользователю" id="96">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ПерейтиКПользователю</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перейти к пользователю</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПерейтиКПользователюРасширеннаяПодсказка" id="97"/>
+				</Button>
+				<Button name="ВывестиСписок" id="120">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Item.ПользователиИБ.StandardCommand.OutputList</CommandName>
+					<ExtendedTooltip name="ВывестиСписокРасширеннаяПодсказка" id="121"/>
+				</Button>
+				<SearchStringAddition name="СтрокаПоиск" id="137">
+					<AdditionSource>
+						<Item>ПользователиИБ</Item>
+						<Type>SearchStringRepresentation</Type>
+					</AdditionSource>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поиск</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтрокаПоискКонтекстноеМеню" id="138"/>
+					<ExtendedTooltip name="СтрокаПоискРасширеннаяПодсказка" id="139"/>
+				</SearchStringAddition>
+			</ChildItems>
+		</CommandBar>
+		<Table name="ПользователиИБ" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<SkipOnInput>false</SkipOnInput>
+			<DefaultItem>true</DefaultItem>
+			<SelectionMode>SingleRow</SelectionMode>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<HeaderHeight>2</HeaderHeight>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ПользователиИБ</DataPath>
+			<RowPictureDataPath>ПользователиИБ.Картинка</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПользователиИБКонтекстноеМеню" id="2">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="КонтекстноеМенюПерейтиКПользователю" id="104">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПерейтиКПользователю</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Перейти к пользователю</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="КонтекстноеМенюПерейтиКПользователюРасширеннаяПодсказка" id="105"/>
+					</Button>
+					<Button name="КонтекстноеМенюОбновить" id="39">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.Обновить</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Обновить</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="КонтекстноеМенюОбновитьРасширеннаяПодсказка" id="64"/>
+					</Button>
+					<Button name="КонтекстноеМенюВывестиСписок" id="118">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ПользователиИБ.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="КонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="119"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ПользователиИБКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ПользователиИБРасширеннаяПодсказка" id="66"/>
+			<SearchStringAddition name="ПользователиИБСтрокаПоиска" id="122">
+				<AdditionSource>
+					<Item>ПользователиИБ</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПользователиИБСтрокаПоискаКонтекстноеМеню" id="123"/>
+				<ExtendedTooltip name="ПользователиИБСтрокаПоискаРасширеннаяПодсказка" id="124"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПользователиИБСостояниеПросмотра" id="125">
+				<AdditionSource>
+					<Item>ПользователиИБ</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПользователиИБСостояниеПросмотраКонтекстноеМеню" id="126"/>
+				<ExtendedTooltip name="ПользователиИБСостояниеПросмотраРасширеннаяПодсказка" id="127"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПользователиИБУправлениеПоиском" id="128">
+				<AdditionSource>
+					<Item>ПользователиИБ</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПользователиИБУправлениеПоискомКонтекстноеМеню" id="129"/>
+				<ExtendedTooltip name="ПользователиИБУправлениеПоискомРасширеннаяПодсказка" id="130"/>
+			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="ПользователиИБПанельДействийВыделенныхСтрок" id="141"/>
+			<Events>
+				<Event name="BeforeDeleteRow">ПользователиИБПередУдалением</Event>
+				<Event name="OnActivateRow">ПользователиИБПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ПолноеИмя" id="6">
+					<DataPath>ПользователиИБ.ПолноеИмя</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полное имя</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полное имя пользователя информационной базы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ПолноеИмяКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ПолноеИмяРасширеннаяПодсказка" id="67"/>
+					<SelectedItemsActionsPanel name="ПолноеИмяПанельДействийВыделенныхСтрок" id="142"/>
+				</InputField>
+				<InputField name="Имя" id="8">
+					<DataPath>ПользователиИБ.Имя</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя (для входа)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя пользователя информационной базы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ИмяКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="68"/>
+					<SelectedItemsActionsPanel name="ИмяПанельДействийВыделенныхСтрок" id="143"/>
+				</InputField>
+				<LabelField name="АутентификацияСтандартная" id="10">
+					<DataPath>ПользователиИБ.АутентификацияСтандартная</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аутентификация
+1С</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ входа в приложение с помощью имени и пароля,
+указанного для пользователя 1С:Предприятия</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=; БИ=Да</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="АутентификацияСтандартнаяКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="АутентификацияСтандартнаяРасширеннаяПодсказка" id="69"/>
+					<SelectedItemsActionsPanel name="АутентификацияСтандартнаяПанельДействийВыделенныхСтрок" id="144"/>
+				</LabelField>
+				<LabelField name="АутентификацияOpenID" id="88">
+					<DataPath>ПользователиИБ.АутентификацияOpenID</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аутентификация
+OpenID</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ входа в приложение с помощью имени, указанного для пользователя 1С:Предприятия,
+которое передается службе аутентификации по протоколу OpenID.
+Используется только при подключении через веб-сервер (адрес службы должен быть настроен)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=; БИ=Да</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="АутентификацияOpenIDКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="АутентификацияOpenIDРасширеннаяПодсказка" id="90"/>
+					<SelectedItemsActionsPanel name="АутентификацияOpenIDПанельДействийВыделенныхСтрок" id="145"/>
+				</LabelField>
+				<LabelField name="АутентификацияOpenIDConnect" id="131">
+					<DataPath>ПользователиИБ.АутентификацияOpenIDConnect</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аутентификация
+OpenID-Connect</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ входа в приложение с проверкой личности по протоколу OpenID-Connect,
+сопоставление имени, как при использовании аутентификации по протоколу OpenID.
+Используется только при подключении через веб-сервер (адрес службы должен быть настроен)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=; БИ=Да</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="АутентификацияOpenIDConnectКонтекстноеМеню" id="132"/>
+					<ExtendedTooltip name="АутентификацияOpenIDConnectРасширеннаяПодсказка" id="133"/>
+					<SelectedItemsActionsPanel name="АутентификацияOpenIDConnectПанельДействийВыделенныхСтрок" id="146"/>
+				</LabelField>
+				<LabelField name="АутентификацияТокеномДоступа" id="134">
+					<DataPath>ПользователиИБ.АутентификацияТокеномДоступа</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аутентификация
+токеном доступа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аутентификация с помощью JWT-токенов (стандарт RFC 7519).
+Более продвинутая аутентификация по сравнению с OpenID и OpenID-Connect</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=; БИ=Да</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="АутентификацияТокеномДоступаКонтекстноеМеню" id="135"/>
+					<ExtendedTooltip name="АутентификацияТокеномДоступаРасширеннаяПодсказка" id="136"/>
+					<SelectedItemsActionsPanel name="АутентификацияТокеномДоступаПанельДействийВыделенныхСтрок" id="147"/>
+				</LabelField>
+				<ColumnGroup name="НастройкиАутентификацияОС" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки аутентификация ОС</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="НастройкиАутентификацияОСРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<LabelField name="АутентификацияОС" id="12">
+							<DataPath>ПользователиИБ.АутентификацияОС</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Аутентификация
+ОС</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Способ входа в приложение с помощью имени и пароля,
+указанного для пользователя операционной системы,
+связанного с пользователем 1С:Предприятия</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="АутентификацияОСКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="АутентификацияОСРасширеннаяПодсказка" id="71"/>
+							<SelectedItemsActionsPanel name="АутентификацияОСПанельДействийВыделенныхСтрок" id="148"/>
+						</LabelField>
+						<LabelField name="ПользовательОС" id="14">
+							<DataPath>ПользователиИБ.ПользовательОС</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользователь ОС</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользователь операционной системы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="ПользовательОСКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ПользовательОСРасширеннаяПодсказка" id="72"/>
+							<SelectedItemsActionsPanel name="ПользовательОСПанельДействийВыделенныхСтрок" id="149"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="СопоставленСВнешнимПользователем" id="115">
+					<DataPath>ПользователиИБ.СопоставленСВнешнимПользователем</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сопоставлен с
+внешним пользователем</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=; БИ=Да</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="СопоставленСВнешнимПользователемКонтекстноеМеню" id="116"/>
+					<ExtendedTooltip name="СопоставленСВнешнимПользователемРасширеннаяПодсказка" id="117"/>
+					<SelectedItemsActionsPanel name="СопоставленСВнешнимПользователемПанельДействийВыделенныхСтрок" id="150"/>
+				</LabelField>
+				<LabelField name="ДобавленВКонфигураторе" id="106">
+					<DataPath>ПользователиИБ.ДобавленВКонфигураторе</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавлен в
+конфигураторе</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=; БИ=Да</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ДобавленВКонфигуратореКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="ДобавленВКонфигуратореРасширеннаяПодсказка" id="108"/>
+					<SelectedItemsActionsPanel name="ДобавленВКонфигуратореПанельДействийВыделенныхСтрок" id="151"/>
+				</LabelField>
+				<LabelField name="ИзмененВКонфигураторе" id="109">
+					<DataPath>ПользователиИБ.ИзмененВКонфигураторе</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменен в
+конфигураторе</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=; БИ=Да</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ИзмененВКонфигуратореКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="ИзмененВКонфигуратореРасширеннаяПодсказка" id="111"/>
+					<SelectedItemsActionsPanel name="ИзмененВКонфигуратореПанельДействийВыделенныхСтрок" id="152"/>
+				</LabelField>
+				<LabelField name="УдаленВКонфигураторе" id="112">
+					<DataPath>ПользователиИБ.УдаленВКонфигураторе</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удален в
+конфигураторе</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=; БИ=Да</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="УдаленВКонфигуратореКонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="УдаленВКонфигуратореРасширеннаяПодсказка" id="114"/>
+					<SelectedItemsActionsPanel name="УдаленВКонфигуратореПанельДействийВыделенныхСтрок" id="153"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПользователиИБ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Картинка" id="1">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПолноеИмя" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полное имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Имя" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя (для входа)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="АутентификацияСтандартная" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аутентификация
+1С</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="АутентификацияОС" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аутентификация
+ОС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПользовательОС" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь ОС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторПользователяИБ" id="7">
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="9">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВнешниеПользователи</v8:Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СопоставленСВнешнимПользователем" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сопоставлен с
+внешним пользователем</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="АутентификацияOpenID" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аутентификация
+OpenID</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДобавленВКонфигураторе" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавлен в
+конфигураторе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИзмененВКонфигураторе" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменен в
+конфигураторе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="УдаленВКонфигураторе" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удален в
+конфигураторе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="АутентификацияOpenIDConnect" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аутентификация
+OpenID-Connect</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="АутентификацияТокеномДоступа" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аутентификация
+токеном доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТипыПользователей" id="5">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ИдентификаторыНесуществующихПользователейИБ" id="6">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ПоказатьТолькоОбработанныеВКонфигураторе" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать только добавленные, измененные или удаленные с помощью конфигуратора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Обновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Сопоставить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставить с существующим пользователем в справочнике</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сопоставить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СопоставитьСНовым" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставить с новым</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставить с новым пользователем в справочнике</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СопоставитьСНовым</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПерейтиКПользователю" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к пользователю</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к сопоставленному пользователю в справочнике</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СостояниеПользователя02</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПерейтиКПользователю</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтменитьСопоставление" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить сопоставление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить сопоставление с пользователем в справочнике</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьСопоставление</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Отбор">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

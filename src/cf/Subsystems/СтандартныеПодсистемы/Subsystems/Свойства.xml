@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Subsystem uuid="3d47838b-e1aa-4acb-96bf-6de2f9be8bdb">
+		<Properties>
+			<Name>Свойства</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойства</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ДополнительныеРеквизитыСведения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ДополнительныеСведения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеСвойствамиКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеСвойствамиПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеСвойствами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьДополнительныеРеквизитыИСведения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.РедактированиеДополнительныхСведений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЗначенияСвойствОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НаборыДополнительныхРеквизитовИСведений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ДополнительныеСведения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеСведенияКоманднаяПанель</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеДополнительныхСведений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИзменениеДополнительныхСведений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьДополнительныеРеквизитыИСведения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЗначенияСвойствОбъектовИерархия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеСвойствамиСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ВладелецДополнительныхСведений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеДополнительныхРеквизитовИСведений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.РедактированиеГиперссылки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.СвойстваПередУдалениемСсылочногоОбъекта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветПустойГиперссылки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеСвойствамиПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ИнтерактивнаяПроверкаЗаполненияСвойств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ДополнительныеРеквизитыОбработкаПроверкиЗаполнения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ЦветаСвойств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыСвойств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветМеткиГолубой</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветМеткиЖелтый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветМеткиЗеленый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветМеткиЛаймовый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветМеткиКрасный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветМеткиОранжевый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветМеткиРозовый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветМеткиСерый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветМеткиСиний</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветМеткиФиолетовый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МеткаФиолетовая</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МеткаСиняя</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МеткаСерая</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МеткаРозовая</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МеткаОранжевая</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МеткаКрасная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МеткаЛаймовая</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МеткаЗеленая</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МеткаЖелтая</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МеткаГолубая</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Метка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПиктограммыСвойств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.РедактированиеМеток</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВариантыОтображенияМеток</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ВладелецМеток</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РедактироватьМетки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветТекстаМетки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ШрифтМеток</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

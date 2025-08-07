@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПредупреждение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предупреждение</v8:content>
+				</v8:item>
+			</Title>
+			<Height>2</Height>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПредупреждениеРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<PictureDecoration name="ЗначокПредупреждения" id="1">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значок предупреждения</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.DialogExclamation</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ЗначокПредупрежденияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ЗначокПредупрежденияРасширеннаяПодсказка" id="3"/>
+				</PictureDecoration>
+				<LabelDecoration name="ТекстПредупреждения" id="6">
+					<Width>46</Width>
+					<Height>2</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Была отменена связь с главным узлом "%1" распределенной информационной базы.</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="ТекстПредупрежденияКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ТекстПредупрежденияРасширеннаяПодсказка" id="8"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Пояснение" id="30">
+			<Width>50</Width>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>- Для восстановления связи с главным узлом нажмите "Восстановить".
+- Для того чтобы подтвердить отмену связи и начать работу в приложении, как с самостоятельной информационной базой, нажмите "Отключить".
+</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПояснениеКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="ПояснениеРасширеннаяПодсказка" id="32"/>
+		</LabelDecoration>
+		<CommandBar name="Команды" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="КомандыРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<Button name="Восстановить" id="16">
+					<Type>CommandBarButton</Type>
+					<DefaultItem>true</DefaultItem>
+					<CommandName>Form.Command.Восстановить</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Восстановить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ВосстановитьРасширеннаяПодсказка" id="17"/>
+				</Button>
+				<Button name="Отключить" id="18">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.Отключить</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отключить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ОтключитьРасширеннаяПодсказка" id="19"/>
+				</Button>
+				<Button name="ЗавершитьРаботу" id="22">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ЗавершитьРаботу</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершить работу</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗавершитьРаботуРасширеннаяПодсказка" id="23"/>
+				</Button>
+				<Button name="Справка" id="14">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="15"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ГлавныйУзел" id="1">
+			<Type>
+				<v8:TypeSet>cfg:ExchangePlanRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Восстановить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Восстановить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отключить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Отключить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗавершитьРаботу" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить работу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить работу и принять решение позже.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗавершитьРаботу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

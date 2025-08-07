@@ -1,0 +1,888 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<Group>HorizontalIfPossible</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаВключитьВГруппу" id="108">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.Command.ВключитьВГруппу</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Включить в группу</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаВключитьВГруппуРасширеннаяПодсказка" id="109"/>
+			</Button>
+			<Button name="ФормаИсключитьИзГруппы" id="107">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.Command.ИсключитьИзГруппы</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Исключить из группы</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаИсключитьИзГруппыРасширеннаяПодсказка" id="110"/>
+			</Button>
+			<Button name="ФормаИзменитьГруппу" id="50">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.Command.ИзменитьГруппу</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Изменить группу</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаИзменитьГруппуРасширеннаяПодсказка" id="111"/>
+			</Button>
+			<Button name="ФормаОтчетПраваПользователя" id="158">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтчетПраваПользователя</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отчет Права пользователя</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаОтчетПраваПользователяРасширеннаяПодсказка" id="159"/>
+			</Button>
+			<Button name="ФормаОбновить" id="57">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Обновить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Обновить</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="115"/>
+			</Button>
+			<Button name="ФормаОтчетПраваДоступа" id="76">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтчетПоПравамДоступа</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отчет по правам доступа (старый)</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОтчетПраваДоступаРасширеннаяПодсказка" id="112"/>
+			</Button>
+			<ButtonGroup name="ПанельФормы" id="28">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Панель формы</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="ПанельФормыРасширеннаяПодсказка" id="113"/>
+			</ButtonGroup>
+			<Button name="ФормаСправка" id="29">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="114"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="НедостаточноПравНаПросмотр" id="61">
+			<Visible>false</Visible>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Недостаточно прав на просмотр</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НедостаточноПравНаПросмотрКонтекстноеМеню" id="62"/>
+			<ExtendedTooltip name="НедостаточноПравНаПросмотрРасширеннаяПодсказка" id="116"/>
+		</LabelDecoration>
+		<LabelDecoration name="ПраваСлужебногоПользователя" id="166">
+			<Visible>false</Visible>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права (роли) служебного пользователя не настраиваются интерактивно.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПраваСлужебногоПользователяКонтекстноеМеню" id="167"/>
+			<ExtendedTooltip name="ПраваСлужебногоПользователяРасширеннаяПодсказка" id="168"/>
+		</LabelDecoration>
+		<Pages name="ГруппыДоступаИРоли" id="83">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы доступа и роли</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппыДоступаИРолиРасширеннаяПодсказка" id="117"/>
+			<ChildItems>
+				<Page name="ГруппыДоступаПользователя" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группы доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ГруппыДоступаПользователяРасширеннаяПодсказка" id="118"/>
+					<ChildItems>
+						<Table name="ГруппыДоступа" id="1">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<DefaultItem>true</DefaultItem>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ГруппыДоступа</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы доступа</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ГруппыДоступаКонтекстноеМеню" id="2">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ГруппыДоступаКонтекстноеМенюИзменитьГруппу" id="51">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьГруппу</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.Change</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить группу</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппыДоступаКонтекстноеМенюИзменитьГруппуРасширеннаяПодсказка" id="119"/>
+									</Button>
+									<ButtonGroup name="ГруппыДоступаКонтекстноеАвтоМеню" id="52">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группы доступа контекстное авто меню</v8:content>
+											</v8:item>
+										</Title>
+										<CommandSource>Item.ГруппыДоступа</CommandSource>
+										<ExtendedTooltip name="ГруппыДоступаКонтекстноеАвтоМенюРасширеннаяПодсказка" id="120"/>
+									</ButtonGroup>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ГруппыДоступаКоманднаяПанель" id="3">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ГруппыДоступаВключитьВГруппу" id="101">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВключитьВГруппу</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Включить в группу</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппыДоступаВключитьВГруппуРасширеннаяПодсказка" id="121"/>
+									</Button>
+									<Button name="ГруппыДоступаИсключитьИзГруппы" id="103">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИсключитьИзГруппы</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Исключить из группы</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппыДоступаИсключитьИзГруппыРасширеннаяПодсказка" id="122"/>
+									</Button>
+									<Button name="ГруппыДоступаИзменитьГруппу" id="102">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьГруппу</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить группу</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппыДоступаИзменитьГруппуРасширеннаяПодсказка" id="123"/>
+									</Button>
+									<SearchStringAddition name="ГруппыДоступаСтрокаПоиск" id="160">
+										<AdditionSource>
+											<Item>ГруппыДоступа</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Поиск</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ГруппыДоступаСтрокаПоискКонтекстноеМеню" id="161"/>
+										<ExtendedTooltip name="ГруппыДоступаСтрокаПоискРасширеннаяПодсказка" id="162"/>
+									</SearchStringAddition>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ГруппыДоступаРасширеннаяПодсказка" id="124"/>
+							<SearchStringAddition name="ГруппыДоступаSearchString" id="138">
+								<AdditionSource>
+									<Item>ГруппыДоступа</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыДоступаSearchStringContextMenu" id="139"/>
+								<ExtendedTooltip name="ГруппыДоступаSearchStringExtendedTooltip" id="140"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ГруппыДоступаViewStatus" id="141">
+								<AdditionSource>
+									<Item>ГруппыДоступа</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыДоступаViewStatusContextMenu" id="142"/>
+								<ExtendedTooltip name="ГруппыДоступаViewStatusExtendedTooltip" id="143"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ГруппыДоступаSearchControl" id="144">
+								<AdditionSource>
+									<Item>ГруппыДоступа</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыДоступаSearchControlContextMenu" id="145"/>
+								<ExtendedTooltip name="ГруппыДоступаSearchControlExtendedTooltip" id="146"/>
+							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="ГруппыДоступаПанельДействийВыделенныхСтрок" id="169"/>
+							<Events>
+								<Event name="Selection">ГруппыДоступаВыбор</Event>
+								<Event name="OnActivateRow">ГруппыДоступаПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ГруппыДоступаНаименование" id="30">
+									<DataPath>ГруппыДоступа.Наименование</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Наименование</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="ГруппыДоступаНаименованиеКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ГруппыДоступаНаименованиеРасширеннаяПодсказка" id="125"/>
+									<SelectedItemsActionsPanel name="ГруппыДоступаНаименованиеПанельДействийВыделенныхСтрок" id="170"/>
+								</InputField>
+								<InputField name="ГруппыДоступаПрофильПредставление" id="77">
+									<DataPath>ГруппыДоступа.ПрофильНаименование</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Профиль</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="ГруппыДоступаПрофильПредставлениеКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="ГруппыДоступаПрофильПредставлениеРасширеннаяПодсказка" id="126"/>
+									<SelectedItemsActionsPanel name="ГруппыДоступаПрофильПредставлениеПанельДействийВыделенныхСтрок" id="171"/>
+								</InputField>
+								<InputField name="ГруппыДоступаОтветственный" id="79">
+									<DataPath>ГруппыДоступа.Ответственный</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ответственный</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="ГруппыДоступаОтветственныйКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="ГруппыДоступаОтветственныйРасширеннаяПодсказка" id="127"/>
+									<SelectedItemsActionsPanel name="ГруппыДоступаОтветственныйПанельДействийВыделенныхСтрок" id="172"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<InputField name="ГруппыДоступаКомментарийПредставление" id="81">
+							<DataPath>Items.ГруппыДоступа.CurrentData.Комментарий</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Left</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание выбранной группы доступа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>2</Height>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ГруппыДоступаКомментарийПредставлениеКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="ГруппыДоступаКомментарийПредставлениеРасширеннаяПодсказка" id="128"/>
+							<SelectedItemsActionsPanel name="ГруппыДоступаКомментарийПредставлениеПанельДействийВыделенныхСтрок" id="174"/>
+						</InputField>
+						<UsualGroup name="ПредупреждениеЕстьСкрытыеГруппыДоступа" id="66">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предупреждение есть скрытые группы доступа</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПредупреждениеЕстьСкрытыеГруппыДоступаРасширеннаяПодсказка" id="129"/>
+							<ChildItems>
+								<PictureDecoration name="ЕстьЗапрещенныеГруппыКартинка" id="67">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Есть запрещенные группы картинка</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>StdPicture.DialogInformation</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ЕстьЗапрещенныеГруппыКартинкаКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ЕстьЗапрещенныеГруппыКартинкаРасширеннаяПодсказка" id="130"/>
+								</PictureDecoration>
+								<LabelDecoration name="ЕстьЗапрещенныеГруппыТекст" id="64">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Есть скрытые группы доступа,
+которые недоступны для просмотра,
+так как недостаточно прав доступа.</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ЕстьЗапрещенныеГруппыТекстКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ЕстьЗапрещенныеГруппыТекстРасширеннаяПодсказка" id="131"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ОтображениеРолей" id="84">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разрешенные действия (роли)</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ОтображениеРолейРасширеннаяПодсказка" id="132"/>
+					<ChildItems>
+						<Table name="Роли" id="85">
+							<Representation>Tree</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<SelectionMode>SingleRow</SelectionMode>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<Header>false</Header>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Роли</DataPath>
+							<RowPictureDataPath>Роли.НомерКартинки</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.ПиктограммыЭлементов</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Роли</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+							</CommandSet>
+							<ContextMenu name="РолиКонтекстноеМеню" id="86">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<AutoCommandBar name="РолиКоманднаяПанель" id="87">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="РолиПоказатьПодсистемыРолей" id="96">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ГруппировкаРолейПоПодсистемам</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>По подсистемам</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="РолиПоказатьПодсистемыРолейРасширеннаяПодсказка" id="133"/>
+									</Button>
+									<SearchStringAddition name="РолиСтрокаПоиск" id="163">
+										<AdditionSource>
+											<Item>Роли</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Поиск</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="РолиСтрокаПоискКонтекстноеМеню" id="164"/>
+										<ExtendedTooltip name="РолиСтрокаПоискРасширеннаяПодсказка" id="165"/>
+									</SearchStringAddition>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="РолиРасширеннаяПодсказка" id="134"/>
+							<SearchStringAddition name="РолиSearchString" id="147">
+								<AdditionSource>
+									<Item>Роли</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РолиSearchStringContextMenu" id="148"/>
+								<ExtendedTooltip name="РолиSearchStringExtendedTooltip" id="149"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РолиViewStatus" id="150">
+								<AdditionSource>
+									<Item>Роли</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РолиViewStatusContextMenu" id="151"/>
+								<ExtendedTooltip name="РолиViewStatusExtendedTooltip" id="152"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РолиSearchControl" id="153">
+								<AdditionSource>
+									<Item>Роли</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РолиSearchControlContextMenu" id="154"/>
+								<ExtendedTooltip name="РолиSearchControlExtendedTooltip" id="155"/>
+							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="РолиПанельДействийВыделенныхСтрок" id="175"/>
+							<ChildItems>
+								<ColumnGroup name="РолиКолонок" id="88">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Роли колонок</v8:content>
+										</v8:item>
+									</Title>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="РолиКолонокРасширеннаяПодсказка" id="135"/>
+									<ChildItems>
+										<CheckBoxField name="РолиПометка" id="105">
+											<DataPath>Роли.Пометка</DataPath>
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пометка</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>Directly</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="РолиПометкаКонтекстноеМеню" id="106"/>
+											<ExtendedTooltip name="РолиПометкаРасширеннаяПодсказка" id="136"/>
+											<SelectedItemsActionsPanel name="РолиПометкаПанельДействийВыделенныхСтрок" id="176"/>
+										</CheckBoxField>
+										<InputField name="РолиСиноним" id="99">
+											<DataPath>Роли.Синоним</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Разрешенное действие (роль)</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ContextMenu name="РолиСинонимКонтекстноеМеню" id="100"/>
+											<ExtendedTooltip name="РолиСинонимРасширеннаяПодсказка" id="137"/>
+											<SelectedItemsActionsPanel name="РолиСинонимПанельДействийВыделенныхСтрок" id="177"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТекущаяГруппаДоступа" id="4">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ГруппыДоступа</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ГруппыДоступа" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы доступа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Наименование" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ГруппаДоступа" id="4">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ГруппыДоступа</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПрофильНаименование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Профиль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ответственный" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПользовательИБПолноправный" id="9">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательИБОтветственный" id="11">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СвойДоступ" id="17">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказатьПодсистемыРолей" id="2">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПоказатьПодсистемыРолей</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Роли" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роли</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пометка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Синоним" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разрешенное действие (роль)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерКартинки" id="4">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Имя" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоРоль" id="3">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПрочитанныеРоли" id="5">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Роль" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПарольПользователяСервиса" id="3">
+			<Type/>
+		</Attribute>
+		<Attribute name="ГруппаДоступаАдминистраторы" id="7">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ГруппыДоступа</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоСлужебныйПользователь" id="8">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВключитьВГруппу" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить в группу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить в группу доступа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьВГруппу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИсключитьИзГруппы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить из группы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить из группы доступа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИсключитьИзГруппы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьГруппу" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить группу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить группу доступа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F2</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьГруппу</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Обновить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтчетПоПравамДоступа" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по правам доступа (старый)</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтчетПоПравамДоступа</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ГруппировкаРолейПоПодсистемам" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По подсистемам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировать список ролей по подсистемам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Подсистема</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ГруппировкаРолейПоПодсистемам</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтчетПраваПользователя" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет Права пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтчетПраваПользователя</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Пользователь">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВнешниеПользователи</v8:Type>
+				<v8:Type>cfg:CatalogRef.ГруппыВнешнихПользователей</v8:Type>
+				<v8:Type>cfg:CatalogRef.ГруппыПользователей</v8:Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанель" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<Button name="ФормаВключитьВозможностьРедактирования" id="42">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включить возможность редактирования</v8:content>
+						</v8:item>
+					</Title>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаВключитьВозможностьРедактированияРасширеннаяПодсказка" id="43"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="СписокПанельДействийВыделенныхСтрок" id="55"/>
+			<ChildItems>
+				<LabelField name="Регистр" id="16">
+					<DataPath>Список.Регистр</DataPath>
+					<ContextMenu name="РегистрКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="РегистрРасширеннаяПодсказка" id="18"/>
+					<SelectedItemsActionsPanel name="РегистрПанельДействийВыделенныхСтрок" id="56"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаВариантДоступа" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вариант доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаВариантДоступаРасширеннаяПодсказка" id="48"/>
+					<ChildItems>
+						<LabelField name="ДляВнешнихПользователей" id="19">
+							<DataPath>Список.ДляВнешнихПользователей</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ВП</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для внешних пользователей</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>1</Width>
+							<ContextMenu name="ДляВнешнихПользователейКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ДляВнешнихПользователейРасширеннаяПодсказка" id="21"/>
+							<SelectedItemsActionsPanel name="ДляВнешнихПользователейПанельДействийВыделенныхСтрок" id="57"/>
+						</LabelField>
+						<LabelField name="КоличествоПолейВСоединении" id="49">
+							<DataPath>Список.КоличествоПолейВСоединении</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>КП</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество полей в соединении</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>1</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=0; ЧГ=</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="КоличествоПолейВСоединенииКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="КоличествоПолейВСоединенииРасширеннаяПодсказка" id="51"/>
+							<SelectedItemsActionsPanel name="КоличествоПолейВСоединенииПанельДействийВыделенныхСтрок" id="58"/>
+						</LabelField>
+						<LabelField name="НаборПолейВСоединении" id="52">
+							<DataPath>Список.НаборПолейВСоединении</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>НП</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Набор полей в соединении</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>1</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=2; ЧН=00; ЧВН=; ЧГ=</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="НаборПолейВСоединенииКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="НаборПолейВСоединенииРасширеннаяПодсказка" id="54"/>
+							<SelectedItemsActionsPanel name="НаборПолейВСоединенииПанельДействийВыделенныхСтрок" id="59"/>
+						</LabelField>
+						<LabelField name="ВариантДоступа" id="44">
+							<DataPath>Список.ВариантДоступа</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ВД</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вариант доступа:
+Бит 0 -  ключ доступа для внешних пользователей.
+Биты 1-5 - количество полей в соединении.
+Биты 6-9 - набор полей в соединении.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>2</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=4; ЧН=0000; ЧВН=; ЧГ=</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ВариантДоступаКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ВариантДоступаРасширеннаяПодсказка" id="46"/>
+							<SelectedItemsActionsPanel name="ВариантДоступаПанельДействийВыделенныхСтрок" id="60"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="Поле1" id="22">
+					<DataPath>Список.Поле1</DataPath>
+					<ContextMenu name="Поле1КонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="Поле1РасширеннаяПодсказка" id="24"/>
+					<SelectedItemsActionsPanel name="Поле1ПанельДействийВыделенныхСтрок" id="61"/>
+				</LabelField>
+				<LabelField name="Поле2" id="25">
+					<DataPath>Список.Поле2</DataPath>
+					<ContextMenu name="Поле2КонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="Поле2РасширеннаяПодсказка" id="27"/>
+					<SelectedItemsActionsPanel name="Поле2ПанельДействийВыделенныхСтрок" id="62"/>
+				</LabelField>
+				<LabelField name="Поле3" id="28">
+					<DataPath>Список.Поле3</DataPath>
+					<ContextMenu name="Поле3КонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="Поле3РасширеннаяПодсказка" id="30"/>
+					<SelectedItemsActionsPanel name="Поле3ПанельДействийВыделенныхСтрок" id="63"/>
+				</LabelField>
+				<LabelField name="Поле4" id="31">
+					<DataPath>Список.Поле4</DataPath>
+					<ContextMenu name="Поле4КонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="Поле4РасширеннаяПодсказка" id="33"/>
+					<SelectedItemsActionsPanel name="Поле4ПанельДействийВыделенныхСтрок" id="64"/>
+				</LabelField>
+				<LabelField name="Поле5" id="34">
+					<DataPath>Список.Поле5</DataPath>
+					<ContextMenu name="Поле5КонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="Поле5РасширеннаяПодсказка" id="36"/>
+					<SelectedItemsActionsPanel name="Поле5ПанельДействийВыделенныхСтрок" id="65"/>
+				</LabelField>
+				<LabelField name="КлючДоступа" id="37">
+					<DataPath>Список.КлючДоступа</DataPath>
+					<ContextMenu name="КлючДоступаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="КлючДоступаРасширеннаяПодсказка" id="39"/>
+					<SelectedItemsActionsPanel name="КлючДоступаПанельДействийВыделенныхСтрок" id="66"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	КлючиДоступаКРегистрам.Регистр КАК Регистр,
+	КлючиДоступаКРегистрам.ВариантДоступа КАК ВариантДоступа,
+	КлючиДоступаКРегистрам.Поле1 КАК Поле1,
+	КлючиДоступаКРегистрам.Поле2 КАК Поле2,
+	КлючиДоступаКРегистрам.Поле3 КАК Поле3,
+	КлючиДоступаКРегистрам.Поле4 КАК Поле4,
+	КлючиДоступаКРегистрам.Поле5 КАК Поле5,
+	КлючиДоступаКРегистрам.КлючДоступа КАК КлючДоступа,
+	ВЫБОР
+		КОГДА КлючиДоступаКРегистрам.ВариантДоступа = 0
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ КлючиДоступаКРегистрам.ВариантДоступа - (ВЫРАЗИТЬ(КлючиДоступаКРегистрам.ВариантДоступа / 2 - 0.5 КАК ЧИСЛО(15, 0))) * 2 = 1
+	КОНЕЦ КАК ДляВнешнихПользователей,
+	ВЫБОР
+		КОГДА КлючиДоступаКРегистрам.ВариантДоступа = 0
+			ТОГДА 0
+		КОГДА КлючиДоступаКРегистрам.ВариантДоступа / 64 &gt;= 1
+			ТОГДА (ВЫРАЗИТЬ(КлючиДоступаКРегистрам.ВариантДоступа / 2 - 0.5 КАК ЧИСЛО(15, 0))) - (ВЫРАЗИТЬ(КлючиДоступаКРегистрам.ВариантДоступа / 64 - 0.5 КАК ЧИСЛО(15, 0))) * 32
+		ИНАЧЕ ВЫРАЗИТЬ(КлючиДоступаКРегистрам.ВариантДоступа / 2 - 0.5 КАК ЧИСЛО(15, 0))
+	КОНЕЦ КАК КоличествоПолейВСоединении,
+	ВЫБОР
+		КОГДА КлючиДоступаКРегистрам.ВариантДоступа / 64 &gt;= 1
+			ТОГДА ВЫРАЗИТЬ(КлючиДоступаКРегистрам.ВариантДоступа / 64 - 0.5 КАК ЧИСЛО(15, 0))
+		ИНАЧЕ 0
+	КОНЕЦ КАК НаборПолейВСоединении
+ИЗ
+	РегистрСведений.КлючиДоступаКРегистрам КАК КлючиДоступаКРегистрам</QueryText>
+				<MainTable>InformationRegister.КлючиДоступаКРегистрам</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВключитьВозможностьРедактирования" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность редактирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность редактирования только для целей поиска неисправности (требуется углубленное понимание работы механизма)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьВозможностьРедактирования</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

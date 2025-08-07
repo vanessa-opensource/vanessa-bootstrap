@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Subsystem uuid="2009c673-c1a5-45fc-8da2-a36c435085a6">
+		<Properties>
+			<Name>РаботаСФайлами</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с файлами</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>АПК:566 синхронные вызовы в веб-клиенте разрешены; АПК:565 использование модального вызова разрешено; АПК:1348 использование платформенных методов для работы с файловой системой разрешено;</Comment>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОпубликоватьФайл</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФайламиКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФайламиКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.НастройкаРабочегоКаталога</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВерсииФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Файлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПапкиФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПрисоединенныеФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФайламиСлужебныйКлиентПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФайламиПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РабочиеКаталогиФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыСравненияВерсийФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Папки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.РазместитьФайлыНачальногоОбраза</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Сканирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ФорматыСканированногоИзображения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РазрешенияСканированногоИзображения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ЦветностиИзображения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыПоворотаИзображения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РазмерыБумаги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ФайлыВРабочемКаталоге</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ДействияСФайламиПоДвойномуЩелчку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВариантыСжатияTIFF</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ФорматыХраненияМногостраничныхФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФайлами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УдалитьХранимыеФайлыВерсий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.СкопироватьРеквизитыВерсииФайловВФайл</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПереносФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФайламиКлиентПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыФайловДляВстроенногоРедактора</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеПапокИФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СправкаВНачало</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СправкаПереходВниз</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтрелкаВнизСправка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФайламиСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФайламиСлужебныйВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФайламиСлужебныйКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КодировкиФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ВладелецФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НаличиеФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиСинхронизацииФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УдалитьДвоичныеДанныеФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СведенияОФайлах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СтатусыСинхронизацииФайловСОблачнымСервисом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.РаботаСФайлами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Сканирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПроверкаЦелостностиТома</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВариантыОчисткиФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПериодОчисткиФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыИзвлеченияТекстаФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыОткрытияФайлаНаПросмотр</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УчетныеЗаписиСинхронизацииФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЗапрещатьЗагрузкуФайловПоРасширению</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИзвлекатьТекстыФайловНаСервере</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.МаксимальныйРазмерФайла</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.МаксимальныйРазмерФайлаОбластиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СинхронизироватьФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СписокЗапрещенныхРасширений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СписокЗапрещенныхРасширенийОбластиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СписокРасширенийТекстовыхФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СписокРасширенийФайловOpenDocument</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СписокРасширенийФайловOpenDocumentОбластиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ХранитьФайлыВТомахНаДиске</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ФайлЗанятыйТекущимПользователем</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗакончитьРедактированиеФайла</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗанятьФайл</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Зашифрован</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КоллекцияПиктограммФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КоллекцияСкрепка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОсвободитьФайл</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОткрытьВыбранныйФайл</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПапкаОблачногоСервиса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПодписанЗашифрованЗаголовок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПодписанЗашифрованСостояния</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РабочийКаталогПоУмолчанию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РедактироватьФайл</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.КомпонентаСканированияДокументов_3_0_1_1033</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СозданиеНачальногоОбразаСФайлами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ФайлыВТоме</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.РедактируемыеФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВсеФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборДействияПриОбнаруженииОтличийФайла</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборПутиКАрхивуФайловТомов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.НапоминаниеПриРедактировании</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.СозданиеНачальногоОбразаСФайлами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФайлыВТоме</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ВладелецПрисоединенныхФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ВладелецПрисоединенныхФайловОбъект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ПрисоединенныйФайл</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ПрисоединенныйФайлОбъект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьСинхронизациюФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ХранитьФайлыВТомахНаДиске</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ИзвлечениеТекста</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.СинхронизацияФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ОчисткаНенужныхФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ВыполнитьДействияПередЗаписьюПрисоединенногоФайла</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ВыполнитьДействияПередУдалениемПрисоединенногоФайла</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ВыполнитьДействияПриЗаписиПрисоединенногоФайла</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.УстановитьПометкуУдаленияПрисоединенныхФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.НастройкаСинхронизацииФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФайламиСлужебныйПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФайламиСлужебныйКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТомаХраненияФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОбъемНенужныхФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АвтоматическоеИзвлечениеТекстов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиОчисткиФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НомераОтсканированныхФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыХраненияФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Фотокамера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбработкаПроверкиЗаполненияПрисоединенногоФайла</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеПапокИФайловВнешнимиПользователями</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветТекстаНевыбраннойКартинки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПараметрыХраненияФайловВИБ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СпособХраненияФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СоздаватьПодкаталогиСИменамиВладельцев</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФайламиВТомахСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ВладелецФайловШрифт</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РежимОчисткиФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РежимыОчисткиФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПутьКТомуБезУчетаРегиональныхНастроек</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ХранилищеФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ХранилищеДвоичныхДанных</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

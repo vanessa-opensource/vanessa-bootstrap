@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Пользователь" id="1">
+			<DataPath>Запись.Пользователь</DataPath>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="3"/>
+			<SelectedItemsActionsPanel name="ПользовательПанельДействийВыделенныхСтрок" id="31"/>
+		</InputField>
+		<InputField name="ВремяСобытия" id="4">
+			<DataPath>Запись.ВремяСобытия</DataPath>
+			<ContextMenu name="ВремяСобытияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ВремяСобытияРасширеннаяПодсказка" id="6"/>
+			<SelectedItemsActionsPanel name="ВремяСобытияПанельДействийВыделенныхСтрок" id="32"/>
+		</InputField>
+		<InputField name="Источник" id="7">
+			<DataPath>Запись.Источник</DataPath>
+			<ContextMenu name="ИсточникКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИсточникРасширеннаяПодсказка" id="9"/>
+			<SelectedItemsActionsPanel name="ИсточникПанельДействийВыделенныхСтрок" id="33"/>
+		</InputField>
+		<InputField name="СрокНапоминания" id="10">
+			<DataPath>Запись.СрокНапоминания</DataPath>
+			<ContextMenu name="СрокНапоминанияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СрокНапоминанияРасширеннаяПодсказка" id="12"/>
+			<SelectedItemsActionsPanel name="СрокНапоминанияПанельДействийВыделенныхСтрок" id="34"/>
+		</InputField>
+		<InputField name="Описание" id="13">
+			<DataPath>Запись.Описание</DataPath>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="15"/>
+			<SelectedItemsActionsPanel name="ОписаниеПанельДействийВыделенныхСтрок" id="35"/>
+		</InputField>
+		<InputField name="СпособУстановкиВремениНапоминания" id="16">
+			<DataPath>Запись.СпособУстановкиВремениНапоминания</DataPath>
+			<ContextMenu name="СпособУстановкиВремениНапоминанияКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="СпособУстановкиВремениНапоминанияРасширеннаяПодсказка" id="18"/>
+			<SelectedItemsActionsPanel name="СпособУстановкиВремениНапоминанияПанельДействийВыделенныхСтрок" id="36"/>
+		</InputField>
+		<InputField name="ИнтервалВремениНапоминания" id="19">
+			<DataPath>Запись.ИнтервалВремениНапоминания</DataPath>
+			<ContextMenu name="ИнтервалВремениНапоминанияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ИнтервалВремениНапоминанияРасширеннаяПодсказка" id="21"/>
+			<SelectedItemsActionsPanel name="ИнтервалВремениНапоминанияПанельДействийВыделенныхСтрок" id="37"/>
+		</InputField>
+		<InputField name="ИмяРеквизитаИсточника" id="22">
+			<DataPath>Запись.ИмяРеквизитаИсточника</DataPath>
+			<ContextMenu name="ИмяРеквизитаИсточникаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ИмяРеквизитаИсточникаРасширеннаяПодсказка" id="24"/>
+			<SelectedItemsActionsPanel name="ИмяРеквизитаИсточникаПанельДействийВыделенныхСтрок" id="38"/>
+		</InputField>
+		<InputField name="ПредставлениеИсточника" id="25">
+			<DataPath>Запись.ПредставлениеИсточника</DataPath>
+			<ContextMenu name="ПредставлениеИсточникаКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ПредставлениеИсточникаРасширеннаяПодсказка" id="27"/>
+			<SelectedItemsActionsPanel name="ПредставлениеИсточникаПанельДействийВыделенныхСтрок" id="39"/>
+		</InputField>
+		<InputField name="Идентификатор" id="28">
+			<DataPath>Запись.Идентификатор</DataPath>
+			<ContextMenu name="ИдентификаторКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ИдентификаторРасширеннаяПодсказка" id="30"/>
+			<SelectedItemsActionsPanel name="ИдентификаторПанельДействийВыделенныхСтрок" id="40"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НапоминанияПользователя</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

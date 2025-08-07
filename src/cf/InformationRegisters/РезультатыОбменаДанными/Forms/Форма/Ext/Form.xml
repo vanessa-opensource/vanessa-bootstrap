@@ -1,0 +1,3662 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Предупреждения при синхронизации данных</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтборов" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отборов</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтборовExtendedTooltip" id="364"/>
+			<ChildItems>
+				<InputField name="Период" id="34">
+					<DataPath>Период</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="35">
+						<Autofill>false</Autofill>
+					</ContextMenu>
+					<ExtendedTooltip name="ПериодExtendedTooltip" id="365"/>
+					<SelectedItemsActionsPanel name="ПериодПанельДействийВыделенныхСтрок" id="839"/>
+					<Events>
+						<Event name="OnChange">ПериодПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="УзелИнформационнойБазы" id="36">
+					<DataPath>УзелИнформационнойБазы</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправитель</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="УзелИнформационнойБазыКонтекстноеМеню" id="37">
+						<Autofill>false</Autofill>
+					</ContextMenu>
+					<ExtendedTooltip name="УзелИнформационнойБазыExtendedTooltip" id="366"/>
+					<SelectedItemsActionsPanel name="УзелИнформационнойБазыПанельДействийВыделенныхСтрок" id="840"/>
+					<Events>
+						<Event name="OnChange">УзелИнформационнойБазыПриИзменении</Event>
+						<Event name="StartChoice">УзелИнформационнойБазыНачалоВыбора</Event>
+						<Event name="Clearing">УзелИнформационнойБазыОчистка</Event>
+						<Event name="ChoiceProcessing">УзелИнформационнойБазыОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="СтрокаПоиска" id="55">
+					<DataPath>СтрокаПоиска</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причина</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="СтрокаПоискаКонтекстноеМеню" id="56">
+						<Autofill>false</Autofill>
+					</ContextMenu>
+					<ExtendedTooltip name="СтрокаПоискаExtendedTooltip" id="367"/>
+					<SelectedItemsActionsPanel name="СтрокаПоискаПанельДействийВыделенныхСтрок" id="841"/>
+					<Events>
+						<Event name="OnChange">СтрокаПоискаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Button name="ПоказатьИнформациюДляТехническихСпециалистов" id="821">
+			<Type>Hyperlink</Type>
+			<CommandName>Form.Command.ПоказатьИнформациюДляТехническихСпециалистов</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать информацию для технических специалистов</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ПоказатьИнформациюДляТехническихСпециалистовРасширеннаяПодсказка" id="822"/>
+		</Button>
+		<Pages name="РезультатыОбменаДанными" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результаты обмена данными</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="РезультатыОбменаДаннымиExtendedTooltip" id="368"/>
+			<Events>
+				<Event name="OnCurrentPageChange">РезультатыОбменаДаннымиПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="СтраницаОшибкиXDTO" id="537">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проблемы при отправке</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список объектов зарегистрированных к отправке в другую программу, но имеют проблемы из-за которых не могут быть выгружены.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаОшибкиXDTOРасширеннаяПодсказка" id="538"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияОшибкиXDTO" id="596">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При отправке данных в другую программу обнаружены объекты информационной базы, которые зарегистрированы к обмену, но не могут быть выгружены по различным причинам. Необходимо открыть проблемный объект и устранить причины, мешающие его отправке в другую программу. При последующей отправке в другую программу список проблем будет актуализирован.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОшибкиXDTOКонтекстноеМеню" id="597"/>
+							<ExtendedTooltip name="ДекорацияОшибкиXDTOРасширеннаяПодсказка" id="598"/>
+						</LabelDecoration>
+						<Table name="ОшибкиОбъектаXDTO" id="672">
+							<ReadOnly>true</ReadOnly>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ОшибкиОбъектаXDTO</DataPath>
+							<RowPictureDataPath>ОшибкиОбъектаXDTO.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Незаполненные реквизиты</v8:content>
+								</v8:item>
+							</Title>
+							<CurrentRowUse>SelectionPresentation</CurrentRowUse>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ОшибкиОбъектаXDTOКонтекстноеМеню" id="673">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ОшибкиОбъектаXDTOКонтекстноеМенюИзменитьВыделенныеОбъекты" id="705">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьВыделенныеОшибкиXTDO</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить выделенные объекты</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ОшибкиОбъектаXDTOКонтекстноеМенюИзменитьВыделенныеОбъектыРасширеннаяПодсказка" id="706"/>
+									</Button>
+									<Button name="ОшибкиОбъектаXDTOКонтекстноеМенюИзменить" id="707">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Изменить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ОшибкиОбъектаXDTOКонтекстноеМенюИзменитьРасширеннаяПодсказка" id="708"/>
+									</Button>
+									<ButtonGroup name="ОшибкиОбъектаXDTOКонтекстноеМенюГруппаИгнорирования" id="709">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Незаполненные реквизиты контекстное меню группа игнорирования</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ОшибкиОбъектаXDTOКонтекстноеМенюГруппаИгнорированияРасширеннаяПодсказка" id="710"/>
+										<ChildItems>
+											<Button name="ОшибкиОбъектаXDTOКонтекстноеМенюИгнорироватьОшибку" id="711">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ИгнорироватьОшибку</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Игнорировать ошибку</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ОшибкиОбъектаXDTOКонтекстноеМенюИгнорироватьОшибкуРасширеннаяПодсказка" id="712"/>
+											</Button>
+											<Button name="ОшибкиОбъектаXDTOКонтекстноеМенюНеИгнорироватьОшибку" id="713">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.НеИгнорироватьОшибку</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Не игнорировать ошибку</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ОшибкиОбъектаXDTOКонтекстноеМенюНеИгнорироватьОшибкуРасширеннаяПодсказка" id="714"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ОшибкиОбъектаXDTOКонтекстноеМенюКопироватьВБуферОбмена" id="715">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НезаполненныеРеквизиты.StandardCommand.CopyToClipboard</CommandName>
+										<ExtendedTooltip name="ОшибкиОбъектаXDTOКонтекстноеМенюКопироватьВБуферОбменаРасширеннаяПодсказка" id="716"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ОшибкиОбъектаXDTOКоманднаяПанель" id="674">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ОшибкиОбъектаXDTOИзменитьВыделенныеОбъекты" id="717">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьВыделенныеОшибкиXTDO</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить выделенные объекты</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ОшибкиОбъектаXDTOИзменитьВыделенныеОбъектыРасширеннаяПодсказка" id="718"/>
+									</Button>
+									<Button name="ОшибкиОбъектаXDTOИзменить" id="719">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Изменить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить</v8:content>
+											</v8:item>
+										</Title>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ОшибкиОбъектаXDTOИзменитьРасширеннаяПодсказка" id="720"/>
+									</Button>
+									<ButtonGroup name="ГруппаИгнорированияОшибокXDTO" id="721">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Игнорирования ошибок XDTO</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаИгнорированияОшибокXDTOРасширеннаяПодсказка" id="722"/>
+										<ChildItems>
+											<Button name="ОшибкиОбъектаXDTOИгнорироватьОшибку" id="723">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ИгнорироватьОшибку</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Игнорировать ошибку</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ОшибкиОбъектаXDTOИгнорироватьОшибкуРасширеннаяПодсказка" id="724"/>
+											</Button>
+											<Button name="ОшибкиОбъектаXDTOНеИгнорироватьОшибку" id="725">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.НеИгнорироватьОшибку</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Не игнорировать ошибку</v8:content>
+													</v8:item>
+												</Title>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ОшибкиОбъектаXDTOНеИгнорироватьОшибкуРасширеннаяПодсказка" id="726"/>
+											</Button>
+											<Button name="ОшибкиОбъектаXDTOПоказыватьПроигнорированные" id="727">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПоказыватьПроигнорированныеНезаполненные</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Показывать проигнорированные</v8:content>
+													</v8:item>
+												</Title>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ОшибкиОбъектаXDTOПоказыватьПроигнорированныеРасширеннаяПодсказка" id="728"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ОшибкиОбъектаXDTOОбновить" id="729">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Обновить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Обновить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ОшибкиОбъектаXDTOОбновитьРасширеннаяПодсказка" id="730"/>
+									</Button>
+									<Button name="ОшибкиОбъектаXDTOНайти" id="731">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НезаполненныеРеквизиты.StandardCommand.Find</CommandName>
+										<ExtendedTooltip name="ОшибкиОбъектаXDTOНайтиРасширеннаяПодсказка" id="732"/>
+									</Button>
+									<Button name="ОшибкиОбъектаXDTOОтменитьПоиск" id="733">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НезаполненныеРеквизиты.StandardCommand.CancelSearch</CommandName>
+										<ExtendedTooltip name="ОшибкиОбъектаXDTOОтменитьПоискРасширеннаяПодсказка" id="734"/>
+									</Button>
+									<Button name="ОшибкиОбъектаXDTOВывестиСписок" id="735">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НезаполненныеРеквизиты.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="ОшибкиОбъектаXDTOВывестиСписокРасширеннаяПодсказка" id="736"/>
+									</Button>
+									<Button name="ОшибкиОбъектаXDTOНастройкаСписка" id="737">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НезаполненныеРеквизиты.StandardCommand.ListSettings</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ОшибкиОбъектаXDTOНастройкаСпискаРасширеннаяПодсказка" id="738"/>
+									</Button>
+									<Button name="ОшибкиОбъектаXDTOИзменитьФорму" id="739">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="ОшибкиОбъектаXDTOИзменитьФормуРасширеннаяПодсказка" id="740"/>
+									</Button>
+									<Button name="ОшибкиОбъектаXDTOСправка" id="741">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ОшибкиОбъектаXDTOСправкаРасширеннаяПодсказка" id="742"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОшибкиОбъектаXDTOРасширеннаяПодсказка" id="675"/>
+							<SearchStringAddition name="ОшибкиОбъектаXDTOСтрокаПоиска" id="676">
+								<AdditionSource>
+									<Item>ОшибкиОбъектаXDTO</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОшибкиОбъектаXDTOСтрокаПоискаКонтекстноеМеню" id="677"/>
+								<ExtendedTooltip name="ОшибкиОбъектаXDTOСтрокаПоискаРасширеннаяПодсказка" id="678"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОшибкиОбъектаXDTOСостояниеПросмотра" id="679">
+								<AdditionSource>
+									<Item>ОшибкиОбъектаXDTO</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОшибкиОбъектаXDTOСостояниеПросмотраКонтекстноеМеню" id="680"/>
+								<ExtendedTooltip name="ОшибкиОбъектаXDTOСостояниеПросмотраРасширеннаяПодсказка" id="681"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОшибкиОбъектаXDTOУправлениеПоиском" id="682">
+								<AdditionSource>
+									<Item>ОшибкиОбъектаXDTO</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОшибкиОбъектаXDTOУправлениеПоискомКонтекстноеМеню" id="683"/>
+								<ExtendedTooltip name="ОшибкиОбъектаXDTOУправлениеПоискомРасширеннаяПодсказка" id="684"/>
+							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="ОшибкиОбъектаXDTOПанельДействийВыделенныхСтрок" id="842"/>
+							<Events>
+								<Event name="Selection">ОшибкиОбъектаXDTOВыбор</Event>
+								<Event name="BeforeRowChange">ОшибкиОбъектаXDTOПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ОшибкиОбъектаXDTOГруппаКартинки" id="685">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Незаполненные реквизиты группа картинки</v8:content>
+										</v8:item>
+									</Title>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ОшибкиОбъектаXDTOГруппаКартинкиРасширеннаяПодсказка" id="686"/>
+									<ChildItems>
+										<PictureField name="ОшибкиОбъектаXDTOКартинка" id="743">
+											<DataPath>ОшибкиОбъектаXDTO.ПометкаУдаления</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.ПиктограммыЭлементов</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="ОшибкиОбъектаXDTOКартинкаКонтекстноеМеню" id="744"/>
+											<ExtendedTooltip name="ОшибкиОбъектаXDTOКартинкаРасширеннаяПодсказка" id="745"/>
+											<SelectedItemsActionsPanel name="ОшибкиОбъектаXDTOКартинкаПанельДействийВыделенныхСтрок" id="843"/>
+										</PictureField>
+										<LabelField name="ОшибкиОбъектаXDTOПредставлениеОбъекта" id="746">
+											<DataPath>ОшибкиОбъектаXDTO.ОбъектМетаданных</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вид данных</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ОшибкиОбъектаXDTOПредставлениеОбъектаКонтекстноеМеню" id="747"/>
+											<ExtendedTooltip name="ОшибкиОбъектаXDTOПредставлениеОбъектаРасширеннаяПодсказка" id="748"/>
+											<SelectedItemsActionsPanel name="ОшибкиОбъектаXDTOПредставлениеОбъектаПанельДействийВыделенныхСтрок" id="844"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ОшибкиОбъектаXDTOСсылка" id="749">
+									<DataPath>ОшибкиОбъектаXDTO.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ОшибкиОбъектаXDTOСсылкаКонтекстноеМеню" id="750"/>
+									<ExtendedTooltip name="ОшибкиОбъектаXDTOСсылкаРасширеннаяПодсказка" id="751"/>
+									<SelectedItemsActionsPanel name="ОшибкиОбъектаXDTOСсылкаПанельДействийВыделенныхСтрок" id="845"/>
+								</InputField>
+								<InputField name="ОшибкиОбъектаXDTOДатаВозникновения" id="752">
+									<DataPath>ОшибкиОбъектаXDTO.ДатаВозникновения</DataPath>
+									<ContextMenu name="ОшибкиОбъектаXDTOДатаВозникновенияКонтекстноеМеню" id="753"/>
+									<ExtendedTooltip name="ОшибкиОбъектаXDTOДатаВозникновенияРасширеннаяПодсказка" id="754"/>
+									<SelectedItemsActionsPanel name="ОшибкиОбъектаXDTOДатаВозникновенияПанельДействийВыделенныхСтрок" id="846"/>
+								</InputField>
+								<InputField name="ОшибкиОбъектаXDTOУзелИнформационнойБазы" id="755">
+									<DataPath>ОшибкиОбъектаXDTO.УзелИнформационнойБазы</DataPath>
+									<ContextMenu name="ОшибкиОбъектаXDTOУзелИнформационнойБазыКонтекстноеМеню" id="756"/>
+									<ExtendedTooltip name="ОшибкиОбъектаXDTOУзелИнформационнойБазыРасширеннаяПодсказка" id="757"/>
+									<SelectedItemsActionsPanel name="ОшибкиОбъектаXDTOУзелИнформационнойБазыПанельДействийВыделенныхСтрок" id="847"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНепроведенныеДокументы" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Непроведенные документы</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.Document</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаНепроведенныеДокументыExtendedTooltip" id="369"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияДокументы" id="57">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Документы, полученные при синхронизации данных с другой программой, не удалось провести автоматически.
+Рекомендуется открыть документ и устранить проблемы, мешающие его проведению.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияДокументыКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ДекорацияДокументыExtendedTooltip" id="370"/>
+						</LabelDecoration>
+						<Table name="НепроведенныеДокументы" id="4">
+							<ReadOnly>true</ReadOnly>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>НепроведенныеДокументы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Непроведенные документы</v8:content>
+								</v8:item>
+							</Title>
+							<CurrentRowUse>SelectionPresentation</CurrentRowUse>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="НепроведенныеДокументыКонтекстноеМеню" id="5">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="НепроведенныеДокументыКонтекстноеМенюИзменитьВыделенныеДокументы" id="62">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьВыделенныеДокументы</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить выделенные...</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепроведенныеДокументыКонтекстноеМенюИзменитьВыделенныеДокументыExtendedTooltip" id="371"/>
+									</Button>
+									<Button name="НепроведенныеДокументыКонтекстноеМенюПровестиДокумент" id="63">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПровестиДокумент</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Провести</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепроведенныеДокументыКонтекстноеМенюПровестиДокументExtendedTooltip" id="372"/>
+									</Button>
+									<Button name="НепроведенныеДокументыКонтекстноеМенюИзменить" id="324">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Изменить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепроведенныеДокументыКонтекстноеМенюИзменитьExtendedTooltip" id="373"/>
+									</Button>
+									<ButtonGroup name="НепроведенныеДокументыКонтекстноеМенюГруппаИгнорирования" id="64">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Непроведенные документы контекстное меню группа игнорирования</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепроведенныеДокументыКонтекстноеМенюГруппаИгнорированияExtendedTooltip" id="374"/>
+										<ChildItems>
+											<Button name="НепроведенныеДокументыКонтекстноеМенюИгнорироватьДокумент" id="65">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ИгнорироватьДокумент</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Игнорировать</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="НепроведенныеДокументыКонтекстноеМенюИгнорироватьДокументExtendedTooltip" id="375"/>
+											</Button>
+											<Button name="НепроведенныеДокументыКонтекстноеМенюНеИгнорироватьДокумент" id="66">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.НеИгнорироватьДокумент</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Не игнорировать</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="НепроведенныеДокументыКонтекстноеМенюНеИгнорироватьДокументExtendedTooltip" id="376"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="НепроведенныеДокументыКонтекстноеМенюКопироватьВБуферОбмена" id="236">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НепроведенныеДокументы.StandardCommand.CopyToClipboard</CommandName>
+										<ExtendedTooltip name="НепроведенныеДокументыКонтекстноеМенюКопироватьВБуферОбменаExtendedTooltip" id="377"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="НепроведенныеДокументыКоманднаяПанель" id="6">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="НепроведенныеДокументыИзменитьВыделенныеДокументы" id="26">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьВыделенныеДокументы</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить выделенные...</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепроведенныеДокументыИзменитьВыделенныеДокументыExtendedTooltip" id="378"/>
+									</Button>
+									<Button name="НепроведенныеДокументыПровестиДокумент" id="30">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПровестиДокумент</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Провести</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепроведенныеДокументыПровестиДокументExtendedTooltip" id="379"/>
+									</Button>
+									<Button name="НепроведенныеДокументыИзменить" id="180">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Изменить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить</v8:content>
+											</v8:item>
+										</Title>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="НепроведенныеДокументыИзменитьExtendedTooltip" id="380"/>
+									</Button>
+									<ButtonGroup name="ГруппаИгнорированияДокументов" id="23">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Игнорирования документов</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаИгнорированияДокументовExtendedTooltip" id="381"/>
+										<ChildItems>
+											<Button name="НепроведенныеДокументыИгнорироватьДокумент" id="21">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ИгнорироватьДокумент</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Игнорировать</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="НепроведенныеДокументыИгнорироватьДокументExtendedTooltip" id="382"/>
+											</Button>
+											<Button name="НепроведенныеДокументыНеИгнорироватьДокумент" id="22">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.НеИгнорироватьДокумент</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Не игнорировать</v8:content>
+													</v8:item>
+												</Title>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="НепроведенныеДокументыНеИгнорироватьДокументExtendedTooltip" id="383"/>
+											</Button>
+											<Button name="НепроведенныеДокументыПоказыватьПроигнорированныеНепроведенные" id="340">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПоказыватьПроигнорированныеНепроведенные</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Показывать проигнорированные</v8:content>
+													</v8:item>
+												</Title>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="НепроведенныеДокументыПоказыватьПроигнорированныеНепроведенныеExtendedTooltip" id="384"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="НепроведенныеДокументыОбновить" id="357">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Обновить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Обновить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепроведенныеДокументыОбновитьExtendedTooltip" id="385"/>
+									</Button>
+									<Button name="НепроведенныеДокументыНайти" id="228">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НепроведенныеДокументы.StandardCommand.Find</CommandName>
+										<ExtendedTooltip name="НепроведенныеДокументыНайтиExtendedTooltip" id="386"/>
+									</Button>
+									<Button name="НепроведенныеДокументыОтменитьПоиск" id="229">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НепроведенныеДокументы.StandardCommand.CancelSearch</CommandName>
+										<ExtendedTooltip name="НепроведенныеДокументыОтменитьПоискExtendedTooltip" id="387"/>
+									</Button>
+									<Button name="НепроведенныеДокументыНастройкаСписка" id="29">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НепроведенныеДокументы.StandardCommand.ListSettings</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="НепроведенныеДокументыНастройкаСпискаExtendedTooltip" id="388"/>
+									</Button>
+									<Button name="НепроведенныеДокументыВывестиСписок" id="230">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НепроведенныеДокументы.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="НепроведенныеДокументыВывестиСписокExtendedTooltip" id="389"/>
+									</Button>
+									<Button name="НепроведенныеДокументыИзменитьФорму" id="344">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="НепроведенныеДокументыИзменитьФормуExtendedTooltip" id="390"/>
+									</Button>
+									<Button name="НепроведенныеДокументыСправка" id="360">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="НепроведенныеДокументыСправкаExtendedTooltip" id="391"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="НепроведенныеДокументыExtendedTooltip" id="392"/>
+							<SearchStringAddition name="НепроведенныеДокументыСтрокаПоиска" id="499">
+								<AdditionSource>
+									<Item>НепроведенныеДокументы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НепроведенныеДокументыСтрокаПоискаКонтекстноеМеню" id="500"/>
+								<ExtendedTooltip name="НепроведенныеДокументыСтрокаПоискаРасширеннаяПодсказка" id="501"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НепроведенныеДокументыСостояниеПросмотра" id="502">
+								<AdditionSource>
+									<Item>НепроведенныеДокументы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НепроведенныеДокументыСостояниеПросмотраКонтекстноеМеню" id="503"/>
+								<ExtendedTooltip name="НепроведенныеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="504"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НепроведенныеДокументыУправлениеПоиском" id="505">
+								<AdditionSource>
+									<Item>НепроведенныеДокументы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НепроведенныеДокументыУправлениеПоискомКонтекстноеМеню" id="506"/>
+								<ExtendedTooltip name="НепроведенныеДокументыУправлениеПоискомРасширеннаяПодсказка" id="507"/>
+							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="НепроведенныеДокументыПанельДействийВыделенныхСтрок" id="849"/>
+							<Events>
+								<Event name="Selection">НепроведенныеДокументыВыбор</Event>
+								<Event name="BeforeRowChange">НепроведенныеДокументыПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="НепроведенныеДокументыСсылка" id="255">
+									<DataPath>НепроведенныеДокументы.Ссылка</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ссылка на документ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="НепроведенныеДокументыСсылкаКонтекстноеМеню" id="256"/>
+									<ExtendedTooltip name="НепроведенныеДокументыСсылкаExtendedTooltip" id="396"/>
+									<SelectedItemsActionsPanel name="НепроведенныеДокументыСсылкаПанельДействийВыделенныхСтрок" id="850"/>
+								</LabelField>
+								<ColumnGroup name="НепроведенныеДокументыГруппаКартинки" id="258">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Непроведенные документы группа картинки</v8:content>
+										</v8:item>
+									</Title>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="НепроведенныеДокументыГруппаКартинкиExtendedTooltip" id="393"/>
+									<ChildItems>
+										<PictureField name="НепроведенныеДокументыПометкаУдаления" id="259">
+											<DataPath>НепроведенныеДокументы.ПометкаУдаления</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пометка удаления</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<Width>9</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СтатусыДокумента</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="НепроведенныеДокументыПометкаУдаленияКонтекстноеМеню" id="260"/>
+											<ExtendedTooltip name="НепроведенныеДокументыПометкаУдаленияExtendedTooltip" id="394"/>
+											<SelectedItemsActionsPanel name="НепроведенныеДокументыПометкаУдаленияПанельДействийВыделенныхСтрок" id="851"/>
+										</PictureField>
+										<LabelField name="НепроведенныеДокументыТипСтрокой" id="19">
+											<DataPath>НепроведенныеДокументы.ТипСтрокой</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вид документа</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тип документа</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ContextMenu name="НепроведенныеДокументыТипСтрокойКонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="НепроведенныеДокументыТипСтрокойExtendedTooltip" id="395"/>
+											<SelectedItemsActionsPanel name="НепроведенныеДокументыТипСтрокойПанельДействийВыделенныхСтрок" id="852"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<LabelField name="НепроведенныеДокументыНомерДокумента" id="251">
+									<DataPath>НепроведенныеДокументы.НомерДокумента</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер документа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>14</Width>
+									<ContextMenu name="НепроведенныеДокументыНомерДокументаКонтекстноеМеню" id="252"/>
+									<ExtendedTooltip name="НепроведенныеДокументыНомерДокументаExtendedTooltip" id="397"/>
+									<SelectedItemsActionsPanel name="НепроведенныеДокументыНомерДокументаПанельДействийВыделенныхСтрок" id="853"/>
+								</LabelField>
+								<LabelField name="НепроведенныеДокументыДатаДокумента" id="253">
+									<DataPath>НепроведенныеДокументы.ДатаДокумента</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата документа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>9</Width>
+									<ContextMenu name="НепроведенныеДокументыДатаДокументаКонтекстноеМеню" id="254"/>
+									<ExtendedTooltip name="НепроведенныеДокументыДатаДокументаExtendedTooltip" id="398"/>
+									<SelectedItemsActionsPanel name="НепроведенныеДокументыДатаДокументаПанельДействийВыделенныхСтрок" id="854"/>
+								</LabelField>
+								<LabelField name="НепроведенныеДокументыПричина" id="15">
+									<DataPath>НепроведенныеДокументы.Причина</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Причина, по которой не провелся документ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>10</Width>
+									<ContextMenu name="НепроведенныеДокументыПричинаКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="НепроведенныеДокументыПричинаExtendedTooltip" id="399"/>
+									<SelectedItemsActionsPanel name="НепроведенныеДокументыПричинаПанельДействийВыделенныхСтрок" id="855"/>
+								</LabelField>
+								<LabelField name="НепроведенныеДокументыДатаВозникновения" id="13">
+									<DataPath>НепроведенныеДокументы.ДатаВозникновения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата получения</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата получения непроведенного документа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>15</Width>
+									<ContextMenu name="НепроведенныеДокументыДатаВозникновенияКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="НепроведенныеДокументыДатаВозникновенияExtendedTooltip" id="400"/>
+									<SelectedItemsActionsPanel name="НепроведенныеДокументыДатаВозникновенияПанельДействийВыделенныхСтрок" id="856"/>
+								</LabelField>
+								<LabelField name="НепроведенныеДокументыУзелИнформационнойБазы" id="11">
+									<DataPath>НепроведенныеДокументы.УзелИнформационнойБазы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отправитель</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информационная база или приложение из которого получен документ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>15</Width>
+									<ContextMenu name="НепроведенныеДокументыУзелИнформационнойБазыКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="НепроведенныеДокументыУзелИнформационнойБазыExtendedTooltip" id="401"/>
+									<SelectedItemsActionsPanel name="НепроведенныеДокументыУзелИнформационнойБазыПанельДействийВыделенныхСтрок" id="857"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНезаполненныеРеквизиты" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Незаполненные реквизиты</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.Catalog</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаНезаполненныеРеквизитыExtendedTooltip" id="403"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияОбъекты" id="59">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При синхронизации с другой программой были получены данные, которые не удалось корректно записать, т.к. один или несколько
+реквизитов не были корректно заполнены. Рекомендуется открыть элемент справочника и заполнить эти реквизиты.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОбъектыКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ДекорацияОбъектыExtendedTooltip" id="404"/>
+						</LabelDecoration>
+						<Table name="НезаполненныеРеквизиты" id="67">
+							<ReadOnly>true</ReadOnly>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>НезаполненныеРеквизиты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Незаполненные реквизиты</v8:content>
+								</v8:item>
+							</Title>
+							<CurrentRowUse>SelectionPresentation</CurrentRowUse>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="НезаполненныеРеквизитыКонтекстноеМеню" id="68">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="НезаполненныеРеквизитыКонтекстноеМенюИзменитьВыделенныеОбъекты" id="100">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьВыделенныеОбъекты</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить выделенные...</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НезаполненныеРеквизитыКонтекстноеМенюИзменитьВыделенныеОбъектыExtendedTooltip" id="405"/>
+									</Button>
+									<Button name="НезаполненныеРеквизитыКонтекстноеМенюИзменить" id="276">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Изменить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НезаполненныеРеквизитыКонтекстноеМенюИзменитьExtendedTooltip" id="406"/>
+									</Button>
+									<ButtonGroup name="НезаполненныеРеквизитыКонтекстноеМенюГруппаИгнорирования" id="101">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Незаполненные реквизиты контекстное меню группа игнорирования</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НезаполненныеРеквизитыКонтекстноеМенюГруппаИгнорированияExtendedTooltip" id="407"/>
+										<ChildItems>
+											<Button name="НезаполненныеРеквизитыКонтекстноеМенюИгнорироватьОбъект" id="97">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ИгнорироватьОбъект</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Игнорировать</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="НезаполненныеРеквизитыКонтекстноеМенюИгнорироватьОбъектExtendedTooltip" id="408"/>
+											</Button>
+											<Button name="НезаполненныеРеквизитыКонтекстноеМенюНеИгнорироватьОбъект" id="99">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.НеИгнорироватьОбъект</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Не игнорировать</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="НезаполненныеРеквизитыКонтекстноеМенюНеИгнорироватьОбъектExtendedTooltip" id="409"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="НезаполненныеРеквизитыКонтекстноеМенюКопироватьВБуферОбмена" id="237">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НезаполненныеРеквизиты.StandardCommand.CopyToClipboard</CommandName>
+										<ExtendedTooltip name="НезаполненныеРеквизитыКонтекстноеМенюКопироватьВБуферОбменаExtendedTooltip" id="410"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="НезаполненныеРеквизитыКоманднаяПанель" id="69">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="НезаполненныеРеквизитыИзменитьВыделенныеОбъекты" id="91">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьВыделенныеОбъекты</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить выделенные...</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НезаполненныеРеквизитыИзменитьВыделенныеОбъектыExtendedTooltip" id="411"/>
+									</Button>
+									<Button name="НезаполненныеРеквизитыИзменить" id="181">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Изменить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить</v8:content>
+											</v8:item>
+										</Title>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="НезаполненныеРеквизитыИзменитьExtendedTooltip" id="412"/>
+									</Button>
+									<ButtonGroup name="ГруппаИгнорированияОбъектов" id="92">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Игнорирования объектов</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаИгнорированияОбъектовExtendedTooltip" id="413"/>
+										<ChildItems>
+											<Button name="НезаполненныеРеквизитыИгнорироватьОбъект" id="89">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ИгнорироватьОбъект</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Игнорировать</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="НезаполненныеРеквизитыИгнорироватьОбъектExtendedTooltip" id="414"/>
+											</Button>
+											<Button name="НезаполненныеРеквизитыНеИгнорироватьОбъект" id="167">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.НеИгнорироватьОбъект</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Не игнорировать</v8:content>
+													</v8:item>
+												</Title>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="НезаполненныеРеквизитыНеИгнорироватьОбъектExtendedTooltip" id="415"/>
+											</Button>
+											<Button name="НезаполненныеРеквизитыПоказыватьПроигнорированныеНезаполненные" id="341">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПоказыватьПроигнорированныеНезаполненные</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Показывать проигнорированные</v8:content>
+													</v8:item>
+												</Title>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="НезаполненныеРеквизитыПоказыватьПроигнорированныеНезаполненныеExtendedTooltip" id="416"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="НезаполненныеРеквизитыОбновить" id="358">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Обновить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Обновить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НезаполненныеРеквизитыОбновитьExtendedTooltip" id="417"/>
+									</Button>
+									<Button name="НезаполненныеРеквизитыНайти" id="234">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НезаполненныеРеквизиты.StandardCommand.Find</CommandName>
+										<ExtendedTooltip name="НезаполненныеРеквизитыНайтиExtendedTooltip" id="418"/>
+									</Button>
+									<Button name="НезаполненныеРеквизитыОтменитьПоиск" id="235">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НезаполненныеРеквизиты.StandardCommand.CancelSearch</CommandName>
+										<ExtendedTooltip name="НезаполненныеРеквизитыОтменитьПоискExtendedTooltip" id="419"/>
+									</Button>
+									<Button name="НезаполненныеРеквизитыВывестиСписок" id="233">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НезаполненныеРеквизиты.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="НезаполненныеРеквизитыВывестиСписокExtendedTooltip" id="420"/>
+									</Button>
+									<Button name="НезаполненныеРеквизитыНастройкаСписка" id="96">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НезаполненныеРеквизиты.StandardCommand.ListSettings</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="НезаполненныеРеквизитыНастройкаСпискаExtendedTooltip" id="421"/>
+									</Button>
+									<Button name="НезаполненныеРеквизитыИзменитьФорму" id="345">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="НезаполненныеРеквизитыИзменитьФормуExtendedTooltip" id="422"/>
+									</Button>
+									<Button name="НезаполненныеРеквизитыСправка" id="361">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="НезаполненныеРеквизитыСправкаExtendedTooltip" id="423"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="НезаполненныеРеквизитыExtendedTooltip" id="424"/>
+							<SearchStringAddition name="НезаполненныеРеквизитыСтрокаПоиска" id="508">
+								<AdditionSource>
+									<Item>НезаполненныеРеквизиты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НезаполненныеРеквизитыСтрокаПоискаКонтекстноеМеню" id="509"/>
+								<ExtendedTooltip name="НезаполненныеРеквизитыСтрокаПоискаРасширеннаяПодсказка" id="510"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НезаполненныеРеквизитыСостояниеПросмотра" id="511">
+								<AdditionSource>
+									<Item>НезаполненныеРеквизиты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НезаполненныеРеквизитыСостояниеПросмотраКонтекстноеМеню" id="512"/>
+								<ExtendedTooltip name="НезаполненныеРеквизитыСостояниеПросмотраРасширеннаяПодсказка" id="513"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НезаполненныеРеквизитыУправлениеПоиском" id="514">
+								<AdditionSource>
+									<Item>НезаполненныеРеквизиты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НезаполненныеРеквизитыУправлениеПоискомКонтекстноеМеню" id="515"/>
+								<ExtendedTooltip name="НезаполненныеРеквизитыУправлениеПоискомРасширеннаяПодсказка" id="516"/>
+							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="НезаполненныеРеквизитыПанельДействийВыделенныхСтрок" id="859"/>
+							<Events>
+								<Event name="Selection">НезаполненныеРеквизитыВыбор</Event>
+								<Event name="BeforeRowChange">НезаполненныеРеквизитыПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="НезаполненныеРеквизитыГруппаКартинки" id="261">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Незаполненные реквизиты группа картинки</v8:content>
+										</v8:item>
+									</Title>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="НезаполненныеРеквизитыГруппаКартинкиExtendedTooltip" id="425"/>
+									<ChildItems>
+										<PictureField name="НезаполненныеРеквизитыПометкаУдаления" id="262">
+											<DataPath>НезаполненныеРеквизиты.ПометкаУдаления</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пометка удаления</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тип данных</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.ПиктограммыЭлементов</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="НезаполненныеРеквизитыПометкаУдаленияКонтекстноеМеню" id="263"/>
+											<ExtendedTooltip name="НезаполненныеРеквизитыПометкаУдаленияExtendedTooltip" id="426"/>
+											<SelectedItemsActionsPanel name="НезаполненныеРеквизитыПометкаУдаленияПанельДействийВыделенныхСтрок" id="860"/>
+										</PictureField>
+										<LabelField name="НезаполненныеРеквизитыТипСтрокой" id="82">
+											<DataPath>НезаполненныеРеквизиты.ТипСтрокой</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вид данных</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НезаполненныеРеквизитыТипСтрокойКонтекстноеМеню" id="83"/>
+											<ExtendedTooltip name="НезаполненныеРеквизитыТипСтрокойExtendedTooltip" id="427"/>
+											<SelectedItemsActionsPanel name="НезаполненныеРеквизитыТипСтрокойПанельДействийВыделенныхСтрок" id="861"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<LabelField name="НезаполненныеРеквизитыСсылка" id="84">
+									<DataPath>НезаполненныеРеквизиты.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные с незаполненными реквизитами</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="НезаполненныеРеквизитыСсылкаКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="НезаполненныеРеквизитыСсылкаExtendedTooltip" id="428"/>
+									<SelectedItemsActionsPanel name="НезаполненныеРеквизитыСсылкаПанельДействийВыделенныхСтрок" id="862"/>
+								</LabelField>
+								<LabelField name="НезаполненныеРеквизитыДатаВозникновения" id="76">
+									<DataPath>НезаполненныеРеквизиты.ДатаВозникновения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата получения</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="НезаполненныеРеквизитыДатаВозникновенияКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="НезаполненныеРеквизитыДатаВозникновенияExtendedTooltip" id="429"/>
+									<SelectedItemsActionsPanel name="НезаполненныеРеквизитыДатаВозникновенияПанельДействийВыделенныхСтрок" id="863"/>
+								</LabelField>
+								<LabelField name="НезаполненныеРеквизитыПричина" id="78">
+									<DataPath>НезаполненныеРеквизиты.Причина</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Причина, по которой данные не удалось корректно записать</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="НезаполненныеРеквизитыПричинаКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="НезаполненныеРеквизитыПричинаExtendedTooltip" id="430"/>
+									<SelectedItemsActionsPanel name="НезаполненныеРеквизитыПричинаПанельДействийВыделенныхСтрок" id="864"/>
+								</LabelField>
+								<LabelField name="НезаполненныеРеквизитыУзелИнформационнойБазы" id="74">
+									<DataPath>НезаполненныеРеквизиты.УзелИнформационнойБазы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отправитель</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информационная база или приложение из которого получены данные</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="НезаполненныеРеквизитыУзелИнформационнойБазыКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="НезаполненныеРеквизитыУзелИнформационнойБазыExtendedTooltip" id="431"/>
+									<SelectedItemsActionsPanel name="НезаполненныеРеквизитыУзелИнформационнойБазыПанельДействийВыделенныхСтрок" id="865"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаКоллизии" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конфликты</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.СинхронизацияДанныхКоллизия</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаКоллизииExtendedTooltip" id="433"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияКоллизии" id="176">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные были одновременно изменены в этой и в другой программе, в результате чего появилось две версии
+одного элемента справочника (документа) и возник конфликт, который был разрешен автоматически.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияКоллизииКонтекстноеМеню" id="177"/>
+							<ExtendedTooltip name="ДекорацияКоллизииExtendedTooltip" id="434"/>
+						</LabelDecoration>
+						<Table name="Коллизии" id="102">
+							<ReadOnly>true</ReadOnly>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Коллизии</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Коллизии</v8:content>
+								</v8:item>
+							</Title>
+							<CurrentRowUse>SelectionPresentation</CurrentRowUse>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="КоллизииКонтекстноеМеню" id="103">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="КоллизииКонтекстноеМенюСравнитьСТекущейВерсиейКоллизии" id="161">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПоказатьОтличияКоллизии</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Показать отличия</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="КоллизииКонтекстноеМенюСравнитьСТекущейВерсиейКоллизииExtendedTooltip" id="435"/>
+									</Button>
+									<Button name="КоллизииКонтекстноеМенюОткрытьВерсиюДоКонфликта" id="162">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьВерсиюДоКонфликта</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Показать версию, созданную в этой информационной базе</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="КоллизииКонтекстноеМенюОткрытьВерсиюДоКонфликтаExtendedTooltip" id="436"/>
+									</Button>
+									<Button name="КоллизииКонтекстноеМенюОткрытьВерсиюКонфликта" id="338">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьВерсиюКонфликта</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Показать версию, полученную из другой информационной базы</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="КоллизииКонтекстноеМенюОткрытьВерсиюКонфликтаExtendedTooltip" id="437"/>
+									</Button>
+									<Button name="КоллизииКонтекстноеМенюИзменить" id="277">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Изменить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="КоллизииКонтекстноеМенюИзменитьExtendedTooltip" id="438"/>
+									</Button>
+									<ButtonGroup name="КоллизииКонтекстноеМенюГруппаРазделитель" id="349">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Коллизии контекстное меню группа разделитель</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="КоллизииКонтекстноеМенюГруппаРазделительРасширеннаяПодсказка" id="439"/>
+										<ChildItems>
+											<Button name="КоллизииКонтекстноеМенюНеИгнорироватьКонфликт" id="317">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.НеИгнорироватьКонфликт</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Снять признак "Рассмотрено"</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="КоллизииКонтекстноеМенюНеИгнорироватьКонфликтExtendedTooltip" id="440"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="КоллизииКонтекстноеМенюКопироватьВБуферОбмена" id="274">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Коллизии.StandardCommand.CopyToClipboard</CommandName>
+										<ExtendedTooltip name="КоллизииКонтекстноеМенюКопироватьВБуферОбменаExtendedTooltip" id="441"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="КоллизииКоманднаяПанель" id="104">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="КоллизииСравнитьСТекущейВерсиейКоллизии" id="158">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПоказатьОтличияКоллизии</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Показать отличия</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="КоллизииСравнитьСТекущейВерсиейКоллизииExtendedTooltip" id="442"/>
+									</Button>
+									<Button name="КоллизииОткрытьВерсиюКоллизии" id="157">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьВерсиюДоКонфликта</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Показать версию, созданную в этой информационной базе</v8:content>
+											</v8:item>
+										</Title>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="КоллизииОткрытьВерсиюКоллизииExtendedTooltip" id="443"/>
+									</Button>
+									<Button name="КоллизииОткрытьВерсиюКонфликта" id="356">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьВерсиюКонфликта</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Показать версию, полученную из другой информационной базы</v8:content>
+											</v8:item>
+										</Title>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="КоллизииОткрытьВерсиюКонфликтаExtendedTooltip" id="444"/>
+									</Button>
+									<Button name="КоллизииИзменить" id="201">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Изменить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить данные</v8:content>
+											</v8:item>
+										</Title>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="КоллизииИзменитьExtendedTooltip" id="445"/>
+									</Button>
+									<ButtonGroup name="КоллизииГруппаИгнорирования" id="314">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Коллизии группа игнорирования</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="КоллизииГруппаИгнорированияExtendedTooltip" id="446"/>
+										<ChildItems>
+											<Button name="КоллизииИгнорироватьКонфликт" id="272">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ИгнорироватьКонфликт</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Подтвердить</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="КоллизииИгнорироватьКонфликтExtendedTooltip" id="447"/>
+											</Button>
+											<Button name="КоллизииНеИгнорироватьКонфликт" id="312">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.НеИгнорироватьКонфликт</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Снять признак "Рассмотрено"</v8:content>
+													</v8:item>
+												</Title>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="КоллизииНеИгнорироватьКонфликтExtendedTooltip" id="448"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="КоллизииИзменитьРезультатКонфликта" id="355">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ИзменитьРезультатКонфликта</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.СинхронизацияДанныхКоллизия</xr:Ref>
+											<xr:LoadTransparent>false</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Пересмотреть</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="КоллизииИзменитьРезультатКонфликтаExtendedTooltip" id="449"/>
+									</Button>
+									<Button name="КоллизииПоказыватьПроигнорированныеКонфликты" id="342">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПоказыватьПроигнорированныеКонфликты</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Показывать рассмотренные конфликты</v8:content>
+											</v8:item>
+										</Title>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="КоллизииПоказыватьПроигнорированныеКонфликтыExtendedTooltip" id="450"/>
+									</Button>
+									<ButtonGroup name="КоллизииГруппаСлужебные" id="156">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Коллизии группа служебные</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="КоллизииГруппаСлужебныеExtendedTooltip" id="451"/>
+										<ChildItems>
+											<Button name="ФормаОбновить" id="28">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.Обновить</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Обновить</v8:content>
+													</v8:item>
+												</Title>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ФормаОбновитьExtendedTooltip" id="452"/>
+											</Button>
+											<Button name="КоллизииНайти" id="238">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.Коллизии.StandardCommand.Find</CommandName>
+												<ExtendedTooltip name="КоллизииНайтиExtendedTooltip" id="453"/>
+											</Button>
+											<Button name="КоллизииОтменитьПоиск" id="239">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.Коллизии.StandardCommand.CancelSearch</CommandName>
+												<ExtendedTooltip name="КоллизииОтменитьПоискExtendedTooltip" id="454"/>
+											</Button>
+											<Button name="КоллизииВывестиСписок" id="240">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.Коллизии.StandardCommand.OutputList</CommandName>
+												<ExtendedTooltip name="КоллизииВывестиСписокExtendedTooltip" id="455"/>
+											</Button>
+											<Button name="КоллизииНастройкаСписка" id="155">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.Коллизии.StandardCommand.ListSettings</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="КоллизииНастройкаСпискаExtendedTooltip" id="456"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="КоллизииИзменитьФорму" id="346">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="КоллизииИзменитьФормуExtendedTooltip" id="457"/>
+									</Button>
+									<Button name="КоллизииСправка" id="362">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="КоллизииСправкаExtendedTooltip" id="458"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КоллизииExtendedTooltip" id="459"/>
+							<SearchStringAddition name="КоллизииСтрокаПоиска" id="517">
+								<AdditionSource>
+									<Item>Коллизии</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КоллизииСтрокаПоискаКонтекстноеМеню" id="518"/>
+								<ExtendedTooltip name="КоллизииСтрокаПоискаРасширеннаяПодсказка" id="519"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КоллизииСостояниеПросмотра" id="520">
+								<AdditionSource>
+									<Item>Коллизии</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КоллизииСостояниеПросмотраКонтекстноеМеню" id="521"/>
+								<ExtendedTooltip name="КоллизииСостояниеПросмотраРасширеннаяПодсказка" id="522"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КоллизииУправлениеПоиском" id="523">
+								<AdditionSource>
+									<Item>Коллизии</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КоллизииУправлениеПоискомКонтекстноеМеню" id="524"/>
+								<ExtendedTooltip name="КоллизииУправлениеПоискомРасширеннаяПодсказка" id="525"/>
+							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="КоллизииПанельДействийВыделенныхСтрок" id="867"/>
+							<Events>
+								<Event name="OnActivateRow">КоллизииПриАктивизацииСтроки</Event>
+								<Event name="BeforeRowChange">КоллизииПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="КоллизииДата" id="332">
+									<DataPath>Коллизии.Дата</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата конфликта</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата возникновения конфликта</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="КоллизииДатаКонтекстноеМеню" id="333"/>
+									<ExtendedTooltip name="КоллизииДатаExtendedTooltip" id="460"/>
+									<SelectedItemsActionsPanel name="КоллизииДатаПанельДействийВыделенныхСтрок" id="868"/>
+								</LabelField>
+								<LabelField name="КоллизииСсылка" id="330">
+									<DataPath>Коллизии.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Элемент справочника (документа) для которого возник конфликт</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="КоллизииСсылкаКонтекстноеМеню" id="331"/>
+									<ExtendedTooltip name="КоллизииСсылкаExtendedTooltip" id="461"/>
+									<SelectedItemsActionsPanel name="КоллизииСсылкаПанельДействийВыделенныхСтрок" id="869"/>
+								</LabelField>
+								<LabelField name="КоллизииТипСтрокой" id="301">
+									<DataPath>Коллизии.ТипСтрокой</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид данных</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид справочника (документа)</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="КоллизииТипСтрокойКонтекстноеМеню" id="302"/>
+									<ExtendedTooltip name="КоллизииТипСтрокойExtendedTooltip" id="462"/>
+									<SelectedItemsActionsPanel name="КоллизииТипСтрокойПанельДействийВыделенныхСтрок" id="870"/>
+								</LabelField>
+								<LabelField name="КоллизииАвторДругойВерсии" id="291">
+									<DataPath>Коллизии.АвторДругойВерсии</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные получены из программы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информационная база или приложение из которого получена версия</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="КоллизииАвторДругойВерсииКонтекстноеМеню" id="292"/>
+									<ExtendedTooltip name="КоллизииАвторДругойВерсииExtendedTooltip" id="463"/>
+									<SelectedItemsActionsPanel name="КоллизииАвторДругойВерсииПанельДействийВыделенныхСтрок" id="871"/>
+								</LabelField>
+								<LabelField name="КоллизииДругаяВерсияПринята" id="299">
+									<DataPath>Коллизии.ДругаяВерсияПринята</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус полученной версии</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус версии, полученной из другой программы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Отклонена; БИ=Принята</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="КоллизииДругаяВерсияПринятаКонтекстноеМеню" id="300"/>
+									<ExtendedTooltip name="КоллизииДругаяВерсияПринятаExtendedTooltip" id="464"/>
+									<SelectedItemsActionsPanel name="КоллизииДругаяВерсияПринятаПанельДействийВыделенныхСтрок" id="872"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНепринятыеПоДатеЗапрета" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Непринятые по дате запрета</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.СинхронизацияДанныхНепринятыеПоДате</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаНепринятыеПоДатеЗапретаExtendedTooltip" id="466"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияНепринятые" id="178">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При синхронизации были получены данные, которые были отклонены из-за установленного запрета на загрузку данных, в результате чего появилась непринятая версия документа. Для того чтобы принять версию несмотря на запрет, используйте команду "Принять версию".</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНепринятыеКонтекстноеМеню" id="179"/>
+							<ExtendedTooltip name="ДекорацияНепринятыеExtendedTooltip" id="467"/>
+						</LabelDecoration>
+						<Table name="НепринятыеПоДате" id="128">
+							<ReadOnly>true</ReadOnly>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>НепринятыеПоДате</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Непринятые по дате</v8:content>
+								</v8:item>
+							</Title>
+							<CurrentRowUse>SelectionPresentation</CurrentRowUse>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="НепринятыеПоДатеКонтекстноеМеню" id="129">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="НепринятыеПоДатеКонтекстноеМенюСравнитьСДаннымиВБазе" id="150">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПоказатьОтличияНепринятые</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Показать отличия</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепринятыеПоДатеКонтекстноеМенюСравнитьСДаннымиВБазеExtendedTooltip" id="468"/>
+									</Button>
+									<Button name="НепринятыеПоДатеКонтекстноеМенюПринятьВерсию" id="323">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПринятьВерсиюНепринятые</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Принять версию</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепринятыеПоДатеКонтекстноеМенюПринятьВерсиюРасширеннаяПодсказка" id="469"/>
+									</Button>
+									<Button name="НепринятыеПоДатеКонтекстноеМенюИзменить" id="279">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Изменить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепринятыеПоДатеКонтекстноеМенюИзменитьExtendedTooltip" id="470"/>
+									</Button>
+									<Button name="НепринятыеПоДатеКонтекстноеМенюОткрытьВерсиюНепринятыеВЭтойПрограмме" id="339">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьВерсиюНепринятыеВЭтойПрограмме</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Показать версию в этой программе</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепринятыеПоДатеКонтекстноеМенюОткрытьВерсиюНепринятыеВЭтойПрограммеExtendedTooltip" id="471"/>
+									</Button>
+									<Button name="НепринятыеПоДатеКонтекстноеМенюОткрытьВерсию" id="151">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьВерсиюНепринятые</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Показать непринятую версию</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепринятыеПоДатеКонтекстноеМенюОткрытьВерсиюExtendedTooltip" id="472"/>
+									</Button>
+									<ButtonGroup name="НепринятыеПоДатеКонтекстноеМенюГруппаИгнорирования" id="322">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Непринятые по дате контекстное меню группа игнорирования</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепринятыеПоДатеКонтекстноеМенюГруппаИгнорированияExtendedTooltip" id="473"/>
+										<ChildItems>
+											<Button name="НепринятыеПоДатеКонтекстноеМенюИгнорироватьНепринятый" id="319">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ИгнорироватьНепринятый</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Игнорировать</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="НепринятыеПоДатеКонтекстноеМенюИгнорироватьНепринятыйExtendedTooltip" id="474"/>
+											</Button>
+											<Button name="НепринятыеПоДатеКонтекстноеМенюНеИгнорироватьНепринятый" id="318">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.НеИгнорироватьНепринятый</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Не игнорировать</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="НепринятыеПоДатеКонтекстноеМенюНеИгнорироватьНепринятыйExtendedTooltip" id="475"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="НепринятыеПоДатеКонтекстноеМенюКопироватьВБуферОбмена" id="257">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.НепринятыеПоДате.StandardCommand.CopyToClipboard</CommandName>
+										<ExtendedTooltip name="НепринятыеПоДатеКонтекстноеМенюКопироватьВБуферОбменаExtendedTooltip" id="476"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="НепринятыеПоДатеКоманднаяПанель" id="130">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="НепринятыеПоДатеСравнитьСДаннымиВБазе" id="144">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПоказатьОтличияНепринятые</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Показать отличия</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепринятыеПоДатеСравнитьСДаннымиВБазеExtendedTooltip" id="477"/>
+									</Button>
+									<Button name="НепринятыеПоДатеПринятьВерсию" id="320">
+										<Type>CommandBarButton</Type>
+										<Enabled>false</Enabled>
+										<CommandName>Form.Command.ПринятьВерсиюНепринятые</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Принять версию</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепринятыеПоДатеПринятьВерсиюExtendedTooltip" id="478"/>
+									</Button>
+									<Button name="НепринятыеПоДатеИзменить" id="227">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Изменить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменить</v8:content>
+											</v8:item>
+										</Title>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="НепринятыеПоДатеИзменитьExtendedTooltip" id="479"/>
+									</Button>
+									<Button name="НепринятыеПоДатеОткрытьВерсию" id="143">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьВерсиюНепринятые</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Показать непринятую версию</v8:content>
+											</v8:item>
+										</Title>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="НепринятыеПоДатеОткрытьВерсиюExtendedTooltip" id="480"/>
+									</Button>
+									<ButtonGroup name="НепринятыеПоДатеГруппаИгнорирования" id="315">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Непринятые по дате группа игнорирования</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепринятыеПоДатеГруппаИгнорированияExtendedTooltip" id="481"/>
+										<ChildItems>
+											<Button name="НепринятыеПоДатеИгнорироватьНепринятый" id="311">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ИгнорироватьНепринятый</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Игнорировать</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="НепринятыеПоДатеИгнорироватьНепринятыйExtendedTooltip" id="482"/>
+											</Button>
+											<Button name="НепринятыеПоДатеНеИгнорироватьНепринятый" id="313">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.НеИгнорироватьНепринятый</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Не игнорировать</v8:content>
+													</v8:item>
+												</Title>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="НепринятыеПоДатеНеИгнорироватьНепринятыйExtendedTooltip" id="483"/>
+											</Button>
+											<Button name="НепринятыеПоДатеПоказыватьПроигнорированныеНепринятые" id="343">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПоказыватьПроигнорированныеНепринятые</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Показывать проигнорированные</v8:content>
+													</v8:item>
+												</Title>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="НепринятыеПоДатеПоказыватьПроигнорированныеНепринятыеExtendedTooltip" id="484"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="НепринятыеПоДатеГруппаСлужебные" id="153">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Непринятые по дате группа служебные</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НепринятыеПоДатеГруппаСлужебныеExtendedTooltip" id="485"/>
+										<ChildItems>
+											<Button name="НепринятыеПоДатеОбновить" id="359">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.Обновить</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Обновить</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="НепринятыеПоДатеОбновитьExtendedTooltip" id="486"/>
+											</Button>
+											<Button name="НепринятыеПоДатеНайти" id="241">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.НепринятыеПоДате.StandardCommand.Find</CommandName>
+												<ExtendedTooltip name="НепринятыеПоДатеНайтиExtendedTooltip" id="487"/>
+											</Button>
+											<Button name="НепринятыеПоДатеОтменитьПоиск" id="242">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.НепринятыеПоДате.StandardCommand.CancelSearch</CommandName>
+												<ExtendedTooltip name="НепринятыеПоДатеОтменитьПоискExtendedTooltip" id="488"/>
+											</Button>
+											<Button name="НепринятыеПоДатеВывестиСписок" id="243">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.НепринятыеПоДате.StandardCommand.OutputList</CommandName>
+												<ExtendedTooltip name="НепринятыеПоДатеВывестиСписокExtendedTooltip" id="489"/>
+											</Button>
+											<Button name="НепринятыеПоДатеНастройкаСписка" id="152">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.НепринятыеПоДате.StandardCommand.ListSettings</CommandName>
+												<ExtendedTooltip name="НепринятыеПоДатеНастройкаСпискаExtendedTooltip" id="490"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="НепринятыеПоДатеИзменитьФорму" id="347">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="НепринятыеПоДатеИзменитьФормуExtendedTooltip" id="491"/>
+									</Button>
+									<Button name="НепринятыеПоДатеСправка" id="363">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="НепринятыеПоДатеСправкаExtendedTooltip" id="492"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="НепринятыеПоДатеExtendedTooltip" id="493"/>
+							<SearchStringAddition name="НепринятыеПоДатеСтрокаПоиска" id="526">
+								<AdditionSource>
+									<Item>НепринятыеПоДате</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НепринятыеПоДатеСтрокаПоискаКонтекстноеМеню" id="527"/>
+								<ExtendedTooltip name="НепринятыеПоДатеСтрокаПоискаРасширеннаяПодсказка" id="528"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НепринятыеПоДатеСостояниеПросмотра" id="529">
+								<AdditionSource>
+									<Item>НепринятыеПоДате</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НепринятыеПоДатеСостояниеПросмотраКонтекстноеМеню" id="530"/>
+								<ExtendedTooltip name="НепринятыеПоДатеСостояниеПросмотраРасширеннаяПодсказка" id="531"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НепринятыеПоДатеУправлениеПоиском" id="532">
+								<AdditionSource>
+									<Item>НепринятыеПоДате</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НепринятыеПоДатеУправлениеПоискомКонтекстноеМеню" id="533"/>
+								<ExtendedTooltip name="НепринятыеПоДатеУправлениеПоискомРасширеннаяПодсказка" id="534"/>
+							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="НепринятыеПоДатеПанельДействийВыделенныхСтрок" id="874"/>
+							<Events>
+								<Event name="OnActivateRow">НепринятыеПоДатеПриАктивизацииСтроки</Event>
+								<Event name="BeforeRowChange">НепринятыеПоДатеПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="НепринятыеПоДатеДата" id="334">
+									<DataPath>НепринятыеПоДате.Дата</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НепринятыеПоДатеДатаКонтекстноеМеню" id="335"/>
+									<ExtendedTooltip name="НепринятыеПоДатеДатаРасширеннаяПодсказка" id="494"/>
+									<SelectedItemsActionsPanel name="НепринятыеПоДатеДатаПанельДействийВыделенныхСтрок" id="875"/>
+								</LabelField>
+								<LabelField name="НепринятыеПоДатеСсылка" id="220">
+									<DataPath>НепринятыеПоДате.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Непринятые по дате запрета данные</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="НепринятыеПоДатеСсылкаКонтекстноеМеню" id="221"/>
+									<ExtendedTooltip name="НепринятыеПоДатеСсылкаExtendedTooltip" id="495"/>
+									<SelectedItemsActionsPanel name="НепринятыеПоДатеСсылкаПанельДействийВыделенныхСтрок" id="876"/>
+								</LabelField>
+								<LabelField name="НепринятыеПоДатеТипСтрокой" id="303">
+									<DataPath>НепринятыеПоДате.ТипСтрокой</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид данных</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип данных</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="НепринятыеПоДатеТипСтрокойКонтекстноеМеню" id="304"/>
+									<ExtendedTooltip name="НепринятыеПоДатеТипСтрокойExtendedTooltip" id="496"/>
+									<SelectedItemsActionsPanel name="НепринятыеПоДатеТипСтрокойПанельДействийВыделенныхСтрок" id="877"/>
+								</LabelField>
+								<LabelField name="НепринятыеПоДатеАвторДругойВерсии" id="247">
+									<DataPath>НепринятыеПоДате.АвторДругойВерсии</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные получены из программы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информационная база или приложение из которого получена версия</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="НепринятыеПоДатеАвторДругойВерсииКонтекстноеМеню" id="248"/>
+									<ExtendedTooltip name="НепринятыеПоДатеАвторДругойВерсииExtendedTooltip" id="497"/>
+									<SelectedItemsActionsPanel name="НепринятыеПоДатеАвторДругойВерсииПанельДействийВыделенныхСтрок" id="878"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОшибкиПриВыполненииКодаОбработчиковОтправки" id="535">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибки кода обработчиков при отправке</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаОшибкиПриВыполненииКодаОбработчиковОтправкиРасширеннаяПодсказка" id="536"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияОшибкиОтправки" id="761">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При отправке данных в другую программу обнаружены ошибки в коде правил конвертации объектов. Необходимо обновится на актуальную версию программы, либо связаться с обслуживающей организацией.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОшибкиОтправкиКонтекстноеМеню" id="762"/>
+							<ExtendedTooltip name="ДекорацияОшибкиОтправкиРасширеннаяПодсказка" id="763"/>
+						</LabelDecoration>
+						<Table name="ОшибкиПриВыполненииКодаОбработчиковОтправки" id="554">
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ОшибкиПриВыполненииКодаОбработчиковОтправки</DataPath>
+							<RowPictureDataPath>ОшибкиПриВыполненииКодаОбработчиковОтправки.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ошибки при выполнении кода обработчиков отправки</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковОтправкиКонтекстноеМеню" id="555"/>
+							<AutoCommandBar name="ОшибкиПриВыполненииКодаОбработчиковОтправкиКоманднаяПанель" id="556">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковОтправкиРасширеннаяПодсказка" id="557"/>
+							<SearchStringAddition name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСтрокаПоиска" id="558">
+								<AdditionSource>
+									<Item>ОшибкиПриВыполненииКодаОбработчиковОтправки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСтрокаПоискаКонтекстноеМеню" id="559"/>
+								<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСтрокаПоискаРасширеннаяПодсказка" id="560"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСостояниеПросмотра" id="561">
+								<AdditionSource>
+									<Item>ОшибкиПриВыполненииКодаОбработчиковОтправки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСостояниеПросмотраКонтекстноеМеню" id="562"/>
+								<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСостояниеПросмотраРасширеннаяПодсказка" id="563"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОшибкиПриВыполненииКодаОбработчиковОтправкиУправлениеПоиском" id="564">
+								<AdditionSource>
+									<Item>ОшибкиПриВыполненииКодаОбработчиковОтправки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковОтправкиУправлениеПоискомКонтекстноеМеню" id="565"/>
+								<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковОтправкиУправлениеПоискомРасширеннаяПодсказка" id="566"/>
+							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковОтправкиПанельДействийВыделенныхСтрок" id="880"/>
+							<Events>
+								<Event name="BeforeRowChange">ОшибкиПриВыполненииКодаОбработчиковОтправкиПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ОшибкиПриВыполненииКодаОбработчиковОтправкиДатаВозникновения" id="773">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковОтправки.ДатаВозникновения</DataPath>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковОтправкиДатаВозникновенияКонтекстноеМеню" id="774"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковОтправкиДатаВозникновенияРасширеннаяПодсказка" id="775"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковОтправкиДатаВозникновенияПанельДействийВыделенныхСтрок" id="881"/>
+								</LabelField>
+								<LabelField name="ОшибкиПриВыполненииКодаОбработчиковОтправкиПредставлениеОбъекта" id="779">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковОтправки.ПредставлениеОбъекта</DataPath>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковОтправкиПредставлениеОбъектаКонтекстноеМеню" id="780"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковОтправкиПредставлениеОбъектаРасширеннаяПодсказка" id="781"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковОтправкиПредставлениеОбъектаПанельДействийВыделенныхСтрок" id="882"/>
+								</LabelField>
+								<LabelField name="ОшибкиПриВыполненииКодаОбработчиковОтправкиПричина" id="782">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковОтправки.Причина</DataPath>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковОтправкиПричинаКонтекстноеМеню" id="783"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковОтправкиПричинаРасширеннаяПодсказка" id="784"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковОтправкиПричинаПанельДействийВыделенныхСтрок" id="883"/>
+								</LabelField>
+								<CheckBoxField name="ОшибкиПриВыполненииКодаОбработчиковОтправкиПропущена" id="785">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковОтправки.Пропущена</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковОтправкиПропущенаКонтекстноеМеню" id="786"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковОтправкиПропущенаРасширеннаяПодсказка" id="787"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковОтправкиПропущенаПанельДействийВыделенныхСтрок" id="884"/>
+								</CheckBoxField>
+								<LabelField name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСсылка" id="788">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковОтправки.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСсылкаКонтекстноеМеню" id="789"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСсылкаРасширеннаяПодсказка" id="790"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСсылкаПанельДействийВыделенныхСтрок" id="885"/>
+								</LabelField>
+								<LabelField name="ОшибкиПриВыполненииКодаОбработчиковОтправкиУзелИнформационнойБазы" id="791">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковОтправки.УзелИнформационнойБазы</DataPath>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковОтправкиУзелИнформационнойБазыКонтекстноеМеню" id="792"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковОтправкиУзелИнформационнойБазыРасширеннаяПодсказка" id="793"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковОтправкиУзелИнформационнойБазыПанельДействийВыделенныхСтрок" id="886"/>
+								</LabelField>
+								<LabelField name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСтандартнаяКартинка" id="794">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковОтправки.DefaultPicture</DataPath>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСтандартнаяКартинкаКонтекстноеМеню" id="795"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСтандартнаяКартинкаРасширеннаяПодсказка" id="796"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковОтправкиСтандартнаяКартинкаПанельДействийВыделенныхСтрок" id="887"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОшибкиПриВыполненииКодаОбработчиковПолучения" id="539">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибки кода обработчиков при получении</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаОшибкиПриВыполненииКодаОбработчиковПолученияРасширеннаяПодсказка" id="540"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияОшибкиПолучения" id="764">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При получении данных из другой программы обнаружены ошибки в коде правил конвертации объектов. Необходимо обновится на актуальную версию программы, или связаться с обслуживающей организацией.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОшибкиПолученияКонтекстноеМеню" id="765"/>
+							<ExtendedTooltip name="ДекорацияОшибкиПолученияРасширеннаяПодсказка" id="766"/>
+						</LabelDecoration>
+						<Table name="ОшибкиПриВыполненииКодаОбработчиковПолучения" id="567">
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ОшибкиПриВыполненииКодаОбработчиковПолучения</DataPath>
+							<RowPictureDataPath>ОшибкиПриВыполненииКодаОбработчиковПолучения.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ошибки при выполнении кода обработчиков получения</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковПолученияКонтекстноеМеню" id="568"/>
+							<AutoCommandBar name="ОшибкиПриВыполненииКодаОбработчиковПолученияКоманднаяПанель" id="569">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковПолученияРасширеннаяПодсказка" id="570"/>
+							<SearchStringAddition name="ОшибкиПриВыполненииКодаОбработчиковПолученияСтрокаПоиска" id="571">
+								<AdditionSource>
+									<Item>ОшибкиПриВыполненииКодаОбработчиковПолучения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковПолученияСтрокаПоискаКонтекстноеМеню" id="572"/>
+								<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковПолученияСтрокаПоискаРасширеннаяПодсказка" id="573"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОшибкиПриВыполненииКодаОбработчиковПолученияСостояниеПросмотра" id="574">
+								<AdditionSource>
+									<Item>ОшибкиПриВыполненииКодаОбработчиковПолучения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковПолученияСостояниеПросмотраКонтекстноеМеню" id="575"/>
+								<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковПолученияСостояниеПросмотраРасширеннаяПодсказка" id="576"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОшибкиПриВыполненииКодаОбработчиковПолученияУправлениеПоиском" id="577">
+								<AdditionSource>
+									<Item>ОшибкиПриВыполненииКодаОбработчиковПолучения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковПолученияУправлениеПоискомКонтекстноеМеню" id="578"/>
+								<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковПолученияУправлениеПоискомРасширеннаяПодсказка" id="579"/>
+							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковПолученияПанельДействийВыделенныхСтрок" id="889"/>
+							<Events>
+								<Event name="BeforeRowChange">ОшибкиПриВыполненииКодаОбработчиковПолученияПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ОшибкиПриВыполненииКодаОбработчиковПолученияДатаВозникновения" id="797">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковПолучения.ДатаВозникновения</DataPath>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковПолученияДатаВозникновенияКонтекстноеМеню" id="798"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковПолученияДатаВозникновенияРасширеннаяПодсказка" id="799"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковПолученияДатаВозникновенияПанельДействийВыделенныхСтрок" id="890"/>
+								</LabelField>
+								<LabelField name="ОшибкиПриВыполненииКодаОбработчиковПолученияПредставлениеОбъекта" id="803">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковПолучения.ПредставлениеОбъекта</DataPath>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковПолученияПредставлениеОбъектаКонтекстноеМеню" id="804"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковПолученияПредставлениеОбъектаРасширеннаяПодсказка" id="805"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковПолученияПредставлениеОбъектаПанельДействийВыделенныхСтрок" id="891"/>
+								</LabelField>
+								<LabelField name="ОшибкиПриВыполненииКодаОбработчиковПолученияПричина" id="806">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковПолучения.Причина</DataPath>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковПолученияПричинаКонтекстноеМеню" id="807"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковПолученияПричинаРасширеннаяПодсказка" id="808"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковПолученияПричинаПанельДействийВыделенныхСтрок" id="892"/>
+								</LabelField>
+								<CheckBoxField name="ОшибкиПриВыполненииКодаОбработчиковПолученияПропущена" id="809">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковПолучения.Пропущена</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковПолученияПропущенаКонтекстноеМеню" id="810"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковПолученияПропущенаРасширеннаяПодсказка" id="811"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковПолученияПропущенаПанельДействийВыделенныхСтрок" id="893"/>
+								</CheckBoxField>
+								<LabelField name="ОшибкиПриВыполненииКодаОбработчиковПолученияСсылка" id="812">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковПолучения.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковПолученияСсылкаКонтекстноеМеню" id="813"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковПолученияСсылкаРасширеннаяПодсказка" id="814"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковПолученияСсылкаПанельДействийВыделенныхСтрок" id="894"/>
+								</LabelField>
+								<LabelField name="ОшибкиПриВыполненииКодаОбработчиковПолученияУзелИнформационнойБазы" id="815">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковПолучения.УзелИнформационнойБазы</DataPath>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковПолученияУзелИнформационнойБазыКонтекстноеМеню" id="816"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковПолученияУзелИнформационнойБазыРасширеннаяПодсказка" id="817"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковПолученияУзелИнформационнойБазыПанельДействийВыделенныхСтрок" id="895"/>
+								</LabelField>
+								<LabelField name="ОшибкиПриВыполненииКодаОбработчиковПолученияСтандартнаяКартинка" id="818">
+									<DataPath>ОшибкиПриВыполненииКодаОбработчиковПолучения.DefaultPicture</DataPath>
+									<ContextMenu name="ОшибкиПриВыполненииКодаОбработчиковПолученияСтандартнаяКартинкаКонтекстноеМеню" id="819"/>
+									<ExtendedTooltip name="ОшибкиПриВыполненииКодаОбработчиковПолученияСтандартнаяКартинкаРасширеннаяПодсказка" id="820"/>
+									<SelectedItemsActionsPanel name="ОшибкиПриВыполненииКодаОбработчиковПолученияСтандартнаяКартинкаПанельДействийВыделенныхСтрок" id="896"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Pages name="ПанельПодробноеОписание" id="823">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель подробное описание</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ПанельПодробноеОписаниеРасширеннаяПодсказка" id="824"/>
+			<ChildItems>
+				<Page name="СтраницаОшибкиXDTOПодробноеОписание" id="825">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ошибки XDTO подробное описание</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаОшибкиXDTOПодробноеОписаниеРасширеннаяПодсказка" id="826"/>
+					<ChildItems>
+						<InputField name="ОшибкиОбъектаXDTOПричинаПодробно" id="758">
+							<DataPath>Items.ОшибкиОбъектаXDTO.CurrentData.Причина</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные не удалось отправить по причине</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ОшибкиОбъектаXDTOПричинаПодробноКонтекстноеМеню" id="759"/>
+							<ExtendedTooltip name="ОшибкиОбъектаXDTOПричинаПодробноРасширеннаяПодсказка" id="760"/>
+							<SelectedItemsActionsPanel name="ОшибкиОбъектаXDTOПричинаПодробноПанельДействийВыделенныхСтрок" id="898"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНепроведенныеДокументыПодробноеОписание" id="827">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница непроведенные документы подробное описание</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаНепроведенныеДокументыПодробноеОписаниеРасширеннаяПодсказка" id="828"/>
+					<ChildItems>
+						<InputField name="НепроведенныеДокументыПричинаПодробно" id="170">
+							<DataPath>Items.НепроведенныеДокументы.CurrentData.Причина</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Документ не удалось провести автоматически по причине</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="НепроведенныеДокументыПричинаПодробноКонтекстноеМеню" id="171"/>
+							<ExtendedTooltip name="НепроведенныеДокументыПричинаПодробноExtendedTooltip" id="402"/>
+							<SelectedItemsActionsPanel name="НепроведенныеДокументыПричинаПодробноПанельДействийВыделенныхСтрок" id="899"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНезаполненныеРеквизитыПодробноеОписание" id="829">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница незаполненные реквизиты подробное описание</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаНезаполненныеРеквизитыПодробноеОписаниеРасширеннаяПодсказка" id="830"/>
+					<ChildItems>
+						<InputField name="НезаполненныеРеквизитыПричинаПодробно" id="174">
+							<DataPath>Items.НезаполненныеРеквизиты.CurrentData.Причина</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные не удалось записать по причине</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="НезаполненныеРеквизитыПричинаПодробноКонтекстноеМеню" id="175"/>
+							<ExtendedTooltip name="НезаполненныеРеквизитыПричинаПодробноExtendedTooltip" id="432"/>
+							<SelectedItemsActionsPanel name="НезаполненныеРеквизитыПричинаПодробноПанельДействийВыделенныхСтрок" id="900"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаКоллизииПодробноеОписание" id="831">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница коллизии подробное описание</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаКоллизииПодробноеОписаниеРасширеннаяПодсказка" id="832"/>
+					<ChildItems>
+						<InputField name="ПричинаКонфликта" id="353">
+							<DataPath>ПричинаКонфликта</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Результат разрешения конфликта</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ПричинаКонфликтаКонтекстноеМеню" id="354"/>
+							<ExtendedTooltip name="ПричинаКонфликтаExtendedTooltip" id="465"/>
+							<SelectedItemsActionsPanel name="ПричинаКонфликтаПанельДействийВыделенныхСтрок" id="901"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНепринятыеПоДатеЗапретаПодробноеОписание" id="833">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница непринятые по дате запрета подробное описание</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаНепринятыеПоДатеЗапретаПодробноеОписаниеРасширеннаяПодсказка" id="834"/>
+					<ChildItems>
+						<InputField name="НепринятыеПоДатеПричинаЗапретаПодробно" id="225">
+							<DataPath>Items.НепринятыеПоДате.CurrentData.ПричинаЗапрета</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные были отклонены из-за запрета</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="НепринятыеПоДатеПричинаЗапретаПодробноКонтекстноеМеню" id="226"/>
+							<ExtendedTooltip name="НепринятыеПоДатеПричинаЗапретаПодробноExtendedTooltip" id="498"/>
+							<SelectedItemsActionsPanel name="НепринятыеПоДатеПричинаЗапретаПодробноПанельДействийВыделенныхСтрок" id="902"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОшибкиПриВыполненииКодаОбработчиковОтправкиПодробноеОписание" id="835">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ошибки при выполнении кода обработчиков отправки подробное описание</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаОшибкиПриВыполненииКодаОбработчиковОтправкиПодробноеОписаниеРасширеннаяПодсказка" id="836"/>
+					<ChildItems>
+						<InputField name="ОшибкиКодаОтправкаПричинаПодробно" id="767">
+							<DataPath>Items.ОшибкиПриВыполненииКодаОбработчиковОтправки.CurrentData.Причина</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные не удалось отправить по причине</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ОшибкиКодаОтправкаПричинаПодробноКонтекстноеМеню" id="768"/>
+							<ExtendedTooltip name="ОшибкиКодаОтправкаПричинаПодробноРасширеннаяПодсказка" id="769"/>
+							<SelectedItemsActionsPanel name="ОшибкиКодаОтправкаПричинаПодробноПанельДействийВыделенныхСтрок" id="903"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОшибкиПриВыполненииКодаОбработчиковПолученияПодробноеОписание" id="837">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ошибки при выполнении кода обработчиков получения подробное описание</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаОшибкиПриВыполненииКодаОбработчиковПолученияПодробноеОписаниеРасширеннаяПодсказка" id="838"/>
+					<ChildItems>
+						<InputField name="ОшибкиКодаПолучениеПричинаПодробно" id="770">
+							<DataPath>Items.ОшибкиПриВыполненииКодаОбработчиковПолучения.CurrentData.Причина</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные не удалось получить по причине</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ОшибкиКодаПолучениеПричинаПодробноКонтекстноеМеню" id="771"/>
+							<ExtendedTooltip name="ОшибкиКодаПолучениеПричинаПодробноРасширеннаяПодсказка" id="772"/>
+							<SelectedItemsActionsPanel name="ОшибкиКодаПолучениеПричинаПодробноПанельДействийВыделенныхСтрок" id="904"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НепроведенныеДокументы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Непроведенные документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>НепроведенныеДокументы.ДатаВозникновения</Field>
+				<Field>НепроведенныеДокументы.ДатаДокумента</Field>
+				<Field>НепроведенныеДокументы.НомерДокумента</Field>
+				<Field>НепроведенныеДокументы.ПометкаУдаления</Field>
+				<Field>НепроведенныеДокументы.Причина</Field>
+				<Field>НепроведенныеДокументы.Пропущена</Field>
+				<Field>НепроведенныеДокументы.Ссылка</Field>
+				<Field>НепроведенныеДокументы.ТипСтрокой</Field>
+				<Field>НепроведенныеДокументы.УзелИнформационнойБазы</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РезультатыОбменаДанными.ПроблемныйОбъект КАК Ссылка,
+	ВЫБОР
+		КОГДА РезультатыОбменаДанными.ПометкаУдаления
+			ТОГДА 2
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПометкаУдаления,
+	РезультатыОбменаДанными.НомерДокумента КАК НомерДокумента,
+	РезультатыОбменаДанными.ДатаДокумента КАК ДатаДокумента,
+	РезультатыОбменаДанными.УзелИнформационнойБазы,
+	РезультатыОбменаДанными.ДатаВозникновения,
+	РезультатыОбменаДанными.Причина,
+	РезультатыОбменаДанными.Пропущена,
+	ТИПЗНАЧЕНИЯ(РезультатыОбменаДанными.ПроблемныйОбъект) КАК ТипСтрокой
+ИЗ
+	РегистрСведений.РезультатыОбменаДанными КАК РезультатыОбменаДанными
+ГДЕ
+	РезультатыОбменаДанными.ТипПроблемы = ЗНАЧЕНИЕ(Перечисление.ТипыПроблемОбменаДанными.НепроведенныйДокумент)</QueryText>
+				<MainTable>InformationRegister.РезультатыОбменаДанными</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Период" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+			<Save>
+				<Field>Период</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="УзелИнформационнойБазы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:ExchangePlanRef</v8:TypeSet>
+			</Type>
+			<Save>
+				<Field>УзелИнформационнойБазы</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СтрокаПоиска" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>СтрокаПоиска</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НезаполненныеРеквизиты" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Незаполненные реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>НезаполненныеРеквизиты.ДатаВозникновения</Field>
+				<Field>НезаполненныеРеквизиты.ПометкаУдаления</Field>
+				<Field>НезаполненныеРеквизиты.Причина</Field>
+				<Field>НезаполненныеРеквизиты.Пропущена</Field>
+				<Field>НезаполненныеРеквизиты.Ссылка</Field>
+				<Field>НезаполненныеРеквизиты.ТипСтрокой</Field>
+				<Field>НезаполненныеРеквизиты.УзелИнформационнойБазы</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РезультатыОбменаДанными.ПроблемныйОбъект Как Ссылка,
+	ВЫБОР
+		КОГДА РезультатыОбменаДанными.ПометкаУдаления
+			ТОГДА 4
+		ИНАЧЕ 3
+	КОНЕЦ КАК ПометкаУдаления,
+	РезультатыОбменаДанными.УзелИнформационнойБазы,
+	РезультатыОбменаДанными.ДатаВозникновения,
+	РезультатыОбменаДанными.Причина,
+	РезультатыОбменаДанными.Пропущена,
+	ТИПЗНАЧЕНИЯ(РезультатыОбменаДанными.ПроблемныйОбъект) КАК ТипСтрокой
+ИЗ
+	РегистрСведений.РезультатыОбменаДанными КАК РезультатыОбменаДанными
+ГДЕ
+	РезультатыОбменаДанными.ТипПроблемы = ЗНАЧЕНИЕ(Перечисление.ТипыПроблемОбменаДанными.НезаполненныеРеквизиты)</QueryText>
+				<MainTable>InformationRegister.РезультатыОбменаДанными</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Коллизии" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коллизии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Коллизии.АвторДругойВерсии</Field>
+				<Field>Коллизии.ВерсияПроигнорирована</Field>
+				<Field>Коллизии.Дата</Field>
+				<Field>Коллизии.НомерДругойВерсии</Field>
+				<Field>Коллизии.НомерЭтойВерсии</Field>
+				<Field>Коллизии.Ссылка</Field>
+				<Field>Коллизии.ТипСтрокой</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	NULL КАК Дата,
+	NULL КАК Ссылка,
+	NULL КАК ТипСтрокой,
+	NULL КАК НомерЭтойВерсии,
+	NULL КАК НомерДругойВерсии,
+	NULL КАК АвторДругойВерсии,
+	NULL КАК ДругаяВерсияПринята,
+	NULL КАК ВерсияПроигнорирована</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="НепринятыеПоДате" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Непринятые по дате</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>НепринятыеПоДате.АвторДругойВерсии</Field>
+				<Field>НепринятыеПоДате.ВерсияПроигнорирована</Field>
+				<Field>НепринятыеПоДате.НовыйОбъект</Field>
+				<Field>НепринятыеПоДате.НомерДругойВерсии</Field>
+				<Field>НепринятыеПоДате.НомерЭтойВерсии</Field>
+				<Field>НепринятыеПоДате.Ссылка</Field>
+				<Field>НепринятыеПоДате.ТипСтрокой</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	NULL КАК Дата,
+	NULL КАК Ссылка,
+	NULL КАК ПричинаЗапрета,
+	NULL КАК НовыйОбъект,
+	NULL КАК НомерДругойВерсии,
+	NULL КАК АвторДругойВерсии,
+	NULL КАК НомерЭтойВерсии,
+	NULL КАК ТипСтрокой,
+	NULL КАК ВерсияПроигнорирована</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ИспользуетсяВерсионирование" id="9">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьПроигнорированныеКонфликты" id="10">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьПроигнорированныеНезаполненные" id="11">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьПроигнорированныеНепринятые" id="12">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьПроигнорированныеНепроведенные" id="13">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПричинаКонфликта" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат разрешения конфликта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокУзлов" id="14">
+			<Type/>
+		</Attribute>
+		<Attribute name="НастройкиОтборовДинамическихСписков" id="15">
+			<Type/>
+		</Attribute>
+		<Attribute name="ОшибкиПриВыполненииКодаОбработчиковОтправки" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки при выполнении кода обработчиков отправки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковОтправки.ДатаВозникновения</Field>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковОтправки.ПометкаУдаления</Field>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковОтправки.ПредставлениеОбъекта</Field>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковОтправки.Причина</Field>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковОтправки.Пропущена</Field>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковОтправки.Ссылка</Field>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковОтправки.УзелИнформационнойБазы</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РезультатыОбменаДанными.ПроблемныйОбъект КАК Ссылка,
+	ВЫБОР
+		КОГДА РезультатыОбменаДанными.ПометкаУдаления
+			ТОГДА 4
+		ИНАЧЕ 3
+	КОНЕЦ КАК ПометкаУдаления,
+	РезультатыОбменаДанными.УзелИнформационнойБазы,
+	РезультатыОбменаДанными.ДатаВозникновения,
+	РезультатыОбменаДанными.Причина,
+	РезультатыОбменаДанными.Пропущена,
+	РезультатыОбменаДанными.ПредставлениеОбъекта КАК ПредставлениеОбъекта
+ИЗ
+	РегистрСведений.РезультатыОбменаДанными КАК РезультатыОбменаДанными
+ГДЕ
+	РезультатыОбменаДанными.ТипПроблемы = ЗНАЧЕНИЕ(Перечисление.ТипыПроблемОбменаДанными.ОшибкаВыполненияКодаОбработчиковПриОтправкеДанных)</QueryText>
+				<MainTable>InformationRegister.РезультатыОбменаДанными</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОшибкиПриВыполненииКодаОбработчиковПолучения" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки при выполнении кода обработчиков получения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковПолучения.ДатаВозникновения</Field>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковПолучения.ПометкаУдаления</Field>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковПолучения.ПредставлениеОбъекта</Field>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковПолучения.Причина</Field>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковПолучения.Пропущена</Field>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковПолучения.Ссылка</Field>
+				<Field>ОшибкиПриВыполненииКодаОбработчиковПолучения.УзелИнформационнойБазы</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РезультатыОбменаДанными.ПроблемныйОбъект КАК Ссылка,
+	ВЫБОР
+		КОГДА РезультатыОбменаДанными.ПометкаУдаления
+			ТОГДА 4
+		ИНАЧЕ 3
+	КОНЕЦ КАК ПометкаУдаления,
+	РезультатыОбменаДанными.УзелИнформационнойБазы,
+	РезультатыОбменаДанными.ДатаВозникновения,
+	РезультатыОбменаДанными.Причина,
+	РезультатыОбменаДанными.Пропущена,
+	РезультатыОбменаДанными.ПредставлениеОбъекта КАК ПредставлениеОбъекта
+ИЗ
+	РегистрСведений.РезультатыОбменаДанными КАК РезультатыОбменаДанными
+ГДЕ
+	РезультатыОбменаДанными.ТипПроблемы = ЗНАЧЕНИЕ(Перечисление.ТипыПроблемОбменаДанными.ОшибкаВыполненияКодаОбработчиковПриПолученииДанных)</QueryText>
+				<MainTable>InformationRegister.РезультатыОбменаДанными</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОшибкиОбъектаXDTO" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки объекта XDTO</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ОшибкиОбъектаXDTO.ДатаВозникновения</Field>
+				<Field>ОшибкиОбъектаXDTO.ПометкаУдаления</Field>
+				<Field>ОшибкиОбъектаXDTO.ПредставлениеОбъекта</Field>
+				<Field>ОшибкиОбъектаXDTO.Причина</Field>
+				<Field>ОшибкиОбъектаXDTO.Пропущена</Field>
+				<Field>ОшибкиОбъектаXDTO.Ссылка</Field>
+				<Field>ОшибкиОбъектаXDTO.УзелИнформационнойБазы</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РезультатыОбменаДанными.ПроблемныйОбъект КАК Ссылка,
+	ВЫБОР
+		КОГДА РезультатыОбменаДанными.ПометкаУдаления
+			ТОГДА 4
+		ИНАЧЕ 3
+	КОНЕЦ КАК ПометкаУдаления,
+	РезультатыОбменаДанными.УзелИнформационнойБазы КАК УзелИнформационнойБазы,
+	РезультатыОбменаДанными.ДатаВозникновения КАК ДатаВозникновения,
+	РезультатыОбменаДанными.Причина КАК Причина,
+	РезультатыОбменаДанными.Пропущена КАК Пропущена,
+	РезультатыОбменаДанными.ПредставлениеОбъекта КАК ПредставлениеОбъекта,
+	РезультатыОбменаДанными.ОбъектМетаданных КАК ОбъектМетаданных
+ИЗ
+	РегистрСведений.РезультатыОбменаДанными КАК РезультатыОбменаДанными
+ГДЕ
+	РезультатыОбменаДанными.ТипПроблемы = ЗНАЧЕНИЕ(Перечисление.ТипыПроблемОбменаДанными.ОшибкаПроверкиСконвертированногоОбъекта)</QueryText>
+				<MainTable>InformationRegister.РезультатыОбменаДанными</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПоказыватьПроигнорированныеОшибки" id="19">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтсутствуетОбменXDTO" id="20">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтсутствуетОбменПоПравилам" id="21">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтсутствуетСтандартныйОбмен" id="22">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтсутствуетОбменРИБ" id="23">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ИгнорироватьДокумент" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игнорировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игнорировать документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИгнорироватьДокумент</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НеИгнорироватьДокумент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не игнорировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить игнорирование документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НеИгнорироватьДокумент</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьВыделенныеДокументы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить выделенные...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить выделенные документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьВыделенныеДокументы</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Обновить" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПровестиДокумент" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Post</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПровестиДокумент</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИгнорироватьОбъект" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игнорировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игнорировать незаполненные реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИгнорироватьОбъект</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьВыделенныеОбъекты" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить выделенные...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить выделенные данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьВыделенныеОбъекты</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НеИгнорироватьОбъект" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не игнорировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить игнорирование незаполненных реквизитов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НеИгнорироватьОбъект</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВерсиюНепринятые" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать непринятую версию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть непринятую версию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВерсиюНепринятые</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьОтличияНепринятые" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать отличия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать отличия в виде отчета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПоказатьОтличия</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоказатьОтличияНепринятые</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВерсиюДоКонфликта" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать версию, созданную в этой информационной базе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть версию, созданную в этой информационной базе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВерсиюДоКонфликта</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьОтличияКоллизии" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать отличия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать отличия между версиями в этой и в другой программе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПоказатьОтличия</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоказатьОтличияКоллизии</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Изменить" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить (или открыть) текущий элемент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F2</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Изменить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИгнорироватьКонфликт" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассмотреть и подтвердить результат автоматического разрешения конфликта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СинхронизацияДанныхДанныеПолучены</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ИгнорироватьКонфликт</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИгнорироватьНепринятый" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игнорировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игнорировать непринятые по дате запрета данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИгнорироватьНепринятый</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НеИгнорироватьКонфликт" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять признак "Рассмотрено"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять с конфликта признак его рассмотрения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НеИгнорироватьКонфликт</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НеИгнорироватьНепринятый" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не игнорировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить игнорирование непринятых по дате запрета данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НеИгнорироватьНепринятый</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПринятьВерсиюНепринятые" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять версию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять версию несмотря на установленный запрет загрузки данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПринятьВерсиюНепринятые</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВерсиюКонфликта" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать версию, полученную из другой информационной базы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть версию, полученную из другой информационной базы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВерсиюКонфликта</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьВерсиюНепринятыеВЭтойПрограмме" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать версию в этой программе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть версию в этой программе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьВерсиюНепринятыеВЭтойПрограмме</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказыватьПроигнорированныеНепроведенные" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать проигнорированные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать проигнорированные документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьПроигнорированныеНепроведенные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказыватьПроигнорированныеНезаполненные" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать проигнорированные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать проигнорированные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьПроигнорированныеНезаполненные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказыватьПроигнорированныеКонфликты" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать рассмотренные конфликты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать рассмотренные конфликты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьПроигнорированныеКонфликты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказыватьПроигнорированныеНепринятые" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать проигнорированные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать проигнорированные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьПроигнорированныеНепринятые</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьРезультатКонфликта" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассмотреть и изменить результат разрешения конфликта на противоположный</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьРезультатКонфликта</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьВыделенныеОшибкиXTDO" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить выделенные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить выделенные ошибки XTDO</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьВыделенныеОшибкиПроверки</Action>
+		</Command>
+		<Command name="ИгнорироватьОшибку" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игнорировать ошибку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игнорировать ошибку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИгнорироватьОшибку</Action>
+		</Command>
+		<Command name="НеИгнорироватьОшибку" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не игнорировать ошибку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не игнорировать ошибку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НеИгнорироватьОшибку</Action>
+		</Command>
+		<Command name="ПоказыватьПроигнорированныеОшибки" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать проигнорированные ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать проигнорированные ошибки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьПроигнорированныеОшибки</Action>
+		</Command>
+		<Command name="ПоказатьИнформациюДляТехническихСпециалистов" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать информацию для технических специалистов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать информацию для технических специалистов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьИнформациюДляТехническихСпециалистов</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="УзлыОбмена">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,773 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Прекратить" id="109">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.Удалить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Прекратить</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ПрекратитьРасширеннаяПодсказка" id="110"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Предмет" id="134">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предмет</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПредметРасширеннаяПодсказка" id="135"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьПредмет" id="131">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьПредметКонтекстноеМеню" id="132"/>
+					<ExtendedTooltip name="НадписьПредметРасширеннаяПодсказка" id="133"/>
+				</LabelDecoration>
+				<LabelDecoration name="ПредметНапоминания" id="128">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет напоминания</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ПредметНапоминанияКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="ПредметНапоминанияРасширеннаяПодсказка" id="130"/>
+					<Events>
+						<Event name="Click">ПредметНапоминанияНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Сообщение" id="140">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СообщениеРасширеннаяПодсказка" id="141"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеСообщения" id="142">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание сообщения</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеСообщенияКонтекстноеМеню" id="143"/>
+					<ExtendedTooltip name="ОписаниеСообщенияРасширеннаяПодсказка" id="144"/>
+				</LabelDecoration>
+				<LabelDecoration name="СсылкаНаСообщение" id="145">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка на сообщение</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СсылкаНаСообщениеКонтекстноеМеню" id="146"/>
+					<ExtendedTooltip name="СсылкаНаСообщениеРасширеннаяПодсказка" id="147"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Текст" id="15">
+			<DataPath>Объект.Описание</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тема</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>None</TitleLocation>
+			<Width>30</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<EditTextUpdate>OnValueChange</EditTextUpdate>
+			<ContextMenu name="ТекстКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ТекстРасширеннаяПодсказка" id="111"/>
+			<SelectedItemsActionsPanel name="ТекстПанельДействийВыделенныхСтрок" id="148"/>
+		</InputField>
+		<UsualGroup name="НастройкаВремени" id="102">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка времени</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НастройкаВремениРасширеннаяПодсказка" id="112"/>
+			<ChildItems>
+				<InputField name="СпособУстановкиВремениНапоминания" id="39">
+					<DataPath>СпособУстановкиВремениНапоминания</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Напомнить</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время, через которое нужно напомнить, или способ установки времени напоминания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>20</Width>
+					<DropListButton>true</DropListButton>
+					<ChooseType>false</ChooseType>
+					<EditTextUpdate>OnValueChange</EditTextUpdate>
+					<ContextMenu name="СпособУстановкиВремениНапоминанияКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="СпособУстановкиВремениНапоминанияРасширеннаяПодсказка" id="114"/>
+					<SelectedItemsActionsPanel name="СпособУстановкиВремениНапоминанияПанельДействийВыделенныхСтрок" id="149"/>
+					<Events>
+						<Event name="OnChange">СпособУстановкиВремениНапоминанияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Pages name="ПанельДетальныхНастроек" id="72">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Панель детальных настроек</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalStretch>false</VerticalStretch>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ПанельДетальныхНастроекРасширеннаяПодсказка" id="115"/>
+					<ChildItems>
+						<Page name="БезДетализации" id="76">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Без детализации</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<ShowTitle>false</ShowTitle>
+							<ScrollOnCompress>false</ScrollOnCompress>
+							<ExtendedTooltip name="БезДетализацииРасширеннаяПодсказка" id="116"/>
+							<ChildItems>
+								<LabelDecoration name="РасчетноеВремяНапоминания" id="97">
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>00:00</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расчетное время</v8:content>
+										</v8:item>
+									</ToolTip>
+									<TitleHeight>1</TitleHeight>
+									<ContextMenu name="РасчетноеВремяНапоминанияКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="РасчетноеВремяНапоминанияРасширеннаяПодсказка" id="117"/>
+								</LabelDecoration>
+							</ChildItems>
+						</Page>
+						<Page name="ДатаВремя" id="73">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата время</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<ShowTitle>false</ShowTitle>
+							<ScrollOnCompress>false</ScrollOnCompress>
+							<ExtendedTooltip name="ДатаВремяРасширеннаяПодсказка" id="118"/>
+							<ChildItems>
+								<InputField name="Дата" id="17">
+									<DataPath>Объект.ВремяСобытия</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата напоминания</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<Width>12</Width>
+									<HorizontalStretch>true</HorizontalStretch>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДЛФ=D</v8:content>
+										</v8:item>
+									</EditFormat>
+									<EditTextUpdate>OnValueChange</EditTextUpdate>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="119"/>
+									<SelectedItemsActionsPanel name="ДатаПанельДействийВыделенныхСтрок" id="150"/>
+									<Events>
+										<Event name="OnChange">ДатаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Время" id="19">
+									<DataPath>Объект.ВремяСобытия</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Время напоминания</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<Width>7</Width>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Wrap>false</Wrap>
+									<DropListButton>true</DropListButton>
+									<ChoiceButton>false</ChoiceButton>
+									<Mask>99:99</Mask>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДЛФ=T</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ChooseType>false</ChooseType>
+									<EditTextUpdate>OnValueChange</EditTextUpdate>
+									<ChoiceListHeight>10</ChoiceListHeight>
+									<DropListWidth>5</DropListWidth>
+									<ContextMenu name="ВремяКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ВремяРасширеннаяПодсказка" id="120"/>
+									<SelectedItemsActionsPanel name="ВремяПанельДействийВыделенныхСтрок" id="151"/>
+									<Events>
+										<Event name="OnChange">ВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="НастройкаИсточника" id="74">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка источника</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<ShowTitle>false</ShowTitle>
+							<ScrollOnCompress>false</ScrollOnCompress>
+							<ExtendedTooltip name="НастройкаИсточникаРасширеннаяПодсказка" id="121"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаИнтервалВремениОтносительноИсточника" id="136">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Интервал времени относительно источника</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИнтервалВремениОтносительноИсточникаРасширеннаяПодсказка" id="137"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьЗа" id="57">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>за</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<ContextMenu name="НадписьЗаКонтекстноеМеню" id="58"/>
+											<ExtendedTooltip name="НадписьЗаРасширеннаяПодсказка" id="122"/>
+										</LabelDecoration>
+										<InputField name="ИнтервалВремениОтносительноИсточника" id="59">
+											<DataPath>ИнтервалВремениСтрокой</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Интервал времени строкой</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Время, за которое необходимо напомнить до даты в реквизите предмета</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<DropListButton>true</DropListButton>
+											<ChooseType>false</ChooseType>
+											<EditTextUpdate>OnValueChange</EditTextUpdate>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>5 минут</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">5м</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>10 минут</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">10м</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>15 минут</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">15м</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>30 минут</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">30м</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>1 час</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">1ч</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>2 часа</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">2ч</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>4 часа</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">4ч</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>8 часов</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">8ч</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>1 день</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">1д</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>2 дня</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">2д</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>3 дня</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">3д</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>1 неделю</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">1н</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>2 недели</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">2н</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ИнтервалВремениОтносительноИсточникаКонтекстноеМеню" id="60"/>
+											<ExtendedTooltip name="ИнтервалВремениОтносительноИсточникаРасширеннаяПодсказка" id="123"/>
+											<SelectedItemsActionsPanel name="ИнтервалВремениОтносительноИсточникаПанельДействийВыделенныхСтрок" id="152"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииИнтервалаВремени</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаИмяРеквизитаИсточника" id="138">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Имя реквизита источника</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИмяРеквизитаИсточникаРасширеннаяПодсказка" id="139"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьДо" id="33">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>до</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьДоКонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="НадписьДоРасширеннаяПодсказка" id="124"/>
+										</LabelDecoration>
+										<InputField name="ИмяРеквизитаИсточника" id="35">
+											<DataPath>Объект.ИмяРеквизитаИсточника</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Имя реквизита предмета, относительно которого устанавливается время напоминания</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>20</Width>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="ИмяРеквизитаИсточникаКонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="ИмяРеквизитаИсточникаРасширеннаяПодсказка" id="125"/>
+											<SelectedItemsActionsPanel name="ИмяРеквизитаИсточникаПанельДействийВыделенныхСтрок" id="153"/>
+											<Events>
+												<Event name="Clearing">ИмяРеквизитаИсточникаОчистка</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="НастройкаПериодичности" id="75">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка периодичности</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<ShowTitle>false</ShowTitle>
+							<ScrollOnCompress>false</ScrollOnCompress>
+							<ExtendedTooltip name="НастройкаПериодичностиРасширеннаяПодсказка" id="126"/>
+							<ChildItems>
+								<InputField name="ВариантПериодичности" id="61">
+									<DataPath>ВариантПериодичности</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вариант периодичности</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<Width>25</Width>
+									<OpenButton>true</OpenButton>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>каждый час</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">1ч</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>ежедневно</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">1д</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>еженедельно</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">1н</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>другое...</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string"/>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ВариантПериодичностиКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ВариантПериодичностиРасширеннаяПодсказка" id="127"/>
+									<SelectedItemsActionsPanel name="ВариантПериодичностиПанельДействийВыделенныхСтрок" id="154"/>
+									<Events>
+										<Event name="OnChange">ВариантПериодичностиПриИзменении</Event>
+										<Event name="Opening">ВариантПериодичностиОткрытие</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НапоминанияПользователя</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ФорматированныйТекст" id="4">
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИнтервалВремениСтрокой" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал времени строкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СпособУстановкиВремениНапоминания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ установки времени напоминания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВариантПериодичности" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант периодичности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Расписание" id="5">
+			<Type/>
+		</Attribute>
+		<Attribute name="ИсходныеПараметры" id="7">
+			<Type/>
+		</Attribute>
+		<Attribute name="НастройкиПодсистемы" id="8">
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Удалить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить напоминание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Удалить</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Источник">
+			<Type/>
+		</Parameter>
+		<Parameter name="ДанныеКлюча">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ГруппаКоманднаяПанель" id="34">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Командная панель</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="35"/>
+				<ChildItems>
+					<Button name="ЗаписатьИЗакрыть" id="36">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+						<ButtonImportance>Main</ButtonImportance>
+						<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="37"/>
+					</Button>
+					<Button name="Записать" id="38">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Write</CommandName>
+						<ExtendedTooltip name="ЗаписатьРасширеннаяПодсказка" id="39"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Button name="ФормаСправка" id="48">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="49"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="Синхронизировать" id="138">
+			<DataPath>Запись.Синхронизировать</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать файлы с облачным сервисом:</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СинхронизироватьКонтекстноеМеню" id="139"/>
+			<ExtendedTooltip name="СинхронизироватьРасширеннаяПодсказка" id="140"/>
+			<SelectedItemsActionsPanel name="СинхронизироватьПанельДействийВыделенныхСтрок" id="141"/>
+		</CheckBoxField>
+		<InputField name="УчетнаяЗапись" id="118">
+			<DataPath>Запись.УчетнаяЗапись</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<TitleLocation>None</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Укажите учетную запись облачного сервиса, с которым будет производиться синхронизация файлов.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+			<Width>40</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<CreateButton>true</CreateButton>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выберите из списка</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="119"/>
+			<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="120">
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Укажите учетную запись облачного сервиса, с которым будет производиться синхронизация файлов.</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+			<SelectedItemsActionsPanel name="УчетнаяЗаписьПанельДействийВыделенныхСтрок" id="142"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НастройкиСинхронизацииФайлов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="ВладелецФайла">
+			<Type>
+				<v8:TypeSet>cfg:BusinessProcessRef</v8:TypeSet>
+				<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+				<v8:TypeSet>cfg:TaskRef</v8:TypeSet>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Parameter>
+		<Parameter name="ТипВладельцаФайла">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовРасширений</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ЭтоФайл">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>
