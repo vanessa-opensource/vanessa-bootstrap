@@ -1,0 +1,1 @@
+C:\Users\e.klishev\Documents\otus\SonarQube\sonar-scanner-6.1.0.4477\bin\sonar-scanner.bat -X -D"sonar.login=sqa_016ce39d927851996432897b978af8da2890666d"
