@@ -1,2 +1,2 @@
 @chcp 65001
-call vrunner run --no-wait %*
+call vrunner run enterprise --no-wait %*

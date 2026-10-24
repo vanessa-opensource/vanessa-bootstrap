@@ -1,18 +1,18 @@
 @chcp 65001
 
 @rem Сборка основной разработческой ИБ. по умолчанию в каталоге build/ib
-call vrunner init-dev --src src/cf %*
+call vrunner infobase init --src src/cf %*
 
 @rem обновление конфигурации основной разработческой ИБ из хранилища. для включения раскомментируйте код ниже
-@rem call vrunner loadrepo %*
-@rem call vrunner updatedb %*
+@rem call vrunner repo load %*
+@rem call vrunner infobase update %*
 
 @rem собрать внешние обработчики и отчеты в каталоге build
-@rem call vrunner compileepf src/epf/МояВнешняяОбработка build %*
-@rem call vrunner compileepf src/erf/МойВнешнийОтчет build %*
+@rem call vrunner epf compile src/epf/МояВнешняяОбработка --out build %*
+@rem call vrunner epf compile src/erf/МойВнешнийОтчет --out build %*
 
 @rem собрать расширения конфигурации внутри ИБ
-@rem call vrunner compileext src/cfe/МоеРасширение МоеРасширение %*
+@rem call vrunner cfe compile --src src/cfe/МоеРасширение build/МоеРасширение.cfe %*
 
 @rem Обновление в режиме Предприятия
-call vrunner run --command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;" --execute $runnerRoot\epf\ЗакрытьПредприятие.epf %*
+call vrunner run enterprise --command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;" --execute $runnerRoot\epf\ЗакрытьПредприятие.epf %*
