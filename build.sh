@@ -12,4 +12,4 @@ vrunner cf compile --src src/cf build/1cv8.cf "$@"
 # vrunner epf compile src/erf/МойВнешнийОтчет --out build "$@"
 
 # собрать расширения конфигурации внутри ИБ
-# vrunner cfe compile --src src/cfe/МоеРасширение build/МоеРасширение.cfe "$@"
+# vrunner cfe load src/cfe/МоеРасширение --extension-name МоеРасширение --no-update-db "$@"

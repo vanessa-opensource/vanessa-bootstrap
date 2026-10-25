@@ -12,4 +12,4 @@ call vrunner cf compile --src src/cf build/1cv8.cf %*
 @rem call vrunner epf compile src/erf/МойВнешнийОтчет --out build %*
 
 @rem собрать расширения конфигурации внутри ИБ
-@rem call vrunner cfe compile --src src/cfe/МоеРасширение build/МоеРасширение.cfe %*
+@rem call vrunner cfe load src/cfe/МоеРасширение --extension-name МоеРасширение --no-update-db %*

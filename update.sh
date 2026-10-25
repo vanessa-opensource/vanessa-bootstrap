@@ -13,7 +13,7 @@ vrunner infobase update --src src/cf "$@"
 # vrunner epf compile src/erf/МойВнешнийОтчет --out build "$@"
 
 # собрать расширения конфигурации внутри ИБ
-# vrunner cfe compile --src src/cfe/МоеРасширение build/МоеРасширение.cfe "$@"
+# vrunner cfe load src/cfe/МоеРасширение --extension-name МоеРасширение --no-update-db "$@"
 
 # обновление в режиме Предприятие
 vrunner run enterprise --command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;" \
