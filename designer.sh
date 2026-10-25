@@ -1,3 +1,3 @@
 #!/bin/bash
 
-vrunner designer --no-wait "$@"
+vrunner run designer --no-wait "$@"

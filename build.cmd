@@ -1,7 +1,7 @@
 @chcp 65001
 
 @rem формирование файла конфигурации. для включения раскомментируйте код ниже
-call vrunner cf compile --src src/cf --out build/1cv8.cf %*
+call vrunner cf compile --src src/cf build/1cv8.cf %*
 
 @rem обновление конфигурации основной разработческой ИБ из хранилища. для включения раскомментируйте код ниже
 @rem call vrunner repo load %*

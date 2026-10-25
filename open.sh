@@ -1,3 +1,3 @@
 #!/bin/bash
 
-vrunner run --no-wait "$@"
+vrunner run enterprise --no-wait "$@"

@@ -1,0 +1,40 @@
+{
+    "vrunner": {
+        "ibconnection": "/Fbuild/ib",
+        "db-user": "",
+        "db-pwd": "",
+        "workspace": ".",
+        "v8version": "8.3.27.2342",
+        "locale": "ru",
+        "language": "ru",
+        "additional": "/DisplayAllFunctions /Lru  /iTaxi /TESTMANAGER",
+        "ordinaryapp": "-1",
+        "test": {
+            "vanessa": {
+                "vanessasettings": "./tools/JSON/vanessaBddConf.json"
+            },
+            "xunit": {
+                "xddConfig": "./tools/JSON/vanessaTddConf.json",
+                "testspath": "$addRoot/tests/smoke",
+                "reportsxunit": "ГенераторОтчетаJUnitXML{out/smoke/junit/junit.xml};ГенераторОтчетаAllureXMLВерсия2{out/smoke/allure/allure.xml}",
+                "xddExitCodePath": "./build/xddExitCodePath.txt"
+            }
+        },
+        "validate": {
+            "syntax-check": {
+                "groupbymetadata": true,
+                "exception-file": "tools/syntax-check-excludes.txt",
+                "junitpath": "out/syntax-check/junit/junit.xml",
+                "allure-results": "out/syntax-check/allure",
+                "mode": [
+                    "ExtendedModulesCheck",
+                    "ThinClient",
+                    "WebClient",
+                    "Server",
+                    "ExternalConnection",
+                    "ThickClientOrdinaryApplication"
+                ]
+            }
+        }
+    }
+}
