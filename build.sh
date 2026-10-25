@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # формирование файла конфигурации. для включения раскомментируйте код ниже
-vrunner compile --src src/cf --out build/1cv8.cf "$@"
+vrunner cf compile --src src/cf build/1cv8.cf "$@"
 
 # обновление конфигурации основной разработческой ИБ из хранилища. для включения раскомментируйте код ниже
-# vrunner loadrepo "$@"
-# vrunner updatedb "$@"
+# vrunner repo load "$@"
+# vrunner infobase update "$@"
 
 # собрать внешние обработчики и отчеты в каталоге build
-# vrunner compileepf src/epf/МояВнешняяОбработка build "$@"
-# vrunner compileepf src/erf/МойВнешнийОтчет build "$@"
+# vrunner epf compile src/epf/МояВнешняяОбработка --out build "$@"
+# vrunner epf compile src/erf/МойВнешнийОтчет --out build "$@"
 
 # собрать расширения конфигурации внутри ИБ
-# vrunner compileext src/cfe/МоеРасширение МоеРасширение "$@"
+# vrunner cfe load src/cfe/МоеРасширение --extension-name МоеРасширение --no-update-db "$@"

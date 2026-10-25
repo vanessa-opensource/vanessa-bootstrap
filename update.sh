@@ -1,19 +1,20 @@
 #!/bin/bash
 
 # обновление конфигурации основной разработческой ИБ без поддержки или на поддержке. по умолчанию в каталоге build/ib
-vrunner update-dev --src src/cf --disable-support
+# В vrunner 3 параметр --disable-support удалён; обновление выполняется штатной командой.
+vrunner infobase update --src src/cf "$@"
 
 # обновление конфигурации основной разработческой ИБ из хранилища. для включения раскомментируйте код ниже
-# vrunner loadrepo "$@"
-# vrunner updatedb "$@"
+# vrunner repo load "$@"
+# vrunner infobase update "$@"
 
 # собрать внешние обработчики и отчеты в каталоге build
-# vrunner compileepf src/epf/МояВнешняяОбработка build "$@"
-# vrunner compileepf src/erf/МойВнешнийОтчет build "$@"
+# vrunner epf compile src/epf/МояВнешняяОбработка --out build "$@"
+# vrunner epf compile src/erf/МойВнешнийОтчет --out build "$@"
 
 # собрать расширения конфигурации внутри ИБ
-# vrunner compileext src/cfe/МоеРасширение МоеРасширение "$@"
+# vrunner cfe load src/cfe/МоеРасширение --extension-name МоеРасширение --no-update-db "$@"
 
 # обновление в режиме Предприятие
-vrunner run --command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;" \
- --execute \$runnerRoot\epf\ЗакрытьПредприятие.epf "$@"
+vrunner run enterprise --command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;" \
+ --execute \$runnerRoot/epf/ЗакрытьПредприятие.epf "$@"

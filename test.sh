@@ -1,3 +1,3 @@
 #!/bin/bash
 
-vrunner vanessa "$@"
+vrunner test vanessa "$@"

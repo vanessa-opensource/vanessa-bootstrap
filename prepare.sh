@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # Сборка основной разработческой ИБ. по умолчанию в каталоге build/ib
-vrunner init-dev --src src/cf "$@"
+vrunner infobase init --src src/cf "$@"
 
 # собрать внешние обработчики и отчеты в каталоге build
-# vrunner compileepf src/epf/МояВнешняяОбработка build "$@"
-# vrunner compileepf src/erf/МойВнешнийОтчет build "$@"
+# vrunner epf compile src/epf/МояВнешняяОбработка --out build "$@"
+# vrunner epf compile src/erf/МойВнешнийОтчет --out build "$@"
 
 # собрать расширения конфигурации внутри ИБ
-# vrunner compileext src/cfe/МоеРасширение МоеРасширение "$@"
+# vrunner cfe load src/cfe/МоеРасширение --extension-name МоеРасширение --no-update-db "$@"
 
 # Обновление в режиме Предприятия
-vrunner run --command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;" \
+vrunner run enterprise --command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;" \
  --execute \$runnerRoot/epf/ЗакрытьПредприятие.epf "$@"
